@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.Mapper.EnergyMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.Energy">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="Customer_Id" jdbcType="INTEGER" property="customerId" />
+    <result column="Date" jdbcType="TIMESTAMP" property="date" />
+    <result column="Data1" jdbcType="DECIMAL" property="data1" />
+    <result column="Data2" jdbcType="DECIMAL" property="data2" />
+    <result column="Data3" jdbcType="DECIMAL" property="data3" />
+    <result column="Data4" jdbcType="DECIMAL" property="data4" />
+    <result column="Data5" jdbcType="DECIMAL" property="data5" />
+    <result column="Hour0" jdbcType="DECIMAL" property="hour0" />
+    <result column="Hour1" jdbcType="DECIMAL" property="hour1" />
+    <result column="Hour2" jdbcType="DECIMAL" property="hour2" />
+    <result column="Hour3" jdbcType="DECIMAL" property="hour3" />
+    <result column="Hour4" jdbcType="DECIMAL" property="hour4" />
+    <result column="Hour5" jdbcType="DECIMAL" property="hour5" />
+    <result column="Hour6" jdbcType="DECIMAL" property="hour6" />
+    <result column="Hour7" jdbcType="DECIMAL" property="hour7" />
+    <result column="Hour8" jdbcType="DECIMAL" property="hour8" />
+    <result column="Hour9" jdbcType="DECIMAL" property="hour9" />
+    <result column="Hour10" jdbcType="DECIMAL" property="hour10" />
+    <result column="Hour11" jdbcType="DECIMAL" property="hour11" />
+    <result column="Hour12" jdbcType="DECIMAL" property="hour12" />
+    <result column="Hour13" jdbcType="DECIMAL" property="hour13" />
+    <result column="Hour14" jdbcType="DECIMAL" property="hour14" />
+    <result column="Hour15" jdbcType="DECIMAL" property="hour15" />
+    <result column="Hour16" jdbcType="DECIMAL" property="hour16" />
+    <result column="Hour17" jdbcType="DECIMAL" property="hour17" />
+    <result column="Hour18" jdbcType="DECIMAL" property="hour18" />
+    <result column="Hour19" jdbcType="DECIMAL" property="hour19" />
+    <result column="Hour20" jdbcType="DECIMAL" property="hour20" />
+    <result column="Hour21" jdbcType="DECIMAL" property="hour21" />
+    <result column="Hour22" jdbcType="DECIMAL" property="hour22" />
+    <result column="Hour23" jdbcType="DECIMAL" property="hour23" />
+    <result column="Hour24" jdbcType="DECIMAL" property="hour24" />
+    <result column="Devices" jdbcType="VARCHAR" property="devices" />
+  </resultMap>
+</mapper>

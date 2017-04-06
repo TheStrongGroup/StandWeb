@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.PortsMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.Ports">
+    <id column="Port_Id" jdbcType="INTEGER" property="portId" />
+    <result column="Port_Name" jdbcType="VARCHAR" property="portName" />
+    <result column="Port_Com" jdbcType="VARCHAR" property="portCom" />
+    <result column="Port_Baud" jdbcType="VARCHAR" property="portBaud" />
+    <result column="Port_Data" jdbcType="VARCHAR" property="portData" />
+    <result column="Port_Dev" jdbcType="INTEGER" property="portDev" />
+    <result column="Port_Int" jdbcType="INTEGER" property="portInt" />
+    <result column="Port_Av" jdbcType="INTEGER" property="portAv" />
+    <result column="Port_Des" jdbcType="VARCHAR" property="portDes" />
+    <result column="Port_Ty" jdbcType="INTEGER" property="portTy" />
+  </resultMap>
+
+</mapper>

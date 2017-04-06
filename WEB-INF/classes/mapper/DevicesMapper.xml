@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.DevicesMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.Devices">
+    <id column="Dev_Id" jdbcType="BIGINT" property="devId" />
+    <result column="Dev_Name" jdbcType="VARCHAR" property="devName" />
+    <result column="Dev_Port" jdbcType="INTEGER" property="devPort" />
+    <result column="Dev_Addr" jdbcType="INTEGER" property="devAddr" />
+    <result column="Dev_Des" jdbcType="VARCHAR" property="devDes" />
+    <result column="Dev_Ct" jdbcType="INTEGER" property="devCt" />
+    <result column="Dev_Pt" jdbcType="INTEGER" property="devPt" />
+    <result column="Dev_Ty" jdbcType="INTEGER" property="devTy" />
+    <result column="Dev_Reg" jdbcType="INTEGER" property="devReg" />
+    <result column="Dev_Seg" jdbcType="INTEGER" property="devSeg" />
+    <result column="Dev_Class" jdbcType="INTEGER" property="devClass" />
+    <result column="Dev_Price" jdbcType="DOUBLE" property="devPrice" />
+    <result column="Dev_Unit" jdbcType="CHAR" property="devUnit" />
+    <result column="Dev_State" jdbcType="INTEGER" property="devState" />
+    <result column="Dev_IsAdd" jdbcType="INTEGER" property="devIsadd" />
+
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.TempdataMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.Tempdata">
+    <id column="Data_Id" jdbcType="INTEGER" property="dataId" />
+    <result column="Data_Date" jdbcType="DATE" property="dataDate" />
+    <result column="Data_Time" jdbcType="TIME" property="dataTime" />
+    <result column="Data1" jdbcType="DOUBLE" property="data1" />
+    <result column="Data2" jdbcType="DOUBLE" property="data2" />
+    <result column="Data3" jdbcType="DOUBLE" property="data3" />
+    <result column="Data4" jdbcType="DOUBLE" property="data4" />
+    <result column="Data5" jdbcType="DOUBLE" property="data5" />
+    <result column="Hour0" jdbcType="DOUBLE" property="hour0" />
+    <result column="Hour1" jdbcType="DOUBLE" property="hour1" />
+    <result column="Hour2" jdbcType="DOUBLE" property="hour2" />
+    <result column="Hour3" jdbcType="DOUBLE" property="hour3" />
+    <result column="Hour4" jdbcType="DOUBLE" property="hour4" />
+    <result column="Hour5" jdbcType="DOUBLE" property="hour5" />
+    <result column="Hour6" jdbcType="DOUBLE" property="hour6" />
+    <result column="Hour7" jdbcType="DOUBLE" property="hour7" />
+    <result column="Hour8" jdbcType="DOUBLE" property="hour8" />
+    <result column="Hour9" jdbcType="DOUBLE" property="hour9" />
+    <result column="Hour10" jdbcType="DOUBLE" property="hour10" />
+    <result column="Hour11" jdbcType="DOUBLE" property="hour11" />
+    <result column="Hour12" jdbcType="DOUBLE" property="hour12" />
+    <result column="Hour13" jdbcType="DOUBLE" property="hour13" />
+    <result column="Hour14" jdbcType="DOUBLE" property="hour14" />
+    <result column="Hour15" jdbcType="DOUBLE" property="hour15" />
+    <result column="Hour16" jdbcType="DOUBLE" property="hour16" />
+    <result column="Hour17" jdbcType="DOUBLE" property="hour17" />
+    <result column="Hour18" jdbcType="DOUBLE" property="hour18" />
+    <result column="Hour19" jdbcType="DOUBLE" property="hour19" />
+    <result column="Hour20" jdbcType="DOUBLE" property="hour20" />
+    <result column="Hour21" jdbcType="DOUBLE" property="hour21" />
+    <result column="Hour22" jdbcType="DOUBLE" property="hour22" />
+    <result column="Hour23" jdbcType="DOUBLE" property="hour23" />
+    <result column="Hour24" jdbcType="DOUBLE" property="hour24" />
+  </resultMap>
+
+  <select id="selectAllByTableName"  parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from ${table}
+  </select>
+  <select id="selectByTableNameAndDate"  parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from ${table}  where Data_Date=#{date}
+  </select>
+
+</mapper>

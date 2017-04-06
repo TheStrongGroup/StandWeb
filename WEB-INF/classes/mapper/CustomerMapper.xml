@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.CustomerMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.Customer">
+    <id column="Customer_Id" jdbcType="INTEGER" property="customerId" />
+    <result column="Customer_Name" jdbcType="VARCHAR" property="customerName" />
+    <result column="Customer_Pwd" jdbcType="VARCHAR" property="customerPwd" />
+    <result column="Customer_Dev" jdbcType="VARCHAR" property="customerDev" />
+    <result column="Customer_Des" jdbcType="VARCHAR" property="customerDes" />
+    <result column="Customer_Contact" jdbcType="VARCHAR" property="customerContact" />
+    <result column="Customer_Phone" jdbcType="VARCHAR" property="customerPhone" />
+    <result column="Customer_Addr" jdbcType="VARCHAR" property="customerAddr" />
+    <result column="Customer_Email" jdbcType="VARCHAR" property="customerEmail" />
+    <result column="Customer_Date" jdbcType="TIMESTAMP" property="customerDate" />
+    <result column="Customer_Class" jdbcType="INTEGER" property="customerClass" />
+    <result column="Customer_Seg" jdbcType="INTEGER" property="customerSeg" />
+    <result column="Customer_Reg" jdbcType="INTEGER" property="customerReg" />
+    <result column="Customer_State" jdbcType="BIT" property="customerState" />
+  </resultMap>
+
+</mapper>

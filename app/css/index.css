@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+.table {
+	width: 100%;
+	max-width: 100%;
+	height: 50%;
+	max-height: 80%;
+	margin-bottom: 10px;
+}
+/* #templatemo-pie-chart{
+	height: 300px !important;
+	width: 500px !important;
+}
+ */
+#templatemo-line-chart {
+	height: 300px !important;
+}
+
+.form_datetime3 {
+	height: 34px !important;
+}
+
+#enddate {
+	width: 150px ! important;
+	height: 34px !important;
+}
+
+span.add-on {
+	height: 34px !important;
+}
+
+#datacompare p {
+	margin: 0px auto;
+	font-size: 20px;
+	overflow: hidden;
+	color: blue;
+	text-align: right;
+}
+#datacompare table{
+text-align: right;
+}
+
+.input-append .add-on:last-child, .input-append .btn:last-child,
+	.input-append .btn-group:last-child>.dropdown-toggle {
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.input-append.date .add-on i, .input-prepend.date .add-on i {
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+}
+
+.input-append .add-on {
+	display: inline-block;
+	width: auto;
+	height: 20px;
+	min-width: 16px;
+	padding: 4px 5px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #eee;
+	border: 1px solid #ccc;
+}
+
+.input-append input, .input-append select, .input-append .uneditable-input
+	{
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	margin-bottom: 0;
+	vertical-align: top;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-top: 1px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image:
+		url("http://cdn.bootcss.com/twitter-bootstrap/2.2.2/img/glyphicons-halflings.png");
+	background-position: 14px 14px;
+	background-repeat: no-repeat;
+}
+
+.icon-calendar {
+	background-position: -192px -120px;
+}
+
+.top-menu1 #power {
+	border-left: 0px solid #F7464A;
+	border-top: 0px solid #F7464A;
+	padding: 0em 0em;
+	text-decoration: none;
+}
+/* 
+.top-menu1  #power {
+	background:#F7464A ;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.top-menu1 #specil {
+	background: #46BFBD;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.top-menu1  #air {
+	background: #00ff40;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.top-menu1  #light {
+	background: #FDB45C;
+	width: 20px !important;
+	height: 20px !important;
+} */
+
+.sub1 {
+	width: 250px !important;
+	height: 20px !important;
+}

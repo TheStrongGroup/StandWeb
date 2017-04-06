@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.RealDataMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.RealData">
+    <id column="Dev_Id" jdbcType="BIGINT" property="devId" />
+    <result column="State" jdbcType="INTEGER" property="state" />
+    <result column="DateTime" jdbcType="TIMESTAMP" property="datetime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.stand.spring.model.RealData">
+    <result column="Data1" jdbcType="LONGVARCHAR" property="data1" />
+  </resultMap>
+
+</mapper>

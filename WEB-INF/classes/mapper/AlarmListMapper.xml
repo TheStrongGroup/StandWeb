@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stand.spring.dao.AlarmListMapper">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.AlarmList">
+    <result column="Al_Id" jdbcType="INTEGER" property="alId" />
+    <result column="Al_Date" jdbcType="TIMESTAMP" property="alDate" />
+    <result column="Al_DevId" jdbcType="INTEGER" property="alDevid" />
+    <result column="Al_Point" jdbcType="INTEGER" property="alPoint" />
+    <result column="Al_Type" jdbcType="INTEGER" property="alType" />
+    <result column="Al_Value" jdbcType="DOUBLE" property="alValue" />
+    <result column="Al_Limit" jdbcType="DOUBLE" property="alLimit" />
+    <result column="Al_Av" jdbcType="INTEGER" property="alAv" />
+  </resultMap>
+
+</mapper>
