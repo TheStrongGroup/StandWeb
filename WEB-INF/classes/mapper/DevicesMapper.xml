@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stand.spring.dao.DevicesMapper">
-  <resultMap id="BaseResultMap" type="com.stand.spring.model.Devices">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.DevicesDO">
     <id column="Dev_Id" jdbcType="BIGINT" property="devId" />
     <result column="Dev_Name" jdbcType="VARCHAR" property="devName" />
     <result column="Dev_Port" jdbcType="INTEGER" property="devPort" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.stand.spring.Mapper.InfoMapper" >
-  <resultMap id="BaseResultMap" type="com.stand.spring.model.Info" >
+<mapper namespace="com.stand.spring.dao.InfoMapper" >
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.InfoDO" >
     <!--
       WARNING - @mbggenerated
     -->

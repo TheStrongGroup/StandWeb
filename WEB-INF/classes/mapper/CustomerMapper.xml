@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stand.spring.dao.CustomerMapper">
-  <resultMap id="BaseResultMap" type="com.stand.spring.model.Customer">
+  <resultMap id="BaseResultMap" type="com.stand.spring.model.CustomerDO">
     <id column="Customer_Id" jdbcType="INTEGER" property="customerId" />
     <result column="Customer_Name" jdbcType="VARCHAR" property="customerName" />
     <result column="Customer_Pwd" jdbcType="VARCHAR" property="customerPwd" />

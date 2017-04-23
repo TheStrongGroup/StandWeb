@@ -116,6 +116,7 @@
 		<property name="triggers">
 			<list>
 				<ref bean="myTriggersA"></ref>
+				<ref bean="myTriggersB"/>
 			</list>
 		</property>
 		<property name="autoStartup" value="true"></property>
@@ -126,7 +127,16 @@
 		<property name="jobDetail" ref="myJobDetailA">
 		</property>
 		<property name="cronExpression">
-			<value>0/1 * * * * ?</value>
+			<value>0 30 00 * * ?</value>
+		</property>
+	</bean>
+
+	<bean id="myTriggersB"
+		  class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="myJobDetaiB">
+		</property>
+		<property name="cronExpression">
+			<value>0 0 0/1 * * ?</value>
 			<!--<value>0 30 23 * * ?</value>-->
 		</property>
 	</bean>
@@ -135,7 +145,16 @@
 		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject" ref="calculateEnergyQuartz">
 		</property>
-		<property name="targetMethod" value="work"></property>
+		<property name="targetMethod" value="workOfDay"></property>
+		<property name="concurrent" value="false" />
+		<!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
+	</bean>
+
+	<bean id="myJobDetaiB"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="calculateEnergyQuartz">
+		</property>
+		<property name="targetMethod" value="workOfHour"></property>
 		<property name="concurrent" value="false" />
 		<!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
 	</bean>
