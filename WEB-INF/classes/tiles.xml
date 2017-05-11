@@ -9,7 +9,7 @@
 		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
 		<put-attribute name="setting" value="/WEB-INF/views/common/setting.jsp" />
 	</definition>
-	
+
 	<definition name="index1" extends="base">
 		<put-attribute name="maincontent" expression="/WEB-INF/views/common/${maincontent}.jsp" />
 	</definition>

@@ -131,7 +131,7 @@
 			<div class="modal-content">
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="exampleModalLabel"><span id="curname" style="display:none;">${userInfo.username}</span>密码修改</h4>
+				<h4 class="modal-title" id="exampleModalLabel"><span id="curname" style="display:none;">${userInfo.customerName}</span>密码修改</h4>
 			  </div>
 			<form>
 				  <div class="form-group">

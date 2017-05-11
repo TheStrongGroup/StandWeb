@@ -89,7 +89,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					<input name="customerPwd1" id="customerPwd1" size="25" value="123456"
 						class="form-control placeholder-no-fix" type="password"
 						autocomplete="off" placeholder="密码" /> <input name="customerPwd"
-						id="password" size="25" value=""
+						id="customerPwd" size="25" value=""
 						class="form-control placeholder-no-fix" type="customerPwd"
 						autocomplete="off" placeholder="密码" style="display: none;" />
 

@@ -12,9 +12,9 @@
     <result column="Customer_Addr" jdbcType="VARCHAR" property="customerAddr" />
     <result column="Customer_Email" jdbcType="VARCHAR" property="customerEmail" />
     <result column="Customer_Date" jdbcType="TIMESTAMP" property="customerDate" />
-    <result column="Customer_Class" jdbcType="INTEGER" property="customerClass" />
-    <result column="Customer_Seg" jdbcType="INTEGER" property="customerSeg" />
-    <result column="Customer_Reg" jdbcType="INTEGER" property="customerReg" />
+    <result column="Customer_Class" jdbcType="VARCHAR" property="customerClass" />
+    <result column="Customer_Seg" jdbcType="VARCHAR" property="customerSeg" />
+    <result column="Customer_Reg" jdbcType="VARCHAR" property="customerReg" />
     <result column="Customer_State" jdbcType="BIT" property="customerState" />
   </resultMap>
 
