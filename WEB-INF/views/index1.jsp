@@ -67,7 +67,8 @@
 
 <!-- BEGIN BODY -->
 <body class="page-header-fixed">
-
+	<script src="assets/plugins/jquery-1.10.2.min.js"
+		type="text/javascript"></script>
 	<!-- BEGIN HEADER -->
 	<div class="header navbar navbar-inverse navbar-fixed-top">
 		<tiles:insertAttribute name="header"></tiles:insertAttribute>
@@ -173,9 +174,8 @@
         <script src="assets/plugins/respond.min.js"></script>
         <script src="assets/plugins/excanvas.min.js"></script>
         <![endif]-->
-	<script src="assets/plugins/jquery-1.10.2.min.js"
-		type="text/javascript"></script>
-	<script src="assets/plugins/jquery-migrate-1.2.1.min.js"
+	
+	<!-- <script src="assets/plugins/jquery-migrate-1.2.1.min.js"
 		type="text/javascript"></script>
 	<script src="assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"
 		type="text/javascript"></script>
@@ -191,13 +191,13 @@
 	<script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 	<script src="assets/plugins/uniform/jquery.uniform.min.js"
 		type="text/javascript"></script>
-
+	
 	<script
 		src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"
 		type="text/javascript"></script>
 	<script type="text/javascript"
 		src="assets/plugins/select2/select2.min.js"></script>
-
+	
 	<script src="app/js/index.js" type="text/javascript"></script>
 	<script src="assets/scripts/app.js" type="text/javascript"></script>
 	<script src="assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
@@ -205,12 +205,8 @@
 	<script src="assets/plugins/echarts3/echarts.min.js"></script>
 	<script src="assets/plugins/echarts3/macarons.js"></script>
 	<script src="assets/plugins/echarts3/shine.js"></script>
-	<!-- <script type="text/javascript" src="assets/plugins/echarts/build/source/echarts.js"></script> -->
 	<script src="assets/plugins/bootstrap-treeview/js/bootstrap-treeview.js" type="text/javascript"></script>
-	<script type="text/javascript" src="app/js/acrel_functioncollection.js"></script>
-	<script type="text/javascript" src="app/js/equipment.js"></script>
 	<script type="text/javascript" src="assets/plugins/jQuery-loading/dist/jquery.showLoading.js"></script>
-	<script type="text/javascript" src="app/lib/security/sha256.js"></script>
-	<script type="text/javascript" src="app/js/reset_password.js"></script>
+	<script type="text/javascript" src="app/lib/security/sha256.js"></script> -->
 </body>
 </html>

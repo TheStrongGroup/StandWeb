@@ -136,8 +136,4 @@
     </div>
 </div>
 
-
-
-<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="app/js/resize.js" type="text/javascript"></script>
-<script type="text/javascript" src="app/js/home_page.js"></script>
+<script type="text/javascript" src="app/js/main.js"></script>
