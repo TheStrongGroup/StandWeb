@@ -8,4 +8,6 @@
 
 jQuery(document).ready(function($) {
 	
+	$("#fistpage").addClass('active');
+
 });
