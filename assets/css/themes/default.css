@@ -12,7 +12,7 @@ Page header
 .header {
   filter: none !important;
   background-image: none !important;
-  background-color: #007CDE !important;
+  background-color: #1D9F2B !important;
 }
 .header .btn-navbar {
   background-color: #212121 !important;
@@ -104,7 +104,7 @@ Hor menu
 Page sidebar
 ***/
 .page-sidebar {
-  background-color: #DBDCDC;     /*导航栏背景设置*/
+  background-color: #E2E2E2;     /*导航栏背景设置*/
 }
 ul.page-sidebar-menu > li > a {
   border-top: 1px solid #F4F4F4 !important;
