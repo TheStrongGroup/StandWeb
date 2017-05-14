@@ -2,7 +2,7 @@
 <!-- BEGIN TOP NAVIGATION BAR -->
 <div class="header-inner">
 
-	<a class="navbar-brand" href="#">能耗管理系统</a>
+	<a class="navbar-brand" href="#">新能源有限公司能耗系统</a>
 
 	<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 	<a href="javascript:;" class="navbar-toggle" data-toggle="collapse"

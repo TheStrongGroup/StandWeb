@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
 
 <div class="page-sidebar navbar-collapse collapse">
+  <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 575px;">
     <ul class="page-sidebar-menu" id="#page-sidebar-menu">
         <li class="sidebar-toggler-wrapper">
             <div class="sidebar-toggler hidden-phone"></div>
@@ -9,7 +10,7 @@
         <li id="fistpage" class="">
             <a href="rest/index" id="btn-dashboard">
                 <i class="fa fa-cog"></i>
-                <span class="title">用能概况 </span>
+                <span class="title">用能概况</span>
             </a>
         </li>
         <li id="energysubery" class="">
@@ -77,4 +78,5 @@
                     </a>
                 </li>
             </ul>
+    </div>
 </div>

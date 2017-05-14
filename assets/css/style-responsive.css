@@ -29,6 +29,9 @@ From Medium Devices Up To Larger Devices
  		float: left;
  		position: relative;
  		margin-right: -100%;
+ 		position:fixed!important;
+ 		margin-left:0;
+ 		top:50px;
   	}
 
   	.page-sidebar.navbar-collapse {

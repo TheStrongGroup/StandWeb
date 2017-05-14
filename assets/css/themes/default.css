@@ -117,7 +117,7 @@ ul.page-sidebar-menu > li:last-child > a {
 ul.page-sidebar-menu > li.open > a,
 ul.page-sidebar-menu > li > a:hover,
 ul.page-sidebar-menu > li:hover > a{
-  background: #007cde;              /*鼠标经过的字体颜色*/
+  background: #1D9F2B;              /*鼠标经过的字体颜色*/
   color: #fff !important;           /*鼠标经过的底色*/
 }
 
@@ -163,7 +163,7 @@ ul.page-sidebar-menu li > ul.sub-menu > li > a {
   color: #514947;
 }
 ul.page-sidebar-menu li > ul.sub-menu > li > a:hover{
-    background-color: #007CDE;
+    background-color: #1D9F2B;
     color: #fff;       /*子导航文字颜色*/
 }
 /* menu arrows */
@@ -210,7 +210,7 @@ Sidebar toggler
 ***/
 .sidebar-toggler {
   background-image: url(../../img/sidebar-toggler.jpg);
-  background-color: #007cde;
+  background-color: #1D9F2B;
 }
 /* search box bg color on expanded */
 .page-sidebar-closed .page-sidebar .sidebar-search.open .form-container {
@@ -244,7 +244,7 @@ Footer Layouts (new in v1.3)
 ***/
 /* begin:fixed footer */
 .page-footer-fixed .footer {    /*底部颜色修改*/
-  background-color: #007cde;
+  background-color: #1D9F2B;
 }
 .page-footer-fixed .footer .footer-inner {
   color: #DBDCDC;
