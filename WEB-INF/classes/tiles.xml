@@ -11,6 +11,6 @@
 	</definition>
 
 	<definition name="index1" extends="base">
-		<put-attribute name="maincontent" expression="/WEB-INF/views/common/${maincontent}.jsp" />
+		<put-attribute name="maincontent" expression="/WEB-INF/views/stand/${maincontent}.jsp" />
 	</definition>
 </tiles-definitions>
