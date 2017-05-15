@@ -4,7 +4,7 @@
       <div class="col-sm-4 main-date-pl">
         <div class="main-1">
           <span class="main-dateicon"></span>
-          <div class="main-date">
+          <div id="currentDate" class="main-date">
             <h4>日期</h4>
             <p>2017年5月2日</p>
             <p>周二</p>
@@ -24,7 +24,7 @@
         </div> 
       </div>
       <div class="col-sm-4 main-date-pl">
-        <div class="main-1">
+        <div id="deviceStatus" class="main-1">
           <span class="main-dateicon main-service-icon"></span>
           <div class="main-date main-service">
             <h4>设备状况</h4>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
-      <div class="main-box main-total-2">
+      <div id="totalConsumption" class="main-box main-total-2">
         <h5>能耗总缆</h5>
         <div class="col-md-12">
             <div class="main-total">
@@ -46,7 +46,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-6">   
+        <div id="dayConsumption" class="col-md-6">   
           <div class="main-total-left">
             <span class="main-pic1"></span>
             <div class="main-total-rig main-left3">   
@@ -56,7 +56,7 @@
                 <span>kW.h</span>
               </div>  
             </div>
-            <div class="main-total-rig">   
+            <div  class="main-total-rig">   
               <span>昨日用电量</span>
               <div class="main-rig">
                 <span class="grey">12800</span>
@@ -65,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="weekConsumption" class="col-md-6">   
           <div class="main-total-left pink">
             <span class="main-pic1 pic-pink"></span>
             <div class="main-total-rig main-left3">   
@@ -84,7 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="monthConsumption" class="col-md-6">   
           <div class="main-total-left d-blue">
             <span class="main-pic1 d-blue2"></span>
             <div class="main-total-rig main-left3">   
@@ -103,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="yearConsumption" class="col-md-6">   
           <div class="main-total-left zs">
             <span class="main-pic1 zs2"></span>
             <div class="main-total-rig main-left3">   

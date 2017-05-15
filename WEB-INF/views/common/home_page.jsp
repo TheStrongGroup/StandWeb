@@ -46,7 +46,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-6">   
+        <div id="dayConsumption" class="col-md-6">   
           <div class="main-total-left">
             <span class="main-pic1"></span>
             <div class="main-total-rig main-left3">   
@@ -65,7 +65,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="weekConsumption" class="col-md-6">   
           <div class="main-total-left pink">
             <span class="main-pic1 pic-pink"></span>
             <div class="main-total-rig main-left3">   
@@ -84,7 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="monthConsumption" class="col-md-6">   
           <div class="main-total-left d-blue">
             <span class="main-pic1 d-blue2"></span>
             <div class="main-total-rig main-left3">   
@@ -103,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">   
+        <div id="yearConsumption" class="col-md-6">   
           <div class="main-total-left zs">
             <span class="main-pic1 zs2"></span>
             <div class="main-total-rig main-left3">   

@@ -2,7 +2,7 @@
 
 <div class="page-sidebar navbar-collapse collapse">
   <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 575px;">
-    <ul class="page-sidebar-menu" id="#page-sidebar-menu">
+    <ul class="page-sidebar-menu" id="page-sidebar-menu">
         <li class="sidebar-toggler-wrapper">
             <div class="sidebar-toggler hidden-phone"></div>
         </li>
