@@ -6,5 +6,144 @@
   Time: 13:01
   To change this template use File | Settings | File Templates.
 --%>
-<div>
-</div>
+
+
+
+
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<div class="main-container">
+    <div class="row">
+        <div class="col-md-4 col-xs-12 servey-left">
+          <div class="servey-left-t">
+          <div class="row">
+             <div class="select-width">类别：</div>
+             <div class="filter-calc">
+               <form role="form">
+                <div class="form-group">
+                  <select class="form-control" id="buildinglist">
+                  </select>
+                </div>
+               </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="select-width">日期：</div>
+              <div class="filter-calc">
+               <div id="yearChose" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                  <input id="yearcalendar" class="form-control" size="16" type="text" value="" readonly>
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+              </div>
+            </div>
+            <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
+            </div>
+            <div class="main-box class-t">
+               <h5>环比单位：kWh</h5>
+               <div class="row">
+                 <div class="col-xs-4">
+                    <span class="class-1"></span>
+                    <p>当日用电</p>
+                    <h4>602</h4>
+                 </div>
+                 <div class="col-xs-4">
+                    <span class="class-2"></span>
+                    <p>昨日同期</p>
+                    <h4>602</h4>
+                 </div>
+                 <div class="col-xs-4">
+                    <span class="class-3"></span>
+                    <p>趋势</p>
+                    <h4 class="red">602</h4>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-xs-4">
+                    <span class="class-4"></span>
+                    <p>当月用电</p>
+                    <h4>602</h4>
+                 </div>
+                 <div class="col-xs-4">
+                    <span class="class-5"></span>
+                    <p>上月同期</p>
+                    <h4>602</h4>
+                 </div>
+                 <div class="col-xs-4">
+                    <span class="class-6"></span>
+                    <p>趋势</p>
+                    <h4 class="red">602</h4>
+                 </div>
+               </div>
+            </div>
+        </div>
+
+      <div class="col-md-8 col-xs-12">
+         <div class="main-box class-h">
+           <h5>日能耗棒图</h5>
+           <div class="col-md-8 col-xs-12 load-calc">
+
+           </div>
+           <div class="col-md-4 col-xs-12 load">
+             <div class="col-md-12 col-xs-4 load1">
+               <p>最大值</p>
+               <span>a</span>
+             </div>
+             <div class="col-md-12 col-xs-4 load2">
+               <p>最小值</p>
+               <span>a</span>
+             </div>
+             <div class="col-md-12 col-xs-4 load3">
+               <p>平均值</p>
+               <span>a</span>
+             </div>
+             <div class="col-md-12 col-xs-4 load4">
+               <p>负荷率</p>
+               <span>a</span>
+             </div>
+             <div class="col-md-12 col-xs-4 load5">
+               <p>峰谷差率</p>
+               <span>a</span>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div>      
+    <div class="col-lg-12">
+       <div class="main-box class-bottom">
+         <h5>日能耗棒图</h5>
+         <div class="col-md-4 col-xs-12 class-b-left">
+           <div class="row class-date">
+              <div class="class-select">年</div>
+              <div class="month">月</div>
+              <div class="week">周</div>
+              <div class="day">天</div>
+           </div>
+            <div class="row">
+              <div class="select-width">起始日期：</div>
+              <div class="filter-calc">
+                          <div id="StartDate" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                              <input id="StartBox" class="form-control" size="16" type="text" value="" readonly>
+                              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                          </div>
+              </div>
+          </div>
+            <div class="row" style="margin-top:10px;margin-bottom:10px;">
+              <div class="select-width">截止日期：</div>
+              <div class="filter-calc">
+                          <div id="EndDate" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                              <input id="EndBox" class="form-control" size="16" type="text" value="" readonly>
+                              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                          </div>
+              </div>
+            </div>
+            <button type="button" class="class-search">查 询</button>
+         </div>
+         <div class="col-md-8 col-xs-12">
+          b
+         </div>
+       </div>
+    </div>
+  </div>
+<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="app/js/resize.js"></script>
+<script type="text/javascript" src="app/js/te_survey.js"></script>
+
