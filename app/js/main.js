@@ -15,6 +15,9 @@ var Home = (function(){
 			$.getJSON(url, params, function(data) {
 				console.log(data);
 				showCompareData(data.energySurvey);
+				showHours(data);
+				showDays(data);
+				showEquipmentStatus(data.status);
 			});
 		}
 
@@ -30,6 +33,9 @@ var Home = (function(){
 
 			$("#yearConsumption .red").html("--");
 			$("#yearConsumption .grey").html("--");
+
+			$(".main-service>p").eq(0).html("在线：--");
+			$(".main-service>p").eq(1).html("离线：--");
 		}
 
 		function showCompareData(data){
@@ -57,6 +63,68 @@ var Home = (function(){
 			if(data.hasOwnProperty('lastyear') && data.lastyear != null)
 				$("#yearConsumption .grey").html(data.lastyear);
 
+		}
+
+		function showHours(data){
+			var times=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+			var datas=[];
+		
+			$.each(data["tweentyfourhours"], function(key, val) {
+				 datas.push(val);
+			});
+			initLine($("#hourLine"),times,datas);
+			
+		}
+
+		function showDays(data){
+			var times=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+			var datas=[];
+		
+			$.each(data["thityonedays"], function(key, val) {
+				 datas.push(val);
+			});
+			initLine($("#dayLine"),times,datas);
+		}
+
+		function initLine($container,time,data){
+
+			$container.html("");
+			$container.width($container.parent('div').width());
+			$container.height($container.parent('div').height()-36);
+
+			var line = echarts.init($container.get(0),'shine');
+
+			var options = {
+				tooltip:{
+					trigger:'axis',
+					axisPointer:{
+						type:'shadow'
+					}
+				},
+				grid:{
+					left:'5%',
+					right:'5%',
+					bottom:'10%',
+					top:10,
+					containLabel:true
+				},
+				xAxis:[{
+					type:'category',
+					data:time
+				}],
+				yAxis:[{
+					type:'value',
+					axisLabel: {
+			            formatter: '{value} k·Wh'
+			        }
+				}],
+				series:{
+					type:'line',
+					data:data
+				}
+			};
+
+			line.setOption(options);
 		}
 
 		function showDate(){
@@ -95,6 +163,11 @@ var Home = (function(){
 			$("#currentDate>p").eq(0).html(year+"年"+month+"月"+monthDay+"日");
 
 			$("#currentDate>p").eq(1).html(weekDayCh);
+		}
+
+		function showEquipmentStatus(data){
+			$(".main-service>p").eq(0).html("在线："+data[0].on+"个");
+			$(".main-service>p").eq(1).html("离线："+data[0].off+"个");
 		}
 
 	};
