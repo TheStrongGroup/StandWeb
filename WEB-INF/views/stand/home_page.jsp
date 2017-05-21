@@ -127,13 +127,16 @@
     <div class="col-md-6 col-sm-12">
       <div class="main-box">
         <h5>近31日用量体图（单位：千瓦时）</h5>
+        <div id="dayLine"></div>
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
       <div class="main-box">
         <h5>24小时负荷曲线（单位：千瓦）</h5>
+        <div id="hourLine"></div>
       </div>
     </div>
 </div>
-
+<script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/main.js"></script>
