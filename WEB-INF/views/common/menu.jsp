@@ -60,7 +60,7 @@
                 </li>
             </ul>
         </li>
-        <li id="setting" class="start active">
+        <li id="setting" class="start">
             <a href="javascript:;">
                 <i class="fa fa-flag"></i>
                 <span class="title">用户设置 </span>
