@@ -1,6 +1,24 @@
 * {
     font-family: "Microsoft YaHei";
 }
+/*统计报表*/
+.report{
+    height:545px!important;
+}
+.report2 button{
+  width:100px;
+  height:35px;
+  background: #1D9F2B;
+  color:white;
+  margin-bottom:10px;
+  border:none;
+}
+.report2 button img{
+    vertical-align: -6px;
+}
+.report2>.class-h{
+    height:500px;
+}
 /*统计分析*/
 .servey-left .servey-left-t .stati-date{
     margin-bottom:5px;
