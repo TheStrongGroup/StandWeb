@@ -1,7 +1,35 @@
 * {
     font-family: "Microsoft YaHei";
 }
-/*能耗概况*/
+/*统计分析*/
+.servey-left .servey-left-t .stati-date{
+    margin-bottom:5px;
+}
+.statistical-left{
+    padding-top:0!important;
+    height:300px;
+}
+.servey-left-t h5{
+    margin:5px 5px 10px 5px;
+    background: #1D9F2B;
+    color:white;
+    padding:10px;
+}
+.stati-left .col-md-3{
+  padding:0!important;
+}
+.stati-left .col-md-9{
+  padding-right:0!important;
+}
+.main-container .stati-bottom{
+  padding-left:0;
+  padding-right:5px;
+}
+.main-container .stati-bottom2{
+  padding-left:0;
+  padding-right:0!important;
+}
+/*能耗概况*/}
 .class-select{
     background-color:#1D9F2B;
     color:white;
