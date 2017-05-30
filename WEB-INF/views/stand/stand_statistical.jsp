@@ -23,7 +23,7 @@
               </div>
             </div>
           <div class="row">
-            <div class="select-width">结束日期：</div>
+            <div class="select-width">截止日期：</div>
               <div class="filter-calc">
                <div id="yearChose" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                   <input id="yearcalendar" class="form-control" size="16" type="text" value="" readonly>
