@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.stand.spring.dao.EnergyMapper">
-    <resultMap id="BaseResultMap" type="com.stand.spring.model.EnergyDO">
+<mapper namespace="com.stand.spring.dao.ClassEnergyMapper">
+    <resultMap id="BaseResultMap" type="com.stand.spring.model.ClassEnergyDO">
         <!--
           WARNING - @mbggenerated
         -->
         <id column="Id" jdbcType="INTEGER" property="id"/>
         <result column="Customer_Id" jdbcType="INTEGER" property="customerId"/>
+        <result column="Class_Id" jdbcType="INTEGER" property="classId"/>
         <result column="Date" jdbcType="VARCHAR" property="date"/>
         <result column="Data1" jdbcType="DOUBLE" property="data1"/>
         <result column="Data2" jdbcType="DOUBLE" property="data2"/>
@@ -40,7 +41,7 @@
         <result column="Hour24" jdbcType="DOUBLE" property="hour24"/>
         <result column="Devices" jdbcType="VARCHAR" property="devices"/>
     </resultMap>
-    <update id="updateHourEnergy" parameterType="com.stand.spring.model.EnergyDO">
+    <update id="updateHourEnergy" parameterType="com.stand.spring.model.ClassEnergyDO">
 
         UPDATE Energy
         <set>
@@ -137,5 +138,6 @@
         </set>
         WHERE Customer_Id=#{customerId}
         AND Date=#{date}
+        AND Class_Id=#{classId,jdbcType=INTEGER}
     </update>
 </mapper>

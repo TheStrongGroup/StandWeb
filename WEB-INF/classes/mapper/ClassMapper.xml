@@ -6,4 +6,11 @@
     <result column="Class_Name" jdbcType="CHAR" property="className" />
   </resultMap>
 
+  <select id="selectById" parameterType="com.stand.spring.model.ClassDO" resultMap="BaseResultMap">
+    select
+      *
+    FROM
+      class
+    WHERE Class_Id=#{id,jdbcType=INTEGER}
+  </select>
 </mapper>
