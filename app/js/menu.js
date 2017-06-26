@@ -4,8 +4,7 @@
 * @Date 2017.05.14
 */
 jQuery(document).ready(function($) {
-	
-	
+
 
 	$(".page-sidebar-menu>li").click(function(event) {
 		

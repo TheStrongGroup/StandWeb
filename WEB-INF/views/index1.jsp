@@ -61,7 +61,7 @@
 
 <link rel="shortcut icon" href="app/img/logo.ico" />
 
-
+<script type="text/javascript" src="app/js/tools.js"></script>
 </head>
 <!-- END HEAD -->
 
