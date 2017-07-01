@@ -1182,7 +1182,6 @@
     position: absolute;
     top: 100%;
     left: inherit;
-    right: 0;
     background-clip: padding-box;
 }
 
