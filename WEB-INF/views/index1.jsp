@@ -61,7 +61,8 @@
 
 <link rel="shortcut icon" href="app/img/logo.ico" />
 
-<script type="text/javascript" src="app/js/tools.js"></script>
+
+
 </head>
 <!-- END HEAD -->
 
@@ -69,6 +70,9 @@
 <body class="page-header-fixed">
 	<script src="assets/plugins/jquery-1.10.2.min.js"
 		type="text/javascript"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="app/js/tools.js"></script>
 	<!-- BEGIN HEADER -->
 	<div class="header navbar navbar-inverse navbar-fixed-top">
 		<tiles:insertAttribute name="header"></tiles:insertAttribute>

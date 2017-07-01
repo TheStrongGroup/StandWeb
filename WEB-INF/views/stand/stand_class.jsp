@@ -80,7 +80,7 @@
          <div class="main-box class-h">
            <h5>日能耗棒图</h5>
            <div class="col-md-8 col-xs-12 load-calc">
-
+            <div id="dayChart"></div>
            </div>
            <div class="col-md-4 col-xs-12 load">
              <div class="col-md-12 col-xs-4 load1">
@@ -138,10 +138,12 @@
             <button type="button" class="class-search">查 询</button>
          </div>
          <div class="col-md-8 col-xs-12">
-          b
+            <div id="chartBar"></div>
          </div>
        </div>
     </div>
   </div>
+  <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_class.js"></script>
 
