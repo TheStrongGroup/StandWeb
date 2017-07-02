@@ -1,6 +1,20 @@
 * {
     font-family: "Microsoft YaHei";
 }
+/*新增设备*/
+.main-container .adddev-h{
+    height:auto;
+    overflow: hidden;
+    padding-bottom:0;
+}
+.adddev-top1{
+    float:left;
+    width:300px;
+    margin-top:10px;
+}
+.main-container .adddev-bottom{
+    height:650px;
+}
 /*统计报表*/
 .report{
     height:545px!important;
@@ -1168,7 +1182,6 @@
     position: absolute;
     top: 100%;
     left: inherit;
-    right: 0;
     background-clip: padding-box;
 }
 
