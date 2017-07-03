@@ -40,8 +40,13 @@
   <select id="selectAllByTableName"  parameterType="java.util.Map" resultMap="BaseResultMap">
     select * from ${table}
   </select>
+
   <select id="selectByTableNameAndDate"  parameterType="java.util.Map" resultMap="BaseResultMap">
     select * from ${table}  where Data_Date=#{date}
+  </select>
+
+  <select id="selectByTableNameAndTime"  parameterType="java.util.Map" resultMap="BaseResultMap">
+    select Data1,Data_Date from ${table}  where Data_Date BETWEEN  #{startDate} and #{endDate}
   </select>
 
 </mapper>

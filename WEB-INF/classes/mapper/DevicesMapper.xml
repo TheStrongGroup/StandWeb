@@ -1,23 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stand.spring.dao.DevicesMapper">
-  <resultMap id="BaseResultMap" type="com.stand.spring.model.DevicesDO">
-    <id column="Dev_Id" jdbcType="BIGINT" property="devId" />
-    <result column="Dev_Name" jdbcType="VARCHAR" property="devName" />
-    <result column="Dev_Port" jdbcType="INTEGER" property="devPort" />
-    <result column="Dev_Addr" jdbcType="INTEGER" property="devAddr" />
-    <result column="Dev_Des" jdbcType="VARCHAR" property="devDes" />
-    <result column="Dev_Ct" jdbcType="INTEGER" property="devCt" />
-    <result column="Dev_Pt" jdbcType="INTEGER" property="devPt" />
-    <result column="Dev_Ty" jdbcType="INTEGER" property="devTy" />
-    <result column="Dev_Reg" jdbcType="INTEGER" property="devReg" />
-    <result column="Dev_Seg" jdbcType="INTEGER" property="devSeg" />
-    <result column="Dev_Class" jdbcType="INTEGER" property="devClass" />
-    <result column="Dev_Price" jdbcType="DOUBLE" property="devPrice" />
-    <result column="Dev_Unit" jdbcType="CHAR" property="devUnit" />
-    <result column="Dev_State" jdbcType="INTEGER" property="devState" />
-    <result column="Dev_IsAdd" jdbcType="INTEGER" property="devIsadd" />
+    <resultMap id="BaseResultMap" type="com.stand.spring.model.DevicesDO">
+        <id column="Dev_Id" jdbcType="BIGINT" property="devId"/>
+        <result column="Dev_Name" jdbcType="VARCHAR" property="devName"/>
+        <result column="Dev_Port" jdbcType="INTEGER" property="devPort"/>
+        <result column="Dev_Addr" jdbcType="INTEGER" property="devAddr"/>
+        <result column="Dev_Des" jdbcType="VARCHAR" property="devDes"/>
+        <result column="Dev_Ct" jdbcType="INTEGER" property="devCt"/>
+        <result column="Dev_Pt" jdbcType="INTEGER" property="devPt"/>
+        <result column="Dev_Ty" jdbcType="INTEGER" property="devTy"/>
+        <result column="Dev_Reg" jdbcType="INTEGER" property="devReg"/>
+        <result column="Dev_Seg" jdbcType="INTEGER" property="devSeg"/>
+        <result column="Dev_Class" jdbcType="INTEGER" property="devClass"/>
+        <result column="Dev_Price" jdbcType="DOUBLE" property="devPrice"/>
+        <result column="Dev_Unit" jdbcType="CHAR" property="devUnit"/>
+        <result column="Dev_State" jdbcType="INTEGER" property="devState"/>
+        <result column="Dev_IsAdd" jdbcType="INTEGER" property="devIsadd"/>
 
-  </resultMap>
+    </resultMap>
+
+
+    <select id="selectDeviceByIds" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        *
+        FROM
+        devices
+        WHERE
+        Dev_Id
+        IN
+        <foreach collection="list" item="item" index="index" open="(" separator="," close=")">
+            (#{item})
+        </foreach>
+
+    </select>
+
+
+    <select id="selectDeviceById" parameterType="java.util.List" resultMap="BaseResultMap">
+    select
+    *
+    FROM
+    devices
+    WHERE
+    Dev_Id =  #{id}
+  </select>
+
+    <insert id="insertDevice" parameterType="com.stand.spring.model.DevicesDO">
+    INSERT  INTO
+      devices
+      (
+          Dev_Id,
+          Dev_Name,
+          Dev_Port,
+          Dev_Addr,
+          Dev_Des,
+          Dev_Ct,
+          Dev_Pt,
+          Dev_Ty,
+          Dev_Reg,
+          Dev_Seg,
+          Dev_Class,
+          Dev_Price,
+          Dev_Unit,
+          Dev_State,
+          Dev_IsAdd
+      )VALUES (
+          #{devId,jdbcType=BIGINT},
+          #{devName,jdbcType=VARCHAR},
+          #{devPort,jdbcType=INTEGER},
+          #{devAddr,jdbcType=INTEGER  },
+          #{devDes, jdbcType=VARCHAR  },
+          #{devCt, jdbcType=INTEGER  },
+          #{devPt, jdbcType=INTEGER  },
+          #{devTy, jdbcType=INTEGER  },
+          #{devReg, jdbcType=INTEGER },
+          #{devSeg, jdbcType=INTEGER  },
+          #{devClass, jdbcType=INTEGER  },
+          #{devPrice, jdbcType=DOUBLE  },
+          #{devUnit, jdbcType=CHAR  },
+          #{devState, jdbcType=INTEGER  },
+          #{devIsadd, jdbcType=INTEGER  }
+      )
+  </insert>
+
+    <select id="selectDeviceByClassId" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        *
+        FROM
+        devices
+        WHERE
+        Dev_Class =  #{classID}
+        or
+        Dev_Class is NULL
+    </select>
+
+
+    <select id="selectDeviceByClassIdC" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        *
+        FROM
+        devices
+        WHERE
+        Dev_Class =  #{classID}
+    </select>
+
+
+    <update id="updateClassByDevId" parameterType="java.util.List">
+
+        UPDATE
+          DEVICES
+        SET
+          Dev_Class =  #{classId}
+        WHERE
+          Dev_Id IN
+           <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+            </foreach>
+
+
+    </update>
+
+    <update id="updateClassByDevClassId" parameterType="java.util.List">
+
+        UPDATE
+          DEVICES
+        SET
+          Dev_Class = NULL
+        WHERE
+         Dev_Class = #{classId}
+    </update>
 
 </mapper>
