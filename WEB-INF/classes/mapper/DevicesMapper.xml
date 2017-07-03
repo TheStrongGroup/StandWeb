@@ -95,6 +95,16 @@
     </select>
 
 
+    <select id="selectDeviceByClassIdC" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        *
+        FROM
+        devices
+        WHERE
+        Dev_Class =  #{classID}
+    </select>
+
+
     <update id="updateClassByDevId" parameterType="java.util.List">
 
         UPDATE
