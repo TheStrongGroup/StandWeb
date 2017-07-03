@@ -62,6 +62,13 @@
   padding-right:0!important;
 }
 /*能耗概况*/}
+.class-rig{
+    padding-left:0!important;
+}
+.class-rig>div{
+    padding-left:0;
+    height:80px;
+}
 .class-select{
     background-color:#1D9F2B;
     color:white;
@@ -93,12 +100,13 @@
 .class-b-left{
     border:1px solid #c8c9c9;
     height:85%;
+    padding-top:20px!important;
 }
 .class-bottom{
     margin-bottom:40px;
 }
 .col-md-8 .class-h{
-    height:448px;
+    height:453px;
 }
 .servey-left .class-t .col-xs-4{
     padding:5px;
@@ -128,9 +136,12 @@
 .servey-left-t .filter-calc{padding-right:0;}
 .servey-left-t .form-group{margin-bottom:10px;}
 .servey-left .btn-count5{
-    width:80px;
-    height:30px;
+    width:90px;
+    height:35px;
+    background:url(../img/search2.png) no-repeat 15px 7px;
     background-color:#1D9F2B;
+    padding:0 0 0 20px;
+    border:none;
     color:white;
     float:right;
     margin:10px;
@@ -485,19 +496,6 @@
     border: 1px solid #B4B4B5;
     padding: 10px;
 }
-
-@media (max-width: 1920px) {
-    .cp-compareanalysis {
-        min-height: 843px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .cp-compareanalysis {
-        min-height: 300px;
-    }
-}
-
 /*支路用能统计*/
 .select-width-te {
     float: left;
@@ -629,24 +627,14 @@
 .count-list {
     padding: 15px;
 }
-
 @media (max-width: 1920px) {
     .count-info {
         min-height: 843px;
     }
-}
-
-@media (max-width: 1024px) {
-    .dis-tree {
-        display: none;
-    }
-
-    .count-info {
-        min-height: 145px;
-        padding-bottom: 10px;
+    .cp-compareanalysis {
+        min-height: 843px;
     }
 }
-
 .count-list p {
     background: #F4F4F4;
     padding: 10px;
@@ -743,7 +731,7 @@
 }
 
 .btn-count5 {
-    background-image: url(../img/search4.png);
+    background-image: url(../img/search4.png) no-repeat;
     border: 1px solid #0076D0;
     color: #0076D0;
 }
@@ -916,7 +904,7 @@
 }
 
 .load {
-    width: 150px;
+    width: 200px;
     padding: 0;
     text-align: center;
     color: #fff;
@@ -959,7 +947,7 @@
 }
 
 .load-calc { /*当日负荷曲线下面的曲线计算出宽度*/
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
 }
 
 @media (max-width: 414px) {
@@ -993,16 +981,16 @@
     padding:0;
 }
 .load>div>p{ /*最大值*/
-    width:70px;
-    height:40px;
-    line-height:40px;
+    width:90px;
+    height:68px;
+    line-height:68px;
     text-align:center;
     float:left;
 }
 .load>div>span{  
-    width:80px;
-    height:40px;
-    line-height:40px;
+    width:110px;
+    height:68px;
+    line-height:68px;
     float:left;
 }
 .load1 p{  background-color:#D0385E;}
@@ -1823,10 +1811,46 @@
     .daily{height:296px;}
     .main-total-left{height:90px;}
 }
-@media (max-width: 1024px){
-    .red,.grey{font-size:18px;}
-    .main-total-left{padding-top:0;}
-}
 @media (max-width: 768px){
     .main-container .main-total-2{height:auto;overflow:hidden;}
+}
+@media (max-width: 1024px) {
+    .cp-compareanalysis {
+        min-height: 300px;
+    }
+    .red,.grey{font-size:18px;}
+    .main-total-left{padding-top:0;}
+    /*能耗概况*/
+    .load{width:150px;}
+    .load-calc { /*当日负荷曲线下面的曲线计算出宽度*/
+      width: calc(100% - 150px);
+    }
+    .load>div>p{ /*最大值*/
+    width:70px;
+    height:68px;
+    line-height:68px;
+    text-align:center;
+    float:left;
+    }
+    .load>div>span{  
+    width:80px;
+    height:68px;
+    line-height:68px;
+    float:left;
+    }
+    /*用能概况*/
+    .main-dateicon{
+        width:80px;
+        height:80px;
+        background-position: 13px 10px;
+    }
+    .main-temp-icon{background-position: -263px 10px;}
+    .main-service-icon{background-position: -527px 10px;}
+    .dis-tree {
+        display: none;
+    }
+    .count-info {
+        min-height: 145px;
+        padding-bottom: 10px;
+    }
 }

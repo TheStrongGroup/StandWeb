@@ -13,7 +13,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <div class="main-container">
     <div class="row">
-        <div class="col-md-4 col-xs-12 servey-left">
+        <div class="col-lg-3 col-md-4 col-xs-12 servey-left">
           <div class="servey-left-t">
           <div class="row">
              <div class="select-width">类别：</div>
@@ -76,11 +76,11 @@
             </div>
         </div>
 
-      <div class="col-md-8 col-xs-12">
+      <div class="col-lg-9 col-md-8 col-xs-12">
          <div class="main-box class-h">
            <h5>日能耗棒图</h5>
            <div class="col-md-8 col-xs-12 load-calc">
-
+            <div id="dayChart"></div>
            </div>
            <div class="col-md-4 col-xs-12 load">
              <div class="col-md-12 col-xs-4 load1">
@@ -110,13 +110,7 @@
     <div class="col-lg-12">
        <div class="main-box class-bottom">
          <h5>日能耗棒图</h5>
-         <div class="col-md-4 col-xs-12 class-b-left">
-           <div class="row class-date">
-              <div class="class-select">年</div>
-              <div class="month">月</div>
-              <div class="week">周</div>
-              <div class="day">天</div>
-           </div>
+         <div class="col-lg-3 col-md-4 col-xs-12 class-b-left">
             <div class="row">
               <div class="select-width">起始日期：</div>
               <div class="filter-calc">
@@ -137,11 +131,13 @@
             </div>
             <button type="button" class="class-search">查 询</button>
          </div>
-         <div class="col-md-8 col-xs-12">
-          b
+         <div class="col-lg-9 col-md-8 col-xs-12">
+            <div id="chartBar"></div>
          </div>
        </div>
     </div>
   </div>
+  <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_class.js"></script>
 
