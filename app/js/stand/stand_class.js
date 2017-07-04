@@ -183,6 +183,9 @@ var StandClass = (function(){
 })();
 
 jQuery(document).ready(function($) {
+
+	$("#energysubery").addClass('active');
+	$("#calssfi").addClass('active');
 	
 	var standClass = new StandClass();
 	standClass.init();
