@@ -16,9 +16,8 @@
     height:650px;
 }
 /*统计报表*/
-.report{
-    height:545px!important;
-}
+.report{ height:790px!important;}
+.report2 .report-h{height:745px;}
 .report2 button{
   width:100px;
   height:35px;
@@ -37,15 +36,19 @@
 .servey-left .servey-left-t .stati-date{
     margin-bottom:5px;
 }
+.statical-phone{padding-left:10px;}
 .statistical-left{
     padding-top:0!important;
-    height:300px;
+    height:390px;
 }
 .servey-left-t h5{
     margin:5px 5px 10px 5px;
     background: #1D9F2B;
     color:white;
     padding:10px;
+}
+.statical-h{
+    height:390px!important;
 }
 .stati-left .col-md-3{
   padding:0!important;
@@ -982,27 +985,23 @@
 }
 .load>div>p{ /*最大值*/
     width:90px;
-    height:68px;
-    line-height:68px;
+    height:122px;
+    line-height:122px;
     text-align:center;
     float:left;
 }
 .load>div>span{  
     width:110px;
-    height:68px;
-    line-height:68px;
+    height:122px;
+    line-height:122px;
     float:left;
 }
-.load1 p{  background-color:#D0385E;}
-.load1 span{border:1px solid #D0385E;}
-.load2 p{  background-color:#3079E0;}
-.load2 span{border:1px solid #3079E0;}
-.load3 p{  background-color:#765397;}
-.load3 span{border:1px solid #765397;}
-.load4 p{  background-color:#6AAD22;}
-.load4 span{border:1px solid #6AAD22;}
-.load5 p{  background-color:#F59A2D;}
-.load5 span{border:1px solid #F59A2D;}
+.load1 p{  background-color:#FF9900;}
+.load1 span{border:1px solid #FF9900;}
+.load2 p{  background-color:#67C238;}
+.load2 span{border:1px solid #67C238;}
+.load3 p{  background-color:#DB0B1E;}
+.load3 span{border:1px solid #DB0B1E;}
 .history-time {
     width: 100px;
     text-align: center;
@@ -1799,20 +1798,24 @@
     .main-date{height:300px;}
     .main-container .main-total-2{height:348px;}
     .main-total-left{height:115px;}
-    .main-left3{
-        margin-top:0;
-    }
+    .main-left3{ margin-top:0;}
+    /*统计分析*/
+    .statistical-left{ height:350px;}
+    .statical-h{height:350px!important;}
 }
 @media (max-width: 1366px){
+    /*报表*/
+    .report{ height:600px!important;}
+    .report2 .report-h{height:555px;}
     .main-total-left > span{display:none;}
     .main-total-left{padding-top:10px;padding-left:10px;}
     .main-container .main-total-2{height:296px;}
     .main-date{height:248px;}
     .daily{height:296px;}
     .main-total-left{height:90px;}
-}
-@media (max-width: 768px){
-    .main-container .main-total-2{height:auto;overflow:hidden;}
+    /*统计分析*/
+    .statistical-left{ height:300px;}
+    .statical-h{height:300px!important;}
 }
 @media (max-width: 1024px) {
     .cp-compareanalysis {
@@ -1827,18 +1830,16 @@
     }
     .load>div>p{ /*最大值*/
     width:70px;
-    height:68px;
-    line-height:68px;
-    text-align:center;
-    float:left;
     }
     .load>div>span{  
     width:80px;
-    height:68px;
-    line-height:68px;
-    float:left;
     }
     /*用能概况*/
+    .main-total-rig>span{padding-top:2px;}
+    .main-date{
+        margin-top:-46px;
+        height:258px;
+    }
     .main-dateicon{
         width:80px;
         height:80px;
@@ -1853,4 +1854,50 @@
         min-height: 145px;
         padding-bottom: 10px;
     }
+}
+@media (max-width: 768px){
+    /*报表*/
+    .report2{padding-left:0; }
+    .report2 .report-h{height:300px;}
+    .main-container .main-total-2{height:auto;overflow:hidden;}
+        /*能耗统计*/
+    .servey-left{margin-bottom:10px;}
+    .col-md-8 .class-h{margin-left:-10px;margin-right:-5px;}
+    .class-bottom{
+        margin-right:-5px;
+        height:auto;
+        overflow:hidden;
+    }
+    .class-b-left{height:60%;}
+    .class-search{margin-top:10px;margin-bottom:10px;}
+    /*用能概况*/
+    .main-container{margin-bottom:30px;}
+    .main-date{
+        height:180px;
+        padding-top:46px;
+    }
+}
+@media (max-width: 600px) {
+    /*统计分析*/
+    .servey-left{margin-bottom:0;}
+    .statical-h{margin-bottom:10px;}
+    .statical-phone{padding-left:0!important;}
+    .main-container .stati-bottom{padding-bottom:0!important;}
+   .main-date-pl{margin-top:5px;padding:0;}
+   .main-container .col-md-6{padding:0 0 10px 0;}
+   .header-inner .navbar-brand{width:65%;}
+   .main-container{padding:0 10px 0 10px;}
+   .col-md-8 .class-h{
+    height:auto;
+    overflow: hidden;
+   }
+   /*用能概况*/
+   .load-calc{width:100%!important;}
+   .load{
+    width:100%;
+    margin-left:0;
+    }
+   .load div{width:100%;}
+   .load>div>p{width:35%;height:60px;line-height: 60px;}
+   .load>div>span{width:65%;height:60px;line-height: 60px;}
 }

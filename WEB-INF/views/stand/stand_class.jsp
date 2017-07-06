@@ -95,14 +95,6 @@
                <p>平均值</p>
                <span>a</span>
              </div>
-             <div class="col-md-12 col-xs-4 load4">
-               <p>负荷率</p>
-               <span>a</span>
-             </div>
-             <div class="col-md-12 col-xs-4 load5">
-               <p>峰谷差率</p>
-               <span>a</span>
-             </div>
            </div>
          </div>
       </div>
