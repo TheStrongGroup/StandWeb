@@ -42,6 +42,7 @@
 <link
 	href="assets/plugins/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css"
 	rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-treeview/css/bootstrap-treeview.min.css">
 <link href="assets/css/style-metronic.css" rel="stylesheet"
 	type="text/css" />
  <link href="assets/css/style.css" rel="stylesheet" type="text/css" /> 
@@ -72,6 +73,7 @@
 		type="text/javascript"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap-treeview/js/bootstrap-treeview.min.js"></script>
 	<script type="text/javascript" src="app/js/tools.js"></script>
 	<!-- BEGIN HEADER -->
 	<div class="header navbar navbar-inverse navbar-fixed-top">

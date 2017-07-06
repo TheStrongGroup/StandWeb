@@ -32,7 +32,7 @@
               </div>
             </div>
             <h5>筛选</h5>
-
+              <div id="treeview"></div>
             </div>
         </div>
 
@@ -61,6 +61,7 @@
          </div>
        </div>
     </div>
-  </div>>
+  </div>
+   <button id="run">查询</button>
 <script type="text/javascript" src="app/js/stand/stand_statistical.js"></script>
 

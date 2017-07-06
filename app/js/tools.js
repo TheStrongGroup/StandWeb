@@ -62,5 +62,24 @@ var Stand={
 		});
 
 		return this;
+	},
+	generateTree:function(data,$Tree){
+		//去掉node=[]这种情况
+		var treedata = new Array();
+		var pattern = new RegExp('\\,\\"nodes\\"\\:\\[\\]',"g");
+		for (var i = 0; i < data.length; i++) {
+			var tempStr = JSON.stringify(data[i]);
+			treedata.push(JSON.parse(tempStr.replace(pattern,"")));
+		};
+
+		$Tree.treeview({
+			data: treedata,
+			showIcon: true,
+			selectedColor:"#cee4f9",
+			showCheckbox: true,
+			highlightSelected:false,
+			showBorder:true,
+			levels:1
+		});
 	}
 };
