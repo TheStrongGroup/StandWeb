@@ -40,7 +40,7 @@
          <div class="main-box class-h">
            <h5>能耗对比分析图</h5>
            <div class="col-md-9 col-xs-12 load-calc">
-
+            <div id="chartLine"></div>
            </div>
          </div>
       </div>
@@ -49,7 +49,7 @@
        <div class="main-box class-bottom">
          <h5>2017.6.1-2017.8.1分项用能饼图</h5>
          <div class="col-md-6 col-xs-12">
-          b
+            <div id="chartPie"></div>
          </div>
        </div>
     </div>
@@ -57,11 +57,13 @@
        <div class="main-box class-bottom">
          <h5>路灯</h5>
          <div class="col-md-6 col-xs-12">
-          b
+            <div id="chartBar"></div>
          </div>
        </div>
     </div>
   </div>
    <button id="run">查询</button>
+  <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_statistical.js"></script>
 

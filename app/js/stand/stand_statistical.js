@@ -59,6 +59,10 @@ var Static=(function(){
 			});
 		}
 
+		function showLineAndPie(data){
+
+		}
+
 	};
 
 	return _static;
