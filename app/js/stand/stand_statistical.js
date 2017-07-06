@@ -18,6 +18,8 @@ var Static=(function(){
 				console.log(data);
 				if(type==0){
 					showTree(data[0].classlist);
+				}else if(type==1){
+					showLineAndPie(data);
 				}
 				
 			});
@@ -59,8 +61,127 @@ var Static=(function(){
 			});
 		}
 
-		function showLineAndPie(data){
+		this.init = function(){
+			
+		}
 
+		function showLineAndPie(data){
+			var time=[];
+			var series=[];
+			var legend=[];
+			var piedata=[];
+			for (var i = 0; i <data.length-1; i++) {
+
+				if(data[i].hasOwnProperty('sumData')){
+					var serie={
+								type:'line',
+								data:[]
+							};
+					$.each(data[i], function(index, val) {
+
+						if(index != "sumData"){
+							serie.name=index;
+							legend.push(index);
+							$.each(val, function(key, value) {
+								
+								serie.data.push(value.data);
+								if($.inArray(value.datatime, time)<0){
+									time.push(value.datatime);
+								}
+								
+							});
+						}
+						if(index=="sumData"){
+
+							piedata.push({value:val,name:legend[i]});
+						}
+					});
+
+					series.push(serie);
+				}
+				
+			}
+
+			console.log(piedata);
+			var width=$(".class-h").width();
+			var height=$(".class-h").height()-36;
+			initLine($("#chartLine"),width,height,time,series);
+			showPie(legend,piedata);
+		}
+
+		function showPie(legend,data){
+			$("#chartPie").html("");
+			$("#chartPie").width($("#chartPie").parent('div').parent('div').width());
+			$("#chartPie").height($("#chartPie").parent('div').parent('div').height());
+
+			var pie = echarts.init($("#chartPie").get(0),'shine');
+			var option = {
+				    
+				    tooltip : {
+				        trigger: 'item',
+				        formatter: "{a} <br/>{b} : {c} ({d})"
+				    },
+				    legend: {
+				        orient: 'vertical',
+				        left: 'left',
+				        data: legend
+				    },
+				    series : [
+				        {
+
+				            type: 'pie',
+				            radius : '55%',
+				            center: ['50%', '50%'],
+				            data:data,
+				            itemStyle: {
+				                emphasis: {
+				                    shadowBlur: 10,
+				                    shadowOffsetX: 0,
+				                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+				                }
+				            }
+				        }
+				    ]
+				};
+			pie.setOption(option);
+		}
+
+		function initLine($container,width,height,time,series){
+
+			$container.html("");
+			$container.width(width);
+			$container.height(height);
+
+			var line = echarts.init($container.get(0),'shine');
+
+			var options = {
+				tooltip:{
+					trigger:'axis',
+					axisPointer:{
+						type:'shadow'
+					}
+				},
+				grid:{
+					left:'5%',
+					right:'5%',
+					bottom:'10%',
+					top:10,
+					containLabel:true
+				},
+				xAxis:[{
+					type:'category',
+					data:time
+				}],
+				yAxis:[{
+					type:'value',
+					axisLabel: {
+			            formatter: '{value} k·Wh'
+			        }
+				}],
+				series:series
+			};
+
+			line.setOption(options);
 		}
 
 	};
