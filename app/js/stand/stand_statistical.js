@@ -62,12 +62,14 @@ var Static=(function(){
 		}
 
 		this.init = function(){
-			
+			Stand.initDateTimePicker("CURRENTDATE",new Date(),$("#startDate"),$("#startBox"));
+			Stand.initDateTimePicker("CURRENTDATE",new Date(),$("#endDate"),$("#endBox"));
 		}
 
 		function showLineAndPie(data){
 			var time=[];
 			var series=[];
+			var barSeries=[];
 			var legend=[];
 			var piedata=[];
 			for (var i = 0; i <data.length-1; i++) {
@@ -77,14 +79,20 @@ var Static=(function(){
 								type:'line',
 								data:[]
 							};
+					var bar={
+								type:'bar',
+								data:[]
+							};
 					$.each(data[i], function(index, val) {
 
 						if(index != "sumData"){
 							serie.name=index;
+							bar.name=index;
 							legend.push(index);
 							$.each(val, function(key, value) {
 								
 								serie.data.push(value.data);
+								bar.data.push(value.data);
 								if($.inArray(value.datatime, time)<0){
 									time.push(value.datatime);
 								}
@@ -96,16 +104,19 @@ var Static=(function(){
 							piedata.push({value:val,name:legend[i]});
 						}
 					});
-
+					barSeries.push(bar);
 					series.push(serie);
 				}
 				
 			}
 
-			console.log(piedata);
+			//console.log(piedata);
 			var width=$(".class-h").width();
 			var height=$(".class-h").height()-36;
+			var barW = $("#chartBar").parent('div').parent('div').width();
+			var barH = $("#chartBar").parent('div').parent('div').height()-36;
 			initLine($("#chartLine"),width,height,time,series);
+			initLine($("#chartBar"),barW,barH,time,barSeries);
 			showPie(legend,piedata);
 		}
 
@@ -119,7 +130,7 @@ var Static=(function(){
 				    
 				    tooltip : {
 				        trigger: 'item',
-				        formatter: "{a} <br/>{b} : {c} ({d})"
+				        formatter: "{a} <br/>{b} : {c} ({d%})"
 				    },
 				    legend: {
 				        orient: 'vertical',
@@ -162,8 +173,8 @@ var Static=(function(){
 					}
 				},
 				grid:{
-					left:'5%',
-					right:'5%',
+					left:'2%',
+					right:'2%',
 					bottom:'10%',
 					top:10,
 					containLabel:true
@@ -175,7 +186,7 @@ var Static=(function(){
 				yAxis:[{
 					type:'value',
 					axisLabel: {
-			            formatter: '{value} k·Wh'
+			            formatter: '{value}'
 			        }
 				}],
 				series:series
@@ -193,12 +204,15 @@ var Static=(function(){
 jQuery(document).ready(function($) {
 	
 	var static = new Static();
+	static.init();
 	static.getData("rest/statistical/analysis","startDate&endDate&devIds&type=0",0);
 
 	$("#run").click(function(event) {
 		var arr = static.getObj();
 		var devIds = arr.join(',');
-		static.getData("rest/statistical/analysis","startDate=2017-03-02&endDate=2017-03-25&devIds="+devIds+"&type=1",1);
+		var startDate = $("#startBox").val();
+		var endDate = $("#endBox").val();
+		static.getData("rest/statistical/analysis","startDate="+startDate+"&endDate="+endDate+"&devIds="+devIds+"&type=1",1);
 		console.log(arr);
 	});
 });
