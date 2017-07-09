@@ -33,7 +33,7 @@ var Report = (function(){
 
 		function showTable(data){
 			$("#report").html("<table></table>");
-			$("#report>table").height($(".report-h").height()-36);
+			//$("#report>table").height($(".report-h").height()-36);
 			$("#report>table").width($(".report-h").width());
 			var column=[
 			{field:'devName',title:'设备名称'},{field:'energy',title:'区间能耗'},
@@ -130,8 +130,9 @@ jQuery(document).ready(function($) {
 		var startDate = $("#startBox").val();
 		var endDate = $("#endBox").val();
 		var devIds= report.getNodes().join(",");
-		report.getData("rest/statistical/report","startDate="+startDate+"&endDate="+
-			endDate+"&devIds="+devIds+"&type=2");
+		window.location = "rest/statistical/report?"+"startDate="+startDate+"&endDate="+endDate+
+		"&devIds="+devIds+"&type=2";
+		
 	});
 
 });
