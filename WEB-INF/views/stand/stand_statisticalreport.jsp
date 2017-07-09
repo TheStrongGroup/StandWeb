@@ -40,10 +40,10 @@
         </div>
 
       <div class="col-md-9 col-xs-12 report2">
-         <button type="button"><img src="app/img/excel2.png"> 导 出</button>
+         <button id="export" type="button"><img src="app/img/excel2.png"> 导 出</button>
          <div class="main-box report-h">
            <h5>能耗对比分析图</h5>
-           <div class="col-md-9 col-xs-12 load-calc">
+           <div id="report">
 
            </div>
          </div>

@@ -77,10 +77,12 @@ var Static=(function(){
 
 				legend.push(data[i].devName);
 				var serie={
+								name:data[i].devName,
 								type:'line',
 								data:[]
 							};
 				var bar={
+								name:data[i].devName,
 								type:'bar',
 								data:[]
 							};
@@ -106,8 +108,8 @@ var Static=(function(){
 			var height=$(".class-h").height()-36;
 			var barW = $("#chartBar").parent('div').parent('div').width();
 			var barH = $("#chartBar").parent('div').parent('div').height()-36;
-			initLine($("#chartLine"),width,height,time,series);
-			initLine($("#chartBar"),barW,barH,time,barSeries);
+			initLine($("#chartLine"),width,height,time,series,legend);
+			initLine($("#chartBar"),barW,barH,time,barSeries,legend);
 			showPie(legend,piedata);
 		}
 
@@ -148,7 +150,7 @@ var Static=(function(){
 			pie.setOption(option);
 		}
 
-		function initLine($container,width,height,time,series){
+		function initLine($container,width,height,time,series,label){
 
 			$container.html("");
 			$container.width(width);
@@ -163,6 +165,12 @@ var Static=(function(){
 						type:'shadow'
 					}
 				},
+				legend: {
+
+				        //orient: 'vertical',
+				        align: 'auto',
+				        data: label
+				    },
 				grid:{
 					left:'2%',
 					right:'2%',

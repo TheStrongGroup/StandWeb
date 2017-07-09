@@ -55,6 +55,8 @@
 <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 <link href="app/css/main.css" rel="stylesheet" type="text/css" />
 <link href="assets/plugins/bootstrap-treeview/css/bootstrap-treeview.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="app/lib/bootstrap-table/bootstrap-table.min.css">
+<link rel="stylesheet" type="text/css" href="app/lib/bootstrap-table/bootstrap-table-sticky-header.css">
 <link rel="stylesheet" href="assets/css/fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="assets/plugins/jQuery-loading/dist/showLoading.css" />
 
@@ -71,9 +73,13 @@
 <body class="page-header-fixed">
 	<script src="assets/plugins/jquery-1.10.2.min.js"
 		type="text/javascript"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap-treeview/js/bootstrap-treeview.min.js"></script>
+	<script type="text/javascript" src="app/lib/bootstrap-table/bootstrap-table.min.js"></script>
+	<script type="text/javascript" src="app/lib/bootstrap-table/bootstrap-table-sticky-header.min.js"></script>
+	<script type="text/javascript" src="app/lib/bootstrap-table/bootstrap-table-zh-CN.js"></script>
 	<script type="text/javascript" src="app/js/tools.js"></script>
 	<!-- BEGIN HEADER -->
 	<div class="header navbar navbar-inverse navbar-fixed-top">
