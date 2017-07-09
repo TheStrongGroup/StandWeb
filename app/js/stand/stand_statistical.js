@@ -203,6 +203,10 @@ var Static=(function(){
 
 jQuery(document).ready(function($) {
 	
+
+	$("#statistical").addClass('active');
+	$("#s_statistical").addClass('active');
+
 	var static = new Static();
 	static.init();
 	static.getData("rest/statistical/analysis","startDate&endDate&devIds&type=0",0);
