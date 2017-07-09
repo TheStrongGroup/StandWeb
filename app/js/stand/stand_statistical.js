@@ -72,41 +72,32 @@ var Static=(function(){
 			var barSeries=[];
 			var legend=[];
 			var piedata=[];
+			var sumData=0;
 			for (var i = 0; i <data.length-1; i++) {
 
-				if(data[i].hasOwnProperty('sumData')){
-					var serie={
+				legend.push(data[i].devName);
+				var serie={
 								type:'line',
 								data:[]
 							};
-					var bar={
+				var bar={
 								type:'bar',
 								data:[]
 							};
-					$.each(data[i], function(index, val) {
+				$.each(data[i].data, function(index, value) {
+					if($.inArray(value.datatime, time)<0){
+						time.push(value.datatime);
+					}
 
-						if(index != "sumData"){
-							serie.name=index;
-							bar.name=index;
-							legend.push(index);
-							$.each(val, function(key, value) {
-								
-								serie.data.push(value.data);
-								bar.data.push(value.data);
-								if($.inArray(value.datatime, time)<0){
-									time.push(value.datatime);
-								}
-								
-							});
-						}
-						if(index=="sumData"){
+					serie.data.push(value.data);
+					bar.data.push(value.data);
+					sumData+=value.data;
+				});
 
-							piedata.push({value:val,name:legend[i]});
-						}
-					});
-					barSeries.push(bar);
-					series.push(serie);
-				}
+				barSeries.push(bar);
+				series.push(serie);
+
+				piedata.push({value:sumData,name:data[i].devName});
 				
 			}
 
