@@ -32,11 +32,13 @@
                 </div>
               </div>
             </div>
-            <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
             <h5>筛选</h5>
-            <div id="treeview"></div>
+            <div id="treeview">
             
             </div>
+             <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
+            </div>
+
         </div>
 
       <div class="col-md-9 col-xs-12 report2">
