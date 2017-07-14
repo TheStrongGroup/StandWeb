@@ -11,7 +11,8 @@
       <div class="col-lg-12">
          <div class="main-box adddev-h">
            <form class="navbar-form navbar-left">
-             <div class="form-group"><label>分类名称：</label><input type="text" class="form-control"></div>
+             <div class="form-group"><label>分类名称：</label><input id="KindAdd" type="text" class="form-control">
+             <button type="button" id="AddBtn" class="btn btn-success">添加</button></div>
          </div>
       </div>     
     <div class="col-lg-12">
@@ -43,11 +44,8 @@
               </tr>
             </tbody>
          </table>
-         <button type="button" class="btn btn-success">查询</button>
-         <button type="button" class="btn btn-success">添加</button>
+         
        </div>
     </div>
   </div>
-<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="app/js/resize.js"></script>
-<script type="text/javascript" src="app/js/te_survey.js"></script>
+<script src="app/js/stand/stand_addclass.js" type="text/javascript"></script>
