@@ -74,7 +74,6 @@ var Report = (function(){
 						.replace(/devName/g,'text');
 
 			var treeData = JSON.parse(treeString);
-			console.log(treeData);
 			$("#treeview").width($(".statistical-left").width());
 			$("#treeview").height($(".statistical-left").height()-140);
 

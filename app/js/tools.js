@@ -63,7 +63,7 @@ var Stand={
 
 		return this;
 	},
-	generateTree:function(data,$Tree){
+	generateTree:function(data,$Tree,option){
 		//去掉node=[]这种情况
 		var treedata = new Array();
 		var pattern = new RegExp('\\,\\"nodes\\"\\:\\[\\]',"g");
@@ -72,14 +72,19 @@ var Stand={
 			treedata.push(JSON.parse(tempStr.replace(pattern,"")));
 		};
 
-		$Tree.treeview({
-			data: treedata,
-			showIcon: true,
-			selectedColor:"#cee4f9",
-			showCheckbox: true,
-			highlightSelected:false,
-			showBorder:true,
-			levels:1
-		});
+		if(option == undefined){
+			$Tree.treeview({
+				data: treedata,
+				showIcon: true,
+				selectedColor:"#cee4f9",
+				showCheckbox: true,
+				highlightSelected:false,
+				showBorder:true,
+				levels:1
+			});
+		}else{
+			$Tree.treeview(option);
+		}
+		
 	}
 };
