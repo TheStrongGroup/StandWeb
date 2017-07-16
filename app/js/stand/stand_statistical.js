@@ -206,6 +206,7 @@ jQuery(document).ready(function($) {
 	$("#statistical").addClass('active');
 	$("#s_statistical").addClass('active');
 
+
 	var static = new Static();
 	static.init();
 	static.getData("rest/statistical/analysis","startDate&endDate&devIds&type=0",0);
@@ -217,5 +218,43 @@ jQuery(document).ready(function($) {
 		var endDate = $("#endBox").val();
 		static.getData("rest/statistical/analysis","startDate="+startDate+"&endDate="+endDate+"&devIds="+devIds+"&type=1",1);
 		console.log(arr);
+	});
+
+	$("#startDate").datetimepicker().on('changeDate',function(e){
+		var date = e.date;
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+
+		month<10?(month ="0"+month):(month);
+		var currentDay = date.getDate();
+
+		currentDay<10?(currentDay = "0"+currentDay):currentDay;
+
+		var lastDayofCurrentMonth = new Date(year,month,0).getDate();
+		var startDate = new Date(year+"/"+month+"/"+currentDay);
+		var endDate = new Date(year+"/"+month+"/"+lastDayofCurrentMonth);
+
+		$("#endDate").datetimepicker('setStartDate',year+"-"+month+"-"+currentDay);
+		$("#endDate").datetimepicker('setEndDate',year+"-"+month+"-"+lastDayofCurrentMonth);
+		$("#endBox").val(year+"-"+month+"-"+currentDay);
+		$("#endDate").datetimepicker('update');
+	});
+
+	$("#endDate").datetimepicker().on('changeDate',function(e){
+		var date = e.date;
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+
+		month<10?(month ="0"+month):(month);
+		var currentDay = date.getDate();
+
+		currentDay<10?(currentDay = "0"+currentDay):currentDay;
+
+		var lastDayofCurrentMonth = new Date(year,month,0).getDate();
+
+		$("#startDate").datetimepicker('setStartDate',year+"-"+month+"-"+"01");
+		$("#startDate").datetimepicker('setEndDate',year+"-"+month+"-"+currentDay);
+		$("#startBox").val(year+"-"+month+"-"+currentDay);
+		$("#startDate").datetimepicker('update');
 	});
 });

@@ -2,6 +2,12 @@ var Kind = (function(){
 
 	function _kind(){
 
+		var kindNameList=[];
+
+		this.getClassList=function(){
+			return kindNameList;
+		}
+
 		this.add = function(url,params){
 			$.getJSON(url, params, function(data) {
 				alert("添加分类成功！");
@@ -47,7 +53,7 @@ var Kind = (function(){
 				{field:'classId',title:'分类编号'},{field:'className',title:'分类名称'},
 				{field:'operation',title:'操作'}
 			];
-
+			kindNameList=[];
 			var tableData=[];
 			$.each(data, function(index, val) {
 				var row = {};
@@ -55,7 +61,7 @@ var Kind = (function(){
 				row.className = val.className;
 				row.operation = '<button type="button" value="'+val.classId+'" class="btn btn-warning">更新</button>'+
 								'<button type="button" value="'+val.classId+'" class="btn btn-danger">删除</button>';
-
+				kindNameList.push(val.className);
 				tableData.push(row);
 			});
 
@@ -109,9 +115,14 @@ jQuery(document).ready(function($) {
 
 	$("#AddBtn").click(function(){
 		var className = $("#KindAdd").val();
-
+		className = className.trim();
 		if(className == ""){
 			alert("分类名称不允许为空，请输入！");
+			return;
+		}
+
+		if($.inArray(className, kind.getClassList())>0){
+			alert("不允许添加重复的分类名称！");
 			return;
 		}
 
