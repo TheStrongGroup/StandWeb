@@ -15,16 +15,42 @@ var History = (function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url,params, function(data) {
-				console.log(data);
 				if(type==0){
 					showTree(data[0].classlist);
+				}else if(type==1){
+					showLine(data);
 				}
 			});
 
 		}
 
-		function showLine(){
-			
+		function showLine(data){
+			if(data.length<=0)
+				return;
+			var series=[];
+			var time=[];
+			var legend=[];
+			for (var i =0;i< data.length ; i++) {
+				legend.push(data[i].linename);
+				var serie = {
+					name:data[i].linename,
+					type:'line',
+					data:[]
+				}
+				$.each(data[i].linedata, function(index, val) {
+					 serie.data.push(val.data);
+
+					if($.inArray(val.datatime, time)<0){
+						time.push(val.datatime);
+					}
+				});
+
+				series.push(serie);
+			}
+
+			var width=$(".class-h").width();
+			var height=$(".class-h").height();
+			initLine($("#chartLine"),width,height,time,series,legend);
 		}
 
 		function showTree(data){
@@ -52,6 +78,50 @@ var History = (function(){
 				}
 				
 			});
+		}
+
+		function initLine($container,width,height,time,series,label){
+
+			$container.html("");
+			$container.width(width);
+			$container.height(height);
+
+			var line = echarts.init($container.get(0),'shine');
+
+			var options = {
+				tooltip:{
+					trigger:'axis',
+					axisPointer:{
+						type:'shadow'
+					}
+				},
+				legend: {
+
+				        //orient: 'vertical',
+				        align: 'auto',
+				        data: label
+				    },
+				grid:{
+					left:'2%',
+					right:'2%',
+					bottom:'10%',
+					top:'5%',
+					containLabel:true
+				},
+				xAxis:[{
+					type:'category',
+					data:time
+				}],
+				yAxis:[{
+					type:'value',
+					axisLabel: {
+			            formatter: '{value}'
+			        }
+				}],
+				series:series
+			};
+
+			line.setOption(options);
 		}
 	};
 
@@ -89,7 +159,6 @@ jQuery(document).ready(function($) {
 		var param = $("#ElecParam").val();
 		var startDate = $("#startBox").val();
 		var endDate = $("#endBox").val();
-		console.log(param);
 		if(node.length==0){
 			alert("请选中需要查询的设备！");
 			return;

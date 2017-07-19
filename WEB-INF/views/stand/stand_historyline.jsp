@@ -49,15 +49,12 @@
       <div class="col-md-9 col-xs-12 report2">
          <div class="main-box class-h">
            <div class="col-md-9 col-xs-12 load-calc">
-
-           </div>
-         </div>
-         <div class="main-box class-h">
-           <div class="col-md-9 col-xs-12 load-calc">
             <div id="chartLine"></div>
            </div>
          </div>
       </div>
     </div>      
   </div>
+  <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_historyline.js"></script>

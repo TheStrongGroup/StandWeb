@@ -15,7 +15,7 @@ var Static=(function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url, params, function(data) {
-				console.log(data);
+		
 				if(type==0){
 					showTree(data[0].classlist);
 				}else if(type==1){
@@ -217,7 +217,7 @@ jQuery(document).ready(function($) {
 		var startDate = $("#startBox").val();
 		var endDate = $("#endBox").val();
 		static.getData("rest/statistical/analysis","startDate="+startDate+"&endDate="+endDate+"&devIds="+devIds+"&type=1",1);
-		console.log(arr);
+	
 	});
 
 	$("#startDate").datetimepicker().on('changeDate',function(e){

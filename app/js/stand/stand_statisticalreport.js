@@ -20,7 +20,6 @@ var Report = (function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url,params, function(data) {
-				console.log(data);
 
 				if(type==0){
 					showTree(data[0].classlist);
