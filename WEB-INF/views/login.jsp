@@ -67,8 +67,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         <div class="login-right">
           <h4>系统登陆</h4>
           <form class="login-form" action="rest/user/login" method="post">
-              <input type="text" name="customerName" id="customerName" placeholder="请输入用户名" size="25" value="java1234"/>
-              <input type="password"  name="customerPwd1"  placeholder="请输入密码" id="customerPwd1" size="25" value="123456"/>
+              <label>用户名：</label><input type="text" name="customerName" id="customerName" placeholder="请输入用户名" size="25" value="java1234"/>
+               <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password"  name="customerPwd1"  placeholder="请输入密码" id="customerPwd1" size="25" value="123456"/>
               <input name="customerPwd" id="password" size="25" value=""  class="form-control placeholder-no-fix"            type="customerPwd"
                      autocomplete="off" placeholder="密码"
                      style="display: none;"/>

@@ -33,7 +33,7 @@
               </div>
             </div>
             <h5>筛选</h5>
-            <div id="treeview">
+            <div id="treeview" class="report-tree">
             
             </div>
              <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>

@@ -1,6 +1,20 @@
 * {
     font-family: "Microsoft YaHei";
 }
+
+.page-sidebar-menu>li>ul.sub-menu>li{
+    background-color: #CDE4B5!important;
+}
+.page-sidebar-menu>li>ul.sub-menu>li.active a{
+    color:#514947!important;
+}
+/*历史曲线*/
+#ElecParam{
+    margin-left:5px;
+    width:268px;
+}
+.history-tree{height:475px!important;}
+.report2 .history-h{height: 395px;}
 /*新增设备*/
 .main-container .adddev-h{
     height:auto;
@@ -19,7 +33,7 @@
     height:650px;
 }
 /*统计报表*/
-#treeview{height:560px!important;}
+#treeview{height:560px;}
 .report{ height:790px!important;}
 .report2 .report-h{height:745px;}
 .report2 button{
@@ -37,6 +51,12 @@
     height:500px;
 }
 /*统计分析*/
+.statistical-left .stati-tree{
+    overflow:auto;
+    height:165px!important;
+    border-bottom:1px solid #ddd;
+}
+.stati-left .class-h{height:390px;}
 .servey-left .servey-left-t .stati-date{
     margin-bottom:5px;
 }
@@ -44,6 +64,9 @@
 .statistical-left{
     padding-top:0!important;
     height:390px;
+}
+.stati-bottom>.class-bottom,.stati-bottom2>.class-bottom{
+    height: 390px;
 }
 .servey-left-t h5{
     margin:5px 5px 10px 5px;
@@ -1809,14 +1832,23 @@
     .main-container .main-total-2{height:348px;}
     .main-total-left{height:115px;}
     .main-left3{ margin-top:0;}
+    /*历史曲线*/
+    .statistical-left .report{height:720px!important;}
+    .history-tree{height:475px!important;}
+    .report2 .history-h{height: 358px;}
+    /*统计报表*/
+    .servey-left .report{height:715px!important;}
+    .report2 .report-h{height:670px;}
+    .report .report-tree{height:485px!important;}
     /*统计分析*/
-    .statistical-left{ height:350px;}
     .statical-h{height:350px!important;}
 }
 @media (max-width: 1366px){
+    /*历史曲线*/
+    .report2 .history-h{height: 300px;}
     /*报表*/
-    #treeview{height:370px!important;}
-    .report{ height:600px!important;}
+    .report-tree{height:370px!important;}
+    .servey-left .report{height:600px!important;}
     .report2 .report-h{height:555px;}
     .main-total-left > span{display:none;}
     .main-total-left{padding-top:10px;padding-left:10px;}
@@ -1825,8 +1857,14 @@
     .daily{height:296px;}
     .main-total-left{height:90px;}
     /*统计分析*/
-    .statistical-left{ height:300px;}
     .statical-h{height:300px!important;}
+}
+@media (max-width: 1280px){
+  /*登录*/
+  .login-tab .login-right{
+    width:300px;
+  }
+  .login-form label{display:none;}
 }
 @media (max-width: 1024px) {
     .cp-compareanalysis {
@@ -1867,11 +1905,18 @@
     }
 }
 @media (max-width: 768px){
+    /*统计分析*/
+    .servey-left .statistical-left{margin-bottom:0;}
+    .stati-left{
+        padding-left:0!important;
+        margin-bottom:10px;
+    }
+    .main-container .stati-bottom{padding-right:5px!important;}
     /*报表*/
     .report2{padding-left:0; }
     .report2 .report-h{height:300px;}
     .main-container .main-total-2{height:auto;overflow:hidden;}
-        /*能耗统计*/
+     /*能耗统计*/
     .servey-left{margin-bottom:10px;}
     .col-md-8 .class-h{margin-left:-10px;margin-right:-5px;}
     .class-bottom{
@@ -1882,6 +1927,7 @@
     .class-b-left{height:60%;}
     .class-search{margin-top:10px;margin-bottom:10px;}
     /*用能概况*/
+    .main-left3{margin-top:19px;}
     .main-container{margin-bottom:30px;}
     .main-date{
         height:180px;
@@ -1889,9 +1935,19 @@
     }
 }
 @media (max-width: 600px) {
+    /*曲线报表*/
+    .history-h{margin-top:10px;}
+    /*登陆*/
+    .login-right{right:14%;}
     /*报表*/
+    .report2>button{margin-top:10px;}
+    .report-h{margin-bottom:10px;}
     #treeview{width:100%!important;}
+    /*能耗分类*/
+    .class-h{margin-top:10px;}
     /*统计分析*/
+    .stati-bottom>.class-bottom{margin-bottom:10px;}
+    .stati-bottom2>.class-bottom{margin-right:0;}
     .servey-left{margin-bottom:0;}
     .statical-h{margin-bottom:10px;}
     .statical-phone{padding-left:0!important;}
@@ -1905,6 +1961,8 @@
     overflow: hidden;
    }
    /*用能概况*/
+   .main-total-left{height:65px;}
+   .main-left3{margin-top:8px;}
    .load-calc{width:100%!important;}
    .load{
     width:100%;
@@ -1913,4 +1971,7 @@
    .load div{width:100%;}
    .load>div>p{width:35%;height:60px;line-height: 60px;}
    .load>div>span{width:65%;height:60px;line-height: 60px;}
+}
+@media (max-width: 375px) {
+    .login-right{right:10%;}
 }
