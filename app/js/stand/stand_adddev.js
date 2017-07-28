@@ -8,13 +8,13 @@ var Device = (function(){
 
 		this.add = function(url,params){
 			$.getJSON(url,params, function(data) {
-				console.log(data);
+				
 			});
 		}
 
 		function getByAjax(url,params,type){
 			$.getJSON(url, params, function(data) {
-				console.log(data);
+				
 				if(type==0){
 					showSelect(data.classlist.classlist);
 					showTable(data.classdata);
@@ -98,7 +98,6 @@ jQuery(document).ready(function($) {
 			return;
 		}
 
-		console.log(devName+"_"+devAddr+"_"+devPrice+"_"+classId);
 
 		device.add("rest/device/add","devName="+devName+"&devId="+devAddr
 			+"&devPrice="+devPrice+"&devClass="+classId+"&type=1");

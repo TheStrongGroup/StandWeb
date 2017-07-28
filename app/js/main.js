@@ -13,7 +13,7 @@ var Home = (function(){
 			initDOM();
 			showDate();
 			$.getJSON(url, params, function(data) {
-				console.log(data);
+
 				showCompareData(data.energySurvey);
 				showHours(data);
 				showDays(data);

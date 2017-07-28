@@ -1,5 +1,5 @@
 <%--
-  åŽ†å²æ›²çº¿
+  ÀúÊ·ÇúÏß
   Created by IntelliJ IDEA.
   User: yangc
   Date: 2017-05-14
@@ -12,9 +12,9 @@
     <div class="row stati-left">
         <div class="col-md-3 col-xs-12 servey-left">
           <div class="servey-left-t statistical-left report">
-          <h5>æŸ¥è¯¢æ—¥æœŸ</h5>
+          <h5>²éÑ¯ÈÕÆÚ</h5>
           <div class="row stati-date">
-            <div class="select-width">å¼€å§‹æ—¥æœŸï¼š</div>
+            <div class="select-width">¿ªÊ¼ÈÕÆÚ£º</div>
               <div class="filter-calc">
                <div id="startDate" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                   <input id="startBox" class="form-control" size="16" type="text" value="" readonly>
@@ -23,7 +23,7 @@
               </div>
             </div>
           <div class="row">
-            <div class="select-width">æˆªæ­¢æ—¥æœŸï¼š</div>
+            <div class="select-width">½ØÖ¹ÈÕÆÚ£º</div>
               <div class="filter-calc">
                <div id="endDate" class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                   <input id="endBox" class="form-control" size="16" type="text" value="" readonly>
@@ -31,17 +31,17 @@
                 </div>
               </div>
             </div>
-            <h5>æ›²çº¿ç§ç±»</h5>
+            <h5>ÇúÏßÖÖÀà</h5>
             <select id="ElecParam" class="form-control">
-      			  <option value="1">ç”µåŽ‹æ›²çº¿</option>
-      			  <option value="2">ç”µæµæ›²çº¿</option>
-      			  <option value="3">åŠŸçŽ‡æ›²çº¿</option>
-      			  <option value="4">åŠŸçŽ‡å› æ•°</option>
-              <option value="5">é¢‘çŽ‡æ›²çº¿</option>
+      			  <option value="1">µçÑ¹ÇúÏß</option>
+      			  <option value="2">µçÁ÷ÇúÏß</option>
+      			  <option value="3">¹¦ÂÊÇúÏß</option>
+      			  <option value="4">¹¦ÂÊÒòÊý</option>
+              <option value="5">ÆµÂÊÇúÏß</option>
       			</select>
-            <h5>é€‰æ‹©åˆ†ç±»</h5>
+            <h5>Ñ¡Ôñ·ÖÀà</h5>
             <div id="treeview" class="history-tree"></div>
-            <button id="yearSearch" type="button" class="btn-count5"><span>æŸ¥è¯¢</span></button>
+            <button id="yearSearch" type="button" class="btn-count5"><span>²éÑ¯</span></button>
             </div>
         </div>
 
