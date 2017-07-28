@@ -32,11 +32,12 @@
               </div>
             </div>
             <h5>筛选</h5>
-              <div id="treeview"></div>
+              <div id="treeview" class="stati-tree"></div>
+              <button id="run" class="btn-count5">查询</button>
             </div>
         </div>
 
-      <div class="col-md-9 col-xs-12">
+      <div class="col-md-9 col-xs-12 stati-left">
          <div class="main-box class-h">
            <h5>能耗对比分析图</h5>
            <div class="col-md-9 col-xs-12 load-calc">
@@ -62,7 +63,6 @@
        </div>
     </div>
   </div>
-   <button id="run">查询</button>
   <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
 <script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_statistical.js"></script>

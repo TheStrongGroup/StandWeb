@@ -32,7 +32,7 @@
               </div>
             </div>
             <h5>曲线种类</h5>
-            <select id="ElecParam">
+            <select id="ElecParam" class="form-control">
       			  <option value="1">电压曲线</option>
       			  <option value="2">电流曲线</option>
       			  <option value="3">功率曲线</option>
@@ -40,14 +40,18 @@
               <option value="5">频率曲线</option>
       			</select>
             <h5>选择分类</h5>
-            <div id="treeview"></div>
-            
-            </div>
+            <div id="treeview" class="history-tree"></div>
             <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
+            </div>
         </div>
 
       <div class="col-md-9 col-xs-12 report2">
-         <div class="main-box class-h">
+         <div class="main-box history-h">
+           <div class="col-md-9 col-xs-12 load-calc">
+
+           </div>
+         </div>
+         <div class="main-box history-h">
            <div class="col-md-9 col-xs-12 load-calc">
             <div id="chartLine"></div>
            </div>
@@ -55,6 +59,4 @@
       </div>
     </div>      
   </div>
-  <script type="text/javascript" src="app/lib/echarts/echarts.min.js"></script>
-<script type="text/javascript" src="app/lib/echarts/shine.js"></script>
 <script type="text/javascript" src="app/js/stand/stand_historyline.js"></script>
