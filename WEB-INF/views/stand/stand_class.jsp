@@ -78,7 +78,7 @@
 
       <div class="col-lg-9 col-md-8 col-xs-12">
          <div class="main-box class-h">
-           <h5>日能耗棒图</h5>
+           <h5>日能耗折线图</h5>
            <div class="col-md-8 col-xs-12 load-calc">
             <div id="dayChart"></div>
            </div>
@@ -101,7 +101,7 @@
     </div>      
     <div class="col-lg-12">
        <div class="main-box class-bottom">
-         <h5>日能耗棒图</h5>
+         <h5>区间能耗棒图</h5>
          <div class="col-lg-3 col-md-4 col-xs-12 class-b-left">
             <div class="row">
               <div class="select-width">起始日期：</div>
