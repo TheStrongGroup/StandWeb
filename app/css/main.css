@@ -1362,7 +1362,10 @@
 .main-date p {
   margin-bottom: 3px;
 }
-
+/*历史曲线*/
+.history-tree{
+    overflow-y:auto;
+}
 
 /*分类用能情况*/
 .main-table {
