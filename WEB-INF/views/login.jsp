@@ -56,58 +56,34 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="app/css/main.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="assets/app/img/logo.ico"/>
+    <link rel="shortcut icon" href="app/img/logo.ico"/>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body>
-    <div class="login-main">
-      <h1>新能源有限公司能耗系统</h1>
-      <div class="login-tab form-group">
+<div class="login-main">
+    <h1>新能源有限公司能耗系统</h1>
+    <div class="login-tab form-group">
         <div class="login-right">
-          <h4>系统登陆</h4>
-          <form class="login-form" action="rest/user/login" method="post">
-              <label>用户名：</label><input type="text" name="customerName" id="customerName" placeholder="请输入用户名" size="25" value="java1234"/>
-               <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password"  name="customerPwd1"  placeholder="请输入密码" id="customerPwd1" size="25" value="123456"/>
-              <input name="customerPwd" id="password" size="25" value=""  class="form-control placeholder-no-fix"            type="customerPwd"
-                     autocomplete="off" placeholder="密码"
-                     style="display: none;"/>
-              <input type="submit" id="loginBut" value="登 录" class="pass-botton" />
-
-
-
-
-             <%-- <div class="form-group">
-                  <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                  <label class="control-label visible-ie8 visible-ie9">用户名</label>
-                  <div class="input-icon">
-                      <i class="fa fa-user"></i> <input name="customerName" id="customerName"
-                                                        size="25" value="java1234"
-                                                        class="form-control placeholder-no-fix"
-                                                        type="text" autocomplete="off" placeholder="用户名"/>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label class="control-label visible-ie8 visible-ie9">密码</label>
-                  <div class="input-icon">
-                      <i class="fa fa-lock"></i>
-                      <input name="customerPwd1" id="customerPwd1" size="25" value="123456"
-                             class="form-control placeholder-no-fix" type="password"
-                             autocomplete="off" placeholder="密码"/> <input name="customerPwd"
-                                                                          id="password" size="25" value=""
-                                                                          class="form-control placeholder-no-fix"
-                                                                          type="customerPwd"
-                                                                          autocomplete="off" placeholder="密码"
-                                                                          style="display: none;"/>
-
-                  </div>--%>
-          </form>
+            <h4>系统登陆</h4>
+            <form class="login-form" action="rest/user/login" method="post">
+                <label>用户名：</label><input type="text" name="customerName" id="customerName" placeholder="请输入用户名"
+                                          size="25" value="java1234"/>
+                <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" name="customerPwd1" placeholder="请输入密码"
+                                                           id="customerPwd1" size="25" value="123456"/>
+                <input name="customerPwd" id="password" size="25" value="" class="form-control placeholder-no-fix"
+                       type="customerPwd"
+                       autocomplete="off" placeholder="密码"
+                       style="display: none;"/>
+                <input type="submit" id="loginBut" value="登 录" class="pass-botton"/>
+            </form>
         </div>
-      </div>
-      <div class="login-foot">
-        <p>版权所有 @新能源有限公司 沪ICP00000</p>
-      </div>
     </div>
+    <div class="login-foot">
+        <p>版权所有 @新能源有限公司 沪ICP00000</p>
+    </div>
+</div>
 
 
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
