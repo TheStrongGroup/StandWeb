@@ -9,6 +9,9 @@
     color:#514947!important;
 }
 /*历史曲线*/
+.servey-left .servey-left-t .btn-history{
+   margin:10px 5px 5px 0;
+}
 #ElecParam{
     margin-left:5px;
     width:268px;
@@ -1847,6 +1850,8 @@
     .statical-h{height:350px!important;}
 }
 @media (max-width: 1366px){
+    /*用户设置-新增设备*/
+    .main-container .adddev-bottom{height:480px;}
     /*历史曲线*/
     .report2 .history-h{height: 300px;}
     /*报表*/

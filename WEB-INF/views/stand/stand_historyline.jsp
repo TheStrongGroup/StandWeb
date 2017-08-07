@@ -39,9 +39,11 @@
       			  <option value="4">功率因数</option>
               <option value="5">频率曲线</option>
       			</select>
+            <div class="row">
+             <button id="yearSearch" type="button" class="btn-count5 btn-history"><span>查询</span></button>
+            </div>
             <h5>选择分类</h5>
             <div id="treeview" class="history-tree"></div>
-            <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
             </div>
         </div>
 
