@@ -110,6 +110,10 @@ var Kind = (function(){
 
 })();
 jQuery(document).ready(function($) {
+
+    $("#setting").addClass('start active');
+    $("#add_device").addClass('active');
+
 	var kind = new Kind();
 	kind.getData("rest/class/operator","type=0");
 

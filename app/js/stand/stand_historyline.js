@@ -39,7 +39,6 @@ var History = (function(){
 				}
 				$.each(data[i].linedata, function(index, val) {
 					 serie.data.push(val.data);
-
 					if($.inArray(val.datatime, time)<0){
 						time.push(val.datatime);
 					}
@@ -48,8 +47,8 @@ var History = (function(){
 				series.push(serie);
 			}
 
-			var width=$(".class-h").width();
-			var height=$(".class-h").height();
+            var width=$(".history-h").width();
+            var height=$(".history-h").height()-36;
 			initLine($("#chartLine"),width,height,time,series,legend);
 		}
 
@@ -130,7 +129,10 @@ var History = (function(){
 })();
 
 jQuery(document).ready(function($) {
-	
+
+    $("#historyline").addClass('active');
+    $("#s_historyline").addClass('active');
+
 	var history = new History();
 	history.init();
 	history.getData("rest/history/line","type=0",0);

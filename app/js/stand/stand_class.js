@@ -22,8 +22,9 @@ var StandClass = (function(){
 					showDay(data[2]);
 					showMultiBar(data[3]);
 				}else if(type==1){
-					showDay(data[0]);
-				}else if(type==2){
+                    showCompare(data[0]);
+                    showDay(data[1]);
+                }else if(type==2){
 					showMultiBar(data[0]);
 				}
 				

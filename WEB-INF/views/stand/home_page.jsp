@@ -42,7 +42,7 @@
               <div class="main-total">
                 <span><b>累计用电量</b></span>
                 <div class="main-rig">
-                  <span class="red">12800</span>
+                  <span class="red">100</span>
                   <span>kW.h</span>
                 </div>
               </div>

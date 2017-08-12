@@ -216,6 +216,10 @@ jQuery(document).ready(function($) {
 		var devIds = arr.join(',');
 		var startDate = $("#startBox").val();
 		var endDate = $("#endBox").val();
+		if(devIds==''){
+			alert("请选择设备！");
+			return;
+		}
 		static.getData("rest/statistical/analysis","startDate="+startDate+"&endDate="+endDate+"&devIds="+devIds+"&type=1",1);
 	
 	});

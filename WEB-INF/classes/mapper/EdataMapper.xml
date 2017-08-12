@@ -3,18 +3,18 @@
 <mapper namespace="com.stand.spring.dao.EdataMapper">
     <resultMap id="BaseResultMap" type="com.stand.spring.model.EdataDO">
         <id column="data_id" jdbcType="INTEGER" property="dataId"/>
-        <result column="data_time" jdbcType="TIMESTAMP" property="dataTime"/>
+        <result column="dataTime" jdbcType="TIMESTAMP" property="dataTime"/>
         <!--<result column="data_state" jdbcType="BIT" property="dataState"/>-->
         <result column="data_vals" jdbcType="VARCHAR" property="dataVals"/>
     </resultMap>
 
     <select id="selectEdata" parameterType="java.util.Map" resultMap="BaseResultMap">
       select
-        data_vals,data_time
+        data_vals,dataTime
       from
         ${table}
       where
-        data_time
+        dataTime
       BETWEEN
         #{startDate}
       and

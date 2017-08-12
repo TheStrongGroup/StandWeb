@@ -68,6 +68,8 @@ var Device = (function(){
 
 })();
 jQuery(document).ready(function($) {
+    $("#setting").addClass('start active');
+    $("#add_classfi").addClass('active');
 	var device = new Device();
 
 	device.load("rest/device/add","type",0);
