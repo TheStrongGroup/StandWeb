@@ -77,6 +77,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                        autocomplete="off" placeholder="密码"
                        style="display: none;"/>
                 <input type="submit" id="loginBut" value="登 录" class="pass-botton"/>
+                <p style="color: #ff2628;">${error}</p>
             </form>
         </div>
     </div>

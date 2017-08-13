@@ -94,7 +94,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                                                         type="customerPwd"
                                                                         autocomplete="off" placeholder="密码"
                                                                         style="display: none;"/>
-
                 </div>
             </div>
             <div class="form-actions">
@@ -196,6 +195,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
      */
     $(document).ready(function () {
         $("#loginBut").bind("click", function () {
+            alert("---")
             App.init();
             Login.init();
         });

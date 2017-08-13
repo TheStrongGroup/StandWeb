@@ -70,13 +70,13 @@
                     <li id="add_classfi" class=""><a href="rest/addclass"><i class="fa fa-caret-right"></i>新增分类</a></li>
                     <li id="add_device" class=""><a href="rest/adddev"><i class="fa fa-caret-right"></i>新增设备</a></li>
                     </li>
-                    <li id="setPsWrd">
-                        <a data-toggle="modal" data-target="#resetpwd">
-                            <i class="fa fa-caret-right"></i>密码修改
-                        </a>
+                    <li id="setPsWrd" data-target="#resetpwd" data-toggle="modal">
+                        <a href="javascript:void(0)"> <i class="fa fa-caret-right"></i>密码修改</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
 </div>
+<script type="text/javascript" src="app/js/stand/reset_password.js"></script>
+<script type="text/javascript" src="app/lib/security/sha256.js"></script>

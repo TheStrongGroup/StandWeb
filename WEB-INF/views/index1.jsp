@@ -141,30 +141,50 @@
     </div>
     <!-- END CONTENT -->
 </div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="footer" align="center">
+    <tiles:insertAttribute name="footer"></tiles:insertAttribute>
+</div>
 
-<div class="modal fade" id="resetpwd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="resetpwd" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel"
      data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="exampleModalLabel"><span id="curname"
                                                                      style="display:none;">${userInfo.customerName}</span>密码修改
                 </h4>
             </div>
-
+            <form>
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label no-padding-right">当前密码 :</label>
+                    <div class="col-sm-9">
+                        <input id="curpwd" type="password" class="col-xs-10 col-sm-5 form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label no-padding-right">新密码 :</label>
+                    <div class="col-sm-9">
+                        <input id="newpwd" type="password" class="col-xs-10 col-sm-5 form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">确认新密码 :</label>
+                    <div class="col-sm-9">
+                        <input id="confirmpwd" type="password" class="col-xs-10 col-sm-5 form-control">
+                    </div>
+                </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button id="confirm" type="button" class="btn btn-primary">确定</button>
             </div>
         </div>
     </div>
-</div>
-<!-- END CONTAINER -->
-<!-- BEGIN FOOTER -->
-<div class="footer" align="center">
-    <tiles:insertAttribute name="footer"></tiles:insertAttribute>
 </div>
 
 <!--[if lt IE 9]>

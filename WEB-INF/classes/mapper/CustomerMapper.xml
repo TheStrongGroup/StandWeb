@@ -36,11 +36,16 @@
           Customer_Id=#{customerId,jdbcType=INTEGER}
     </update>
 
-    <update id="updatePWD" parameterType="com.stand.spring.model.CustomerDO">
+    <update id="updateCustomer" parameterType="com.stand.spring.model.CustomerDO">
         UPDATE
         CUSTOMER
         SET
-        Customer_Pwd=#{customerClass,jdbcType=VARCHAR}
+        <if test="customerPwd!=null and customerPwd !=''">
+            Customer_Pwd=#{customerPwd,jdbcType=VARCHAR},
+        </if>
+        <if test="customerDev!=null and customerDev !=''">
+            Customer_Dev=#{customerDev,jdbcType=VARCHAR}
+        </if>
         WHERE
         Customer_Id=#{customerId,jdbcType=INTEGER}
     </update>

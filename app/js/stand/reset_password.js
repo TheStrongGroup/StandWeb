@@ -126,12 +126,12 @@ function checkPassword(oldpwd,newpwd,username){
     })
         .done(function(data) {
             var obj = JSON.parse(data);
-            if(obj[0].result == 0){
+            if(obj.result == 0){
                 alert("未能修改密码，请重试！");
-            }else if(obj[0].result ==1){
+            }else if(obj.result ==1){
                 alert("修改成功!");
                 $("#resetpwd").modal('hide');
-            }else if(obj[0].result ==3){
+            }else if(obj.result ==3){
                 //alert("原密码校验失败，请重新输入！");
                 $("#curpwd").get(0).style.borderColor = "red";
                 $("#curpwd").attr("type","text");
