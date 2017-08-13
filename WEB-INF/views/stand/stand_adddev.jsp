@@ -25,7 +25,7 @@
              </div>
              <div class="adddev-top1">
                <div class="form-group">
-                 <label>备注：</label>
+                 <label>设备描述：</label>
                  <textarea id="remark" class="form-control" row="3"></textarea>
                </div>
              </div>

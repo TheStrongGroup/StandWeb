@@ -80,10 +80,11 @@ jQuery(document).ready(function ($) {
     device.load("rest/device/add", "type", 0);
 
     $("#Add").click(function (event) {
-        var devName = $("#devName").val();
+        var devName = encodeURI(encodeURI($("#devName").val()));
         var devAddr = $("#devAddr").val();
         var devPrice = $("#devPrice").val();
         var classId = $("#Select").val();
+        var devDesc = encodeURI(encodeURI($("#remark").val()));
 
         if (devName == null || devName == "") {
             alert("仪表名称不能为空！");
@@ -113,7 +114,7 @@ jQuery(document).ready(function ($) {
         }
 
         device.add("rest/device/add", "devName=" + devName + "&devId=" + devAddr
-            + "&devPrice=" + devPrice + "&devClass=" + classId + "&type=1");
+            + "&devPrice=" + devPrice + "&devClass=" + classId + "&devDesc=" + devDesc + "&type=1");
 
     });
 
