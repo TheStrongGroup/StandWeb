@@ -63,7 +63,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!-- BEGIN BODY -->
 <body>
 <div class="login-main">
-    <h1>新能源有限公司能耗系统</h1>
+    <h1>Stand能耗系统</h1>
     <div class="login-tab form-group">
         <div class="login-right">
             <h4>系统登陆</h4>
@@ -82,7 +82,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         </div>
     </div>
     <div class="login-foot">
-        <p>版权所有 @新能源有限公司 沪ICP00000</p>
+        <p>版权所有 @斯同瑞电气有限公司 沪ICP00000</p>
     </div>
 </div>
 
