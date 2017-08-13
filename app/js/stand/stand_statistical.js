@@ -15,7 +15,7 @@ var Static=(function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url, params, function(data) {
-		
+
 				if(type==0){
 					showTree(data[0].classlist);
 				}else if(type==1){
@@ -123,7 +123,7 @@ var Static=(function(){
 				    
 				    tooltip : {
 				        trigger: 'item',
-				        formatter: "{a} <br/>{b} : {c} ({d%})"
+				        formatter: "{a} <br/>{b} : {c}"
 				    },
 				    legend: {
 				        orient: 'vertical',

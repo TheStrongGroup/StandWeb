@@ -13,7 +13,6 @@ var Home = (function () {
             initDOM();
             showDate();
             $.getJSON(url, params, function (data) {
-
                 showCompareData(data.energySurvey);
                 showHours(data);
                 showDays(data);
@@ -100,8 +99,6 @@ var Home = (function () {
                 else {
                     datas2 = val;
                 }
-
-
             });
             initLine($("#dayLine"), times, datas1, datas2, '近31天', '上31天', 'bar');
         }
@@ -119,11 +116,14 @@ var Home = (function () {
                         type: 'shadow'
                     }
                 },
+                legend:{
+                    data:[name1,name2]
+                },
                 grid: {
                     left: '5%',
                     right: '5%',
                     bottom: '10%',
-                    top: 10,
+                    top: 20,
                     containLabel: true
                 },
                 xAxis: [{
@@ -191,8 +191,15 @@ var Home = (function () {
         }
 
         function showEquipmentStatus(data) {
-            $(".main-service>p").eq(0).html("在线：" + data[0].on + "个");
-            $(".main-service>p").eq(1).html("离线：" + data[0].off + "个");
+            if(data.length==0)
+                return;
+            if(data[0].hasOwnProperty('on')){
+                $(".main-service>p").eq(0).html("在线：" + data[0].on + "个");
+            }
+           
+            if(data[0].hasOwnProperty('off')){
+                $(".main-service>p").eq(1).html("离线：" + data[0].off + "个");
+            }
         }
 
     }
