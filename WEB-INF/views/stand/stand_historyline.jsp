@@ -34,16 +34,14 @@
                     </div>
                 </div>
                 <h5>曲线种类</h5>
-                <select id="ElecParam" class="form-control">
+                <select id="ElecParam">
                     <option value="1">电压曲线</option>
                     <option value="2">电流曲线</option>
                     <option value="3">功率曲线</option>
                     <option value="4">功率因数</option>
                     <option value="5">频率曲线</option>
                 </select>
-                <div class="row">
-                    <button id="yearSearch" type="button" class="btn-count5 btn-history"><span>查询</span></button>
-                </div>
+                <button id="yearSearch" type="button" class="btn-count5 btn-history"><span>查询</span></button>
                 <h5>选择分类</h5>
                 <div id="treeview" class="history-tree"></div>
             </div>

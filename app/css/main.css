@@ -14,11 +14,24 @@
 }
 #ElecParam{
     margin-left:5px;
-    width:268px;
+    width:160px;
+    height:35px;
 }
+.btn-history{margin-top:0!important;}
 .history-tree{height:475px!important;}
 .report2 .history-h{height: 395px;}
 /*新增设备*/
+.adddev-margin{margin-top:10px;}
+.adddev-margin select{
+    width:165px;
+    height:32px;
+}
+.adddev-set{vertical-align: 19px;}
+.main-box .adddev-button{width:100px;}
+.btn-adddev{margin-top:7px;}
+.form-group textarea{
+    height:75px;
+}
 .main-container .adddev-h{
     height:auto;
     background:#F8FFF5;
@@ -191,7 +204,7 @@
 }
 .main-container .col-md-4{padding:0;}
 /* 登录 */
-.login-form{padding:35px 25px 35px 25px;}
+.login-form{padding:35px 0 35px 25px;}
 .login-main{
     height:100%;
     padding:3% 0 0 0;
@@ -238,7 +251,7 @@
 .login-right input{
     border:1px solid #ddd;
     font-size:14px;
-    width:240px;
+    width:245px;
     height:36px;
     margin-bottom:10px;
     padding:0 10px;
@@ -252,7 +265,7 @@
     cursor:pointer;
     font-size:16px;
     color:#FFF;
-    width:100%;
+    width:92%;
     margin-top:60px;
     border-radius:20;
     border-radius:5px
@@ -1369,7 +1382,7 @@
 .history-tree{
     overflow-y:auto;
 }
-
+.stati-left
 /*分类用能情况*/
 .main-table {
     width: 95%;

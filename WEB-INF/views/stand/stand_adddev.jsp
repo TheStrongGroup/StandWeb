@@ -8,7 +8,7 @@
                  <label>设备名称：</label>
                  <input id="devName" type="text" class="form-control">
                </div>
-               <div class="col-xs-12 form-group">
+               <div class="col-xs-12 form-group adddev-margin">
                  <label>通讯表号：</label>
                  <input id="devAddr" type="text" class="form-control">
                </div>
@@ -18,20 +18,20 @@
                  <label>能耗单价：</label>
                  <input id="devPrice" type="text" class="form-control">
                </div>
-               <div class="col-xs-12 form-group">
+               <div class="col-xs-12 form-group adddev-margin">
                  <label>自定义分类：</label>
                  <select id="Select"></select>
                </div>
              </div>
              <div class="adddev-top1">
                <div class="form-group">
-                 <label>设备描述：</label>
-                 <textarea id="remark" class="form-control" row="3"></textarea>
+                 <label class="adddev-set">设备描述：</label>
+                 <textarea id="remark" class="form-control" row="1"></textarea>
                </div>
              </div>
-             <div class="adddev-top1">
+             <div class="adddev-top1 adddev-button">
                <button type="button" id="Add" class="btn btn-success">添加</button>
-               <button type="button" id="Reset" class="btn btn-success">重置</button>
+               <button type="button" id="Reset" class="btn btn-success btn-adddev">重置</button>
              </div>
          </div>
       </div>     
