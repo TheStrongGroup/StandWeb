@@ -74,7 +74,9 @@ var Device = (function () {
 })();
 jQuery(document).ready(function ($) {
     $("#setting").addClass('start active');
-    $("#add_classfi").addClass('active');
+    $("#add_device").addClass('active');
+    $("#add_device").css('cssText','background-color:#1D9F2B!important;');
+    $("#add_device>a").css('cssText','color:white!important;');
     var device = new Device();
 
     device.load("rest/device/add", "type", 0);

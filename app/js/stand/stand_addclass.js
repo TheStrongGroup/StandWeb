@@ -109,7 +109,9 @@ var Kind = (function () {
 jQuery(document).ready(function ($) {
 
     $("#setting").addClass('start active');
-    $("#add_device").addClass('active');
+    $("#add_classfi").addClass('active');
+    $("#add_classfi").css('cssText','background-color:#1D9F2B!important;');
+    $("#add_classfi>a").css('cssText','color:white!important;');
 
     var kind = new Kind();
     kind.getData("rest/class/operator", "type=0");

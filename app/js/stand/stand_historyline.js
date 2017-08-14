@@ -132,6 +132,8 @@ jQuery(document).ready(function($) {
 
     $("#historyline").addClass('active');
     $("#s_historyline").addClass('active');
+    $("#s_historyline").css('cssText','background-color:#1D9F2B!important;');
+	$("#s_historyline>a").css('cssText','color:white!important;');
 
 	var history = new History();
 	history.init();

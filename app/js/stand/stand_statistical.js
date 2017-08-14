@@ -205,6 +205,8 @@ jQuery(document).ready(function($) {
 
 	$("#statistical").addClass('active');
 	$("#s_statistical").addClass('active');
+	$("#s_statistical").css('cssText','background-color:#1D9F2B!important;');
+	$("#s_statistical>a").css('cssText','color:white!important;');
 
 
 	var static = new Static();
