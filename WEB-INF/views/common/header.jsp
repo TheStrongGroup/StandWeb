@@ -11,11 +11,6 @@
 	</a>
 	<!-- --------------------------------- -->
 	<ul class="nav navbar-nav pull-right">
-        <li>
-            <acronym title="地图">
-                <a href="rest/map"><img alt="" src="app/img/map.png"/></a>
-            </acronym>
-        </li>
         <li class="dropdown message">
           <!--  <a href="#" data-toggle="dropdown"> -->
           <a href="rest/user/logout">
