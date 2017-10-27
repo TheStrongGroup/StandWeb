@@ -100,7 +100,7 @@ var Home = (function () {
                     datas2 = val;
                 }
             });
-            initLine($("#dayLine"), times, datas1, datas2, '近31天', '上31天', 'bar');
+            initLine($("#dayLine"), times, datas1, datas2, '当月', '上月', 'bar');
         }
 
         function initLine($container, time, data1, data2, name1, name2, type) {
@@ -139,9 +139,13 @@ var Home = (function () {
                 series: [{
                     type: type,
                     name: name1,
+                    smooth:true,
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
                     data: data1
                 }, {
                     type: type,
+                    smooth:true,
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
                     name: name2,
                     data: data2
                 }]

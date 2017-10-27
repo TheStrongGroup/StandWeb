@@ -222,9 +222,9 @@ jQuery(document).ready(function($) {
 
 	$("#yearSearch").click(function(event) {
 		var day=$("#yearcalendar").val();
-		var classId=$("#buildinglist").val();
-		
-		standClass.getData("rest/energy/class","startDate="+day+"&endDate=&classId="+classId+"&type=1",1);
+        var classId=$("#buildinglist").val();
+
+        standClass.getData("rest/energy/class","startDate="+day+"&endDate=&classId="+classId+"&type=1",1);
 
 	});
 
