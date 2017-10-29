@@ -111,10 +111,10 @@ var Home = (function () {
             var line = echarts.init($container.get(0), 'shine');
             var options = {
                 tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'shadow'
-                    }
+                    trigger: 'axis'
+                    // axisPointer: {
+                    //     type: 'shadow'
+                    // }
                 },
                 legend:{
                     data:[name1,name2]

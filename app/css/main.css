@@ -266,9 +266,9 @@
     font-size:16px;
     color:#FFF;
     width:92%;
-    margin-top:60px;
-    border-radius:20;
-    border-radius:5px
+    margin-top:30px;
+    border-radius:20px;
+    border-radius:5px;
     -moz-border-radius: 5px; /* Firefox */
    -webkit-border-radius: 5px; /* Safari 和 Chrome */
 }
@@ -1802,42 +1802,6 @@
     height: 35px;
     background: #5c9fce;
     color: #fff;
-}
-
-.icon1 {
-    background: url(app/img/pica.png);
-}
-
-.icon2 {
-    background: url(app/img/pic2.png);
-}
-
-.icon3 {
-    background: url(app/img/pic3.png);
-}
-
-.icon4 {
-    background: url(app/img/pic4.png);
-}
-
-.icon5 {
-    background: url(app/img/pic5.png);
-}
-
-.icon6 {
-    background: url(app/img/pic6.png);
-}
-
-.icon7 {
-    background: url(app/img/pic7.png);
-}
-
-.icon8 {
-    background: url(app/img/pic8.png);
-}
-
-.icon9 {
-    background: url(app/img/pic9.png);
 }
 
 .menu div {

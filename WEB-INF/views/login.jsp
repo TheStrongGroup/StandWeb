@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
+<%@ page language="java" pageEncoding="utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
     String path = request.getContextPath();
@@ -72,12 +72,17 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                           size="25" value="java1234"/>
                 <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" name="customerPwd1" placeholder="请输入密码"
                                                            id="customerPwd1" size="25" value="123456"/>
+                <label>验证码：</label><input type="text" name="checkCode" placeholder="请输入验证码"
+                                          id="checkCode" size="15" value="" style="width: 50%;"/>
+                <img id="img" src="<%=basePath%>rest/user/createCode" onclick="refresh()"
+                     style="width: 30%;height:100%;">
+
                 <input name="customerPwd" id="password" size="25" value="" class="form-control placeholder-no-fix"
                        type="customerPwd"
-                       autocomplete="off" placeholder="密码"
+                       autocomplete="off" placeholder=" 密码"
                        style="display: none;"/>
                 <input type="submit" id="loginBut" value="登 录" class="pass-botton"/>
-                <p style="color: #ff2628;">${error}</p>
+                <div><p style="color: #ff2628;">${error}</p></div>
             </form>
         </div>
     </div>
@@ -126,19 +131,32 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <script src="app/lib/security/sha256.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
-    /* 	jQuery(document).ready(function() {
-     App.init();
-     Login.init();
-     });
-     */
-    $(document).ready(function () {
-        $("#loginBut").bind("click", function () {
-            App.init();
-            Login.init();
-        });
 
+    $("#loginBut").bind("click", function () {
+        var userName = $("#customerName").val();
+        var userPwd = $("#customerPwd1").val();
+        var checkCode = $("#checkCode").val();
+        if (userName == "") {
+            alert("用户名不能为空！");
+            return false;
+        }
+        if (userPwd == "") {
+            alert("密码不能为空！");
+            return false;
 
-    })
+        }
+        if (checkCode == "") {
+            alert("验证码不能为空！");
+            return false;
+        }
+        App.init();
+        Login.init();
+    });
+    function refresh() {
+        var url = "/rest/user/createCode?number=" + Math.random();//这里没有随机参数的话就只进两次后台就再也不进了，这个现在还不太明白为什么
+        $("#img").attr("src", url);
+    }
+
 </script>
 <!-- END JAVASCRIPTS -->
 </body>
