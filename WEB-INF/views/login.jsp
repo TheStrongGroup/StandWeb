@@ -153,7 +153,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         Login.init();
     });
     function refresh() {
-        var url = "/rest/user/createCode?number=" + Math.random();//这里没有随机参数的话就只进两次后台就再也不进了，这个现在还不太明白为什么
+        var url = "/rest/user/createCode?number=" + Math.random();//这里没有随机参数的话就只进两次后台就再也不进了
         $("#img").attr("src", url);
     }
 
