@@ -2,9 +2,6 @@
     font-family: "Microsoft YaHei";
 }
 
-.page-sidebar-menu>li>ul.sub-menu>li{
-    background-color: #CDE4B5!important;
-}
 .page-sidebar-menu>li>ul.sub-menu>li.active a{
     color:#514947!important;
 }
@@ -108,6 +105,18 @@
   padding-right:0!important;
 }
 /*能耗概况*/}
+.chart1{
+    width:74px;
+    overflow: hidden;
+    float:left;
+    box-sizing:border-box;
+}
+.main-line{
+    height:347px;
+    width:calc(100% - 74px);
+    float:left;
+    overflow: hidden;
+}
 .class-rig{
     padding-left:0!important;
 }
@@ -196,7 +205,6 @@
 .main-container .row{margin:0;}
 .main-container .col-lg-12{
     padding:0 5px 0 0;
-    margin-top:10px;
 }
 .main-container .col-md-8{
     padding-left:10px;
@@ -266,9 +274,9 @@
     font-size:16px;
     color:#FFF;
     width:92%;
-    margin-top:30px;
-    border-radius:20px;
-    border-radius:5px;
+    margin-top:60px;
+    border-radius:20;
+    border-radius:5px
     -moz-border-radius: 5px; /* Firefox */
    -webkit-border-radius: 5px; /* Safari 和 Chrome */
 }
@@ -342,7 +350,18 @@
     height: 376px;
     overflow: hidden;
 }
-
+@media (max-width: 990px) {
+    .main-line{
+        width:100%;
+        height: 276px;
+    }
+    .chart1{
+        width:100%!important;
+    }
+    .chart1 > .col-sm-2{
+        width:70px;
+    }
+}
 @media (max-width: 1000px) {
     .build-info-le, .build-info-le2 {
         height: 320px;
@@ -1195,7 +1214,7 @@
 }
 
 .message > a {
-    background: #1D9F2B !important;
+    background: #0161B8 !important;
     height: 38px;
 }
 
@@ -1233,7 +1252,7 @@
 .btn-default:active {
     background: rgb(87, 158, 200);
 }
-/*主界面*/
+/*主界面 常规*/
 .main-total-rig {
   overflow: hidden;
 }
@@ -1242,7 +1261,7 @@
   padding-top: 6px;
 }
 .main-left3 {
-  margin-top: 36px;
+  margin-top: 52px;
 }
 .main-clear-l {
   clear: left;
@@ -1253,48 +1272,40 @@
   display: inline-block;
   float: left;
   border-radius: 50%!important;
-  background: url(../img/main-s-icon.png) no-repeat 15px 13px;
-  background-color: #0088cc;
-  margin: 23px 10px 5px 10px;
+  background: url(../img/main-s-icon.png) no-repeat 22px 19px;
+  background-color: #38befb;
+  margin: 39px 10px 5px 10px;
 }
-.main-total {
-  border: 1px solid #c8c9c9;
-  overflow: hidden;
-  padding: 3px 10px 3px 10px;
-  line-height: 29px;
-  margin-bottom: 10px;
+.col-md-6 .pink{
+    background-color: #fef5ec;
+}
+.col-md-6 .d-blue{
+    background-color: #f7fbea;
+}
+.col-md-6 .zs{
+    background-color: #f4f4fe;
 }
 .main-total-left {
-  border: 1px solid #c8c9c9;
-  border-left: 4px solid #0088cc;
   overflow: hidden;
-  height:133px;
+  height:168px;
   padding-right: 10px;
-}
-.pink {
-  border-left: 4px solid #e36159;
+  background:#ebf8fe;
 }
 .pic-pink {
-  background-color: #e36159;
-  background-position: -84px 13px;
-}
-.d-blue {
-  border-left: 4px solid #2baab1;
+  background-color: #E60012;
+  background-position: -50px 19px;
 }
 .d-blue2 {
-  background-color: #2baab1;
-  background-position: 14px -109px;
-}
-.zs {
-  border-left: 4px solid #734ba9;
+  background-color: #b1d52d;
+  background-position: 22px -42px;
 }
 .zs2 {
-  background-color: #734ba9;
-  background-position: -84px -109px;
+  background-color: #9393eb;
+  background-position: -50px -42px;
 }
 .main-container .main-total-2 {
   padding-right: 0;
-  height:383px;
+  min-height:405px;
 }
 .main-container .main-total-2 > .col-md-12 {
   padding: 0 10px 0 0;
@@ -1310,17 +1321,20 @@
   font-size: 23px;
 }
 .main-container {
-  padding: 0 0 0 10px;
+  padding: 10px 5px 40px 10px;
   overflow: hidden;
 }
-.main-container .col-md-6 {
+.main-container .row > .col-lg-6 {
   padding: 0 10px 10px 0;
+}
+.row .col-lg-6 #dayConsumption,#weekConsumption,#monthConsumption,#yearConsumption{
+    padding:0 10px 10px 0;
+    width:50%;
 }
 .main-date-pl {
   padding: 0 10px 0 0;
   position: relative;
   overflow: hidden;
-  color: white;
 }
 .main-box {
   border: 1px solid #c8c9c9;
@@ -1328,7 +1342,8 @@
   padding: 0 10px 10px 10px;
 }
 .main-box h5 {
-  background: #e2e2e2;
+  background: #00ADEE;
+  color:white;
   padding: 10px 20px;
   margin-top: 0;
   margin: 0 -10px 10px -10px;
@@ -1336,35 +1351,44 @@
 .main-1 {
   text-align: center;
   position: relative;
+  min-height: 405px;
+  overflow: hidden;
+  border-radius: 10px!important;
+  border:1px solid #c8c9c9;
 }
 .main-dateicon {
   width: 115px;
   height: 115px;
-  background: url(../img/main-icon.png) no-repeat 31px 25px;
+  margin:40px 0 40px 0;
+  background: url(../img/main-icon.png) no-repeat 20px 14px;
   display: inline-block;
-  border: 2px solid #2baab1;
-  background-color: #FFF;
+  background-color: #00ADEE;
   border-radius: 50%!important;
   z-index: 1;
 }
+.main-1 h3{
+    color:#00ADEE;
+    font-family: "Arial";
+    font-weight: bold;
+}
+.main-1 p{color:#00ADEE;}
 .main-1 .main-temp {
   background-color: #734ba9;
 }
 .main-temp-icon {
-  border: 2px solid #734ba9;
-  background-position: -245px 25px;
+  background-position: -192px 18px;
 }
 .main-1 .main-service {
   background-color: #f29503;
 }
 .main-service-icon {
-  border: 2px solid #f29503;
-  background-position: -509px 25px;
+  background-position: -400px 18px;
 }
-.main-container .main-left-pr {
+.main-container .row .main-left-pr {
   padding-right: 0;
+  overflow: hidden;
 }
-.daily{height:383px;}
+.daily{min-height:405px;}
 .main-date {
   width: 100%;
   height: 335px;
@@ -1493,13 +1517,13 @@
         height: 460px;
     }
 }
-
 .chart1 {
     width: 74px;
     overflow: hidden;
     float: left;
+    padding:0;
 }
-
+.chart1 div{margin-top:0;}
 #main_line {
     height: 382px;
     float: left;
@@ -1716,11 +1740,10 @@
 }
 
 .btn-elc {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/elc2.png) no-repeat center center;
     background-color: #969696;
-    margin-bottom: 10px;
     margin-right: 5px;
 }
 
@@ -1729,16 +1752,19 @@
 }
 
 .btn-elc-selected {
-    background-color: #F08500;
+    background-color: #3DBDF5;
+    margin-bottom:10px;
+    border-radius: 10px!important;
 }
 
 .btn-water {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/water2.png) no-repeat center center;
-    background-color: #969696;
+    background-color: #B1D52C;
     margin-bottom: 10px;
     margin-right: 5px;
+    border-radius: 10px!important;
 }
 
 @media (max-width: 320px) {
@@ -1756,11 +1782,12 @@
 }
 
 .btn-solar {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/solar2.png) no-repeat center center;
-    background-color: #969696;
+    background-color: #F7AA40;
     margin-bottom: 10px;
+    border-radius: 10px!important;
 }
 
 .btn-solar:hover {
@@ -1804,6 +1831,42 @@
     color: #fff;
 }
 
+.icon1 {
+    background: url(app/img/pica.png);
+}
+
+.icon2 {
+    background: url(app/img/pic2.png);
+}
+
+.icon3 {
+    background: url(app/img/pic3.png);
+}
+
+.icon4 {
+    background: url(app/img/pic4.png);
+}
+
+.icon5 {
+    background: url(app/img/pic5.png);
+}
+
+.icon6 {
+    background: url(app/img/pic6.png);
+}
+
+.icon7 {
+    background: url(app/img/pic7.png);
+}
+
+.icon8 {
+    background: url(app/img/pic8.png);
+}
+
+.icon9 {
+    background: url(app/img/pic9.png);
+}
+
 .menu div {
     display: none;
 }
@@ -1813,8 +1876,6 @@
 @media (max-width: 1440px){
     .main-date{height:300px;}
     .main-container .main-total-2{height:348px;}
-    .main-total-left{height:115px;}
-    .main-left3{ margin-top:0;}
     /*历史曲线*/
     .statistical-left .report{height:720px!important;}
     .history-tree{height:475px!important;}
@@ -1835,12 +1896,10 @@
     .report-tree{height:370px!important;}
     .servey-left .report{height:600px!important;}
     .report2 .report-h{height:555px;}
-    .main-total-left > span{display:none;}
     .main-total-left{padding-top:10px;padding-left:10px;}
     .main-container .main-total-2{height:296px;}
     .main-date{height:248px;}
     .daily{height:296px;}
-    .main-total-left{height:90px;}
     /*统计分析*/
     .statical-h{height:300px!important;}
 }
@@ -1868,19 +1927,17 @@
     .load>div>span{  
     width:80px;
     }
-    /*用能概况*/
+    /*用能概况 1024*/
     .main-total-rig>span{padding-top:2px;}
     .main-date{
         margin-top:-46px;
         height:258px;
     }
     .main-dateicon{
-        width:80px;
-        height:80px;
-        background-position: 13px 10px;
+        background-position: 19px 14px;
     }
-    .main-temp-icon{background-position: -263px 10px;}
-    .main-service-icon{background-position: -527px 10px;}
+    .main-temp-icon{background-position: -191px 14px;}
+    .main-service-icon{background-position: -401px 14px;}
     .dis-tree {
         display: none;
     }
@@ -1911,8 +1968,7 @@
     }
     .class-b-left{height:60%;}
     .class-search{margin-top:10px;margin-bottom:10px;}
-    /*用能概况*/
-    .main-left3{margin-top:19px;}
+    /*用能概况 768*/
     .main-container{margin-bottom:30px;}
     .main-date{
         height:180px;
@@ -1937,7 +1993,30 @@
     .statical-h{margin-bottom:10px;}
     .statical-phone{padding-left:0!important;}
     .main-container .stati-bottom{padding-bottom:0!important;}
-   .main-date-pl{margin-top:5px;padding:0;}
+   .main-date-pl{
+    margin-top:5px;
+    padding:0;
+    width:32.33%;
+    margin-right:1%;
+    float:left;
+}
+.main-1{
+    min-height: 250px;
+}
+.main-pic1{margin:9px 10px 5px 10px;}
+.main-dateicon{
+    width:85px;
+    height:85px;
+    margin:20px 0 10px 0;
+    background-size: 430px;
+    background-position: 9px 3px;
+}
+.main-1 .main-temp-icon{
+    background-size: 400px;
+    background-position: -162px 5px;}
+.main-1 .main-service-icon{
+    background-size: 400px;
+    background-position: -333px 5px;}
    .main-container .col-md-6{padding:0 0 10px 0;}
    .header-inner .navbar-brand{width:65%;}
    .main-container{padding:0 10px 0 10px;}
@@ -1945,9 +2024,10 @@
     height:auto;
     overflow: hidden;
    }
-   /*用能概况*/
-   .main-total-left{height:65px;}
-   .main-left3{margin-top:8px;}
+   /*用能概况 600*/
+   .main-total-left{height:97px;}
+   .main-container .row > .col-lg-6{padding:0 0 10px 0;}
+   .main-left3{margin-top:28px;}
    .load-calc{width:100%!important;}
    .load{
     width:100%;
@@ -1956,6 +2036,9 @@
    .load div{width:100%;}
    .load>div>p{width:35%;height:60px;line-height: 60px;}
    .load>div>span{width:65%;height:60px;line-height: 60px;}
+   .row .col-lg-6 #dayConsumption,#weekConsumption,#monthConsumption,#yearConsumption{
+    width:100%;
+}
 }
 @media (max-width: 375px) {
     .login-right{right:10%;}
