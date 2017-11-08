@@ -5,32 +5,30 @@
         <div class="col-sm-4 main-date-pl">
           <div class="main-1">
             <span class="main-dateicon"></span>
-            <div id="currentDate" class="main-date">
-              <h4>日期</h4>
-              <p>2017年5月2日</p>
-              <p>周二</p>
+            <div id="ElecValue" class="main-date">
+              <h4>电</h4>
+              <p></p>
+              <p>kW·h</p>
             </div>
           </div> 
         </div>
         <div class="col-sm-4 main-date-pl">
           <div class="main-1">
             <span class="main-dateicon main-temp-icon"></span>
-            <div class="main-date main-temp">
-              <h4>天气预报</h4>
-              <p>温度：8-12</p>
-              <p>湿度：70%</p>
-              <p>风力：中</p>
-              <p>pm2.5：良</p>
+            <div id="WaterValue" class="main-date main-temp">
+              <h4>水</h4>
+              <p></p>
+              <p>吨</p>
             </div>
           </div> 
         </div>
         <div class="col-sm-4 main-date-pl">
           <div id="deviceStatus" class="main-1">
             <span class="main-dateicon main-service-icon"></span>
-            <div class="main-date main-service">
-              <h4>设备状况</h4>
-              <p>在线：在线在线</p>
-              <p>失联：失联失联</p>
+            <div id="GasValue" class="main-date main-service">
+              <h4>燃气</h4>
+              <p></p>
+              <p>立方米</p>
             </div>
           </div> 
         </div>
@@ -38,15 +36,6 @@
       <div class="col-md-6 col-sm-12">
         <div id="totalConsumption" class="main-box main-total-2">
           <h5>能耗总缆</h5>
-          <div class="col-md-12">
-              <div class="main-total">
-                <span><b>累计用电量</b></span>
-                <div class="main-rig">
-                  <span class="red">100</span>
-                  <span>kW.h</span>
-                </div>
-              </div>
-          </div>
           <div id="dayConsumption" class="col-md-6">   
             <div class="main-total-left">
               <span class="main-pic1"></span>
