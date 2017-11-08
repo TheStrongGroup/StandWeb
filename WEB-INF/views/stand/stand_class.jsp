@@ -99,7 +99,7 @@
          </div>
       </div>
     </div>      
-    <div class="col-lg-12">
+    <div class="col-lg-12 bar-diagram">
        <div class="main-box class-bottom">
          <h5>区间能耗棒图</h5>
          <div class="col-lg-3 col-md-4 col-xs-12 class-b-left">
@@ -123,7 +123,7 @@
             </div>
             <button type="button" class="class-search">查 询</button>
          </div>
-         <div class="col-lg-9 col-md-8 col-xs-12">
+         <div class="col-lg-9 col-md-8 col-xs-12 chartBar">
             <div id="chartBar"></div>
          </div>
        </div>
