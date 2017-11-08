@@ -10,9 +10,8 @@ var Home = (function () {
 
         this.getData = function (url, params) {
             initDOM();
-            //showDate();
             $.getJSON(url, params, function (data) {
-                console.log(data);
+               // console.log(data);
                 
                 showEnergyData(data);
                 showCompareData(data.energySurvey);
