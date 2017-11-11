@@ -106,12 +106,12 @@
          <div class="row">
                 <div class="select-width">筛选条件：</div>
                   <div class="filter-calc EnergyBar">
-                   <select>
-                    <option>小时</option>
-                    <option>日</option>
-                    <option>周</option>
-                    <option>月</option>
-                    <option>年</option>
+                   <select id="TypeCode">
+                    <option value="1">小时</option>
+                    <option value="2">日</option>
+                    <option value="3">周</option>
+                    <option value="4">月</option>
+                    <option value="5">年</option>
                    </select>
                   </div>
                 </div>
