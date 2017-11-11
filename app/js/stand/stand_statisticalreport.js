@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
 
 	$("#statisticalreport").addClass('active');
 	$("#s_statisticalreport").addClass('active');
-	$("#s_statisticalreport").css('cssText','background-color:#1D9F2B!important;');
+	//$("#s_statisticalreport").css('cssText','background-color:#1D9F2B!important;');
 	$("#s_statisticalreport>a").css('cssText','color:white!important;');
 
 	var report = new Report();

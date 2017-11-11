@@ -130,13 +130,16 @@
                </acronym>
             </div>
           </div>
-          <div id="" class="col-md-11 col-xs-12 main-line"><!--dayLine--></div>
+          <div id="" class="col-md-11 col-xs-12 main-line">
+            <!--dayLine-->
+              <div id="dayLine"></div>
+            </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="main-box daily">
           <h5>日负荷曲线（单位：kW.h）</h5>
-          <div id=""><!--hourLine--></div>
+          <div id="hourLine"><!--hourLine--></div>
         </div>
       </div>
   </div>

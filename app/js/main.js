@@ -132,7 +132,7 @@ var Home = (function () {
 
             $container.html("");
             $container.width($container.parent('div').width());
-            $container.height($container.parent('div').height() - 36);
+            $container.height($(".daily").height()-36);
             var line = echarts.init($container.get(0), 'shine');
             var options = {
                 tooltip: {

@@ -213,7 +213,7 @@ jQuery(document).ready(function($) {
 
 	$("#energysubery").addClass('active');
 	$("#calssfi").addClass('active');
-	$("#calssfi").css('cssText','background-color:#1D9F2B!important;');
+	//$("#calssfi").css('cssText','background-color:#1D9F2B!important;');
 	$("#calssfi>a").css('cssText','color:white!important;');
 	
 	var standClass = new StandClass();
