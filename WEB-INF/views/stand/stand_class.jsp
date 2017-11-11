@@ -103,6 +103,18 @@
        <div class="main-box class-bottom">
          <h5>区间能耗棒图</h5>
          <div class="col-lg-3 col-md-4 col-xs-12 class-b-left">
+         <div class="row">
+                <div class="select-width">筛选条件：</div>
+                  <div class="filter-calc EnergyBar">
+                   <select>
+                    <option>小时</option>
+                    <option>日</option>
+                    <option>周</option>
+                    <option>月</option>
+                    <option>年</option>
+                   </select>
+                  </div>
+                </div>
             <div class="row">
               <div class="select-width">起始日期：</div>
               <div class="filter-calc">

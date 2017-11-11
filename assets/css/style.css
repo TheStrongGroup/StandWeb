@@ -351,6 +351,8 @@ Header and header elements.
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+  padding-top:7px!important;
+  line-height: 35px;
   width: 225px;
 }
 
@@ -650,7 +652,7 @@ Page sidebar
 	color:#fff !important;
   border: none; 
   text-shadow:none;
-  background-color:#1D9F2B ;
+  background-color:#0161B8;
 }  
 
 .page-sidebar-menu > li.active > a .selected {
@@ -1034,7 +1036,7 @@ Footer
 .footer {
   padding: 8px 20px 5px 20px; 
   font-size: 12px;
-  background-color:#1D9F2B;
+  background-color:#0161B8;
   position:fixed;
   left:0;
   right:0;

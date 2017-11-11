@@ -43,8 +43,8 @@
         </div>
 
         <div class="col-md-9 col-xs-12 report2">
-            <button id="yearSearch" type="button" class="btn-count5"><span>查询</span></button>
-            <button id="export" type="button"><img src="app/img/excel2.png"> 导 出</button>
+            <button id="yearSearch" type="button" class="btn-count5"><img src="app/img/search2.png">&nbsp;查 询</button>
+            <button id="export" type="button" class="btn-count5"><img src="app/img/excel2.png"> 导 出</button>
             <div class="main-box report-h">
                 <h5>能耗对比分析图</h5>
                 <div id="report">

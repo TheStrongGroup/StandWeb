@@ -48,11 +48,56 @@
         </div>
 
         <div class="col-md-9 col-xs-12 report2">
-            <h5>历史曲线</h5>
             <div class="main-box history-h">
+                <h5>历史曲线</h5>
                 <div class="col-md-9 col-xs-12 load-calc">
                     <div id="chartLine"></div>
                 </div>
+            </div>
+            <div class="main-box history-h">
+                <h5>历史曲线报表</h5>
+                
+                    <table class="table table-bordered table-striped table-hover">
+                        <tr>
+                           <td>功率曲线</td>
+                           <td  colspan="2">最大</td>
+                           <td  colspan="2">最小</td>
+                           <td>平均值</td>
+                        </tr>
+                        <tr>
+                           <td>  </td>
+                           <td>时间</td>
+                           <td>值</td>
+                           <td>时间</td>
+                           <td>值</td>
+                           <td> </td>
+                        </tr>
+                        <tr>
+                           <td>Pa</td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                        </tr>
+                        <tr>
+                           <td>Pb</td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                        </tr>
+                        <tr>
+                           <td>Pc</td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                        </tr>
+                    </table>
+               
             </div>
         </div>
     </div>
