@@ -10,12 +10,13 @@ var Home = (function () {
 
         this.getData = function (url, params) {
             initDOM();
-            showDate();
             $.getJSON(url, params, function (data) {
+               // console.log(data);
+                
+                showEnergyData(data);
                 showCompareData(data.energySurvey);
                 showHours(data);
                 showDays(data);
-                showEquipmentStatus(data.status);
             });
         }
 
@@ -32,38 +33,60 @@ var Home = (function () {
             $("#yearConsumption .red").html("--");
             $("#yearConsumption .grey").html("--");
 
-            $(".main-service>p").eq(0).html("在线：--");
-            $(".main-service>p").eq(1).html("离线：--");
+            $("#ElecValue>p").eq(0).html("--");
+            $("#ElecValue>p").eq(1).html("千瓦时(kW·h)");
+
+            $("#WaterValue>p").eq(0).html("--");
+            $("#WaterValue>p").eq(1).html("吨(t)");
+
+            $("#GasValue>p").eq(0).html("--");
+            $("#GasValue>p").eq(1).html("立方米(m³)");
+        }
+
+        function showEnergyData(data){
+
+            if(!data.hasOwnProperty('energySurvey'))
+                return;
+
+            if(data.energySurvey.hasOwnProperty('sumelecenergy'))
+                $("#ElecValue>p").eq(0).html(data.energySurvey.sumelecenergy);
+                
+
+            if(data.energySurvey.hasOwnProperty('sumwaterenergy'))
+                $("#WaterValue>p").eq(0).html(data.energySurvey.sumwaterenergy);
+
+            if(data.energySurvey.hasOwnProperty('sumgasenergy'))
+                $("#GasValue>p").eq(0).html(data.energySurvey.sumgasenergy);
         }
 
         function showCompareData(data) {
 
             if (data.hasOwnProperty('sumenergy') && data.sumenergy != null)
-                $("#totalConsumption .red").html(data.sumenergy);
+                $("#totalConsumption .red").html(data.sumenergy.toFixed(2));
 
             if (data.hasOwnProperty('today') && data.today != null)
-                $("#dayConsumption .red").html(data.today);
+                $("#dayConsumption .red").html(data.today.toFixed(2));
 
             if (data.hasOwnProperty('yesterday') && data.yesterday != null)
-                $("#dayConsumption .grey").html(data.yesterday);
+                $("#dayConsumption .grey").html(data.yesterday.toFixed(2));
 
             if (data.hasOwnProperty('thisweek') && data.thisweek != null)
-                $("#weekConsumption .red").html(data.thisweek);
+                $("#weekConsumption .red").html(data.thisweek.toFixed(2));
 
             if (data.hasOwnProperty('lastweek') && data.lastweek != null)
-                $("#weekConsumption .grey").html(data.lastweek);
+                $("#weekConsumption .grey").html(data.lastweek.toFixed(2));
 
             if (data.hasOwnProperty('thismonth') && data.thismonth != null)
-                $("#monthConsumption .red").html(data.thismonth);
+                $("#monthConsumption .red").html(data.thismonth.toFixed(2));
 
             if (data.hasOwnProperty('lastmonth') && data.lastmonth != null)
-                $("#monthConsumption .grey").html(data.lastmonth);
+                $("#monthConsumption .grey").html(data.lastmonth.toFixed(2));
 
             if (data.hasOwnProperty('thisyear') && data.thisyear != null)
-                $("#yearConsumption .red").html(data.thisyear);
+                $("#yearConsumption .red").html(data.thisyear.toFixed(2));
 
             if (data.hasOwnProperty('lastyear') && data.lastyear != null)
-                $("#yearConsumption .grey").html(data.lastyear);
+                $("#yearConsumption .grey").html(data.lastyear.toFixed(2));
 
 
         }
@@ -82,7 +105,8 @@ var Home = (function () {
                     }
                 }
             );
-            initLine($("#hourLine"), times, datas1, datas2, '今日', '昨日', 'line');
+            var color=['#61B2F0','#B0A5C9'];
+            initLine($("#hourLine"), times, datas1, datas2, '今日', '昨日', 'line',color);
         }
 
 
@@ -99,10 +123,12 @@ var Home = (function () {
                     datas2 = val;
                 }
             });
-            initLine($("#dayLine"), times, datas1, datas2, '当月', '上月', 'bar');
+            
+            var color=['#6EB5FF','#FFC244'];
+            initLine($("#dayLine"), times, datas1, datas2, '当月', '上月', 'bar',color);
         }
 
-        function initLine($container, time, data1, data2, name1, name2, type) {
+        function initLine($container, time, data1, data2, name1, name2, type,color) {
 
             $container.html("");
             $container.width($container.parent('div').width());
@@ -147,7 +173,8 @@ var Home = (function () {
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
                     name: name2,
                     data: data2
-                }]
+                }],
+                color:color
 
 
             };
@@ -193,20 +220,8 @@ var Home = (function () {
             $("#currentDate>p").eq(1).html(weekDayCh);
         }
 
-        function showEquipmentStatus(data) {
-            if(data.length==0)
-                return;
-            if(data[0].hasOwnProperty('on')){
-                $(".main-service>p").eq(0).html("在线：" + data[0].on + "个");
-            }
-           
-            if(data[0].hasOwnProperty('off')){
-                $(".main-service>p").eq(1).html("离线：" + data[0].off + "个");
-            }
-        }
 
-    }
-    ;
+    };
 
     return _home;
 })
