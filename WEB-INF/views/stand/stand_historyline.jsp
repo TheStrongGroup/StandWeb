@@ -59,43 +59,20 @@
                 
                     <table class="table table-bordered table-striped table-hover">
                         <tr>
-                           <td>功率曲线</td>
+                           <td id="ParamName" rowspan="2">功率曲线</td>
                            <td  colspan="2">最大</td>
                            <td  colspan="2">最小</td>
-                           <td>平均值</td>
+                           <td rowspan="2">平均值</td>
                         </tr>
                         <tr>
-                           <td>  </td>
                            <td>时间</td>
                            <td>值</td>
                            <td>时间</td>
                            <td>值</td>
-                           <td> </td>
                         </tr>
-                        <tr>
-                           <td>Pa</td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                        </tr>
-                        <tr>
-                           <td>Pb</td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                        </tr>
-                        <tr>
-                           <td>Pc</td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                        </tr>
+                        <tbody id="tableBody">
+                        </tbody>
+                        
                     </table>
                
             </div>

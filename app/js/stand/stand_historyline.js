@@ -9,8 +9,12 @@ var History = (function(){
 		this.init = function(){
 			Stand.initDateTimePicker("CURRENTDATE",new Date(),$("#startDate"),$("#startBox"));
 			Stand.initDateTimePicker("CURRENTDATE",new Date(),$("#endDate"),$("#endBox"));
-			
+			initDom();
 		};
+
+		function initDom(){
+			$("#ParamName").html($("#ElecParam").find("option:selected").text());
+		}
 
 		function getByAjax(url,params,type){
 
@@ -19,8 +23,56 @@ var History = (function(){
 					showTree(data[0].classlist);
 				}else if(type==1){
 					showLine(data);
+					showTableData(data);
 				}
 			});
+
+		};
+
+		function showTableData(data){
+			$("#tableBody").html("");
+			$("#ParamName").html($("#ElecParam").find("option:selected").text());
+			if(data.length<=0)
+				return;
+
+			for (var i = 0;i<data.length;i++) {
+				var name = data[i].linename;
+				var maxObj={};
+				var minObj={};
+				var sum=0;
+
+				$.each(data[i].linedata, function(key, val) {
+					
+					if(!maxObj.hasOwnProperty('value')){
+						maxObj.time = val.datatime;
+						maxObj.value=val.data;
+					}else{
+						if(maxObj.value<=val.data){
+							maxObj.time=val.datatime;
+							maxObj.value=val.data;
+						}
+					};
+
+					if(!minObj.hasOwnProperty('value')){
+						minObj.time = val.datatime;
+						minObj.value = val.data;
+					}else{
+						if(minObj.value>=val.data){
+							minObj.time = val.datatime;
+							minObj.value = val.data;
+						}
+					};
+
+					sum += parseFloat(val.data);
+				});
+
+				var tableRow = '<tr><td>'+name+'</td><td>'+maxObj.time+'</td><td>'
+					+maxObj.value+'</td><td>'+minObj.time+'</td><td>'
+					+minObj.value+'</td><td>'+(sum/data[i].linedata.length).toFixed(2)+'</td></tr>';
+
+				$("#tableBody").append(tableRow);
+			}
+
 
 		}
 
