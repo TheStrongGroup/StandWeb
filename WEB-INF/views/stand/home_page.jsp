@@ -7,7 +7,7 @@
             <span class="main-dateicon"></span>
               <h4>电</h4>
               <h3>5487215</h3>
-              <p>千瓦时(kW.h)</p>
+              <p>kW.h</p>
           </div> 
         </div>
         <div class="col-sm-4 main-date-pl">
@@ -15,7 +15,7 @@
             <span class="main-dateicon main-temp-icon"></span>
               <h4>水</h4>
               <h3>6587152</h3>
-              <p>吨(t)</p>
+              <p>吨</p>
           </div> 
         </div>
         <div class="col-sm-4 main-date-pl">
@@ -23,7 +23,7 @@
             <span class="main-dateicon main-service-icon"></span>
               <h4>气</h4>
               <h3>242513</h3>
-              <p>立方米(m³)</p>
+              <p>kW.h</p>
           </div> 
         </div>
       </div>
@@ -130,16 +130,13 @@
                </acronym>
             </div>
           </div>
-          <div id="" class="col-md-11 col-xs-12 main-line">
-            <!--dayLine-->
-              <div id="dayLine"></div>
-            </div>
+          <div id="" class="col-md-11 col-xs-12 main-line"><!--dayLine--></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="main-box daily">
           <h5>日负荷曲线（单位：kW.h）</h5>
-          <div id="hourLine"><!--hourLine--></div>
+          <div id=""><!--hourLine--></div>
         </div>
       </div>
   </div>
