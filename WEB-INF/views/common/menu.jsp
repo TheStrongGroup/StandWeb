@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
 
 <div class="page-sidebar navbar-collapse collapse">
-    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 900px;">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 1100px;">
         <ul class="page-sidebar-menu" id="page-sidebar-menu">
             <li class="sidebar-toggler-wrapper">
                 <div class="sidebar-toggler hidden-phone"></div>
@@ -60,21 +60,21 @@
                     </li>
                 </ul>
             </li>
-            <%--<li id="setting" class="start">--%>
-                <%--<a href="javascript:;">--%>
-                    <%--<i class="fa fa-flag"></i>--%>
-                    <%--<span class="title">用户设置 </span>--%>
-                    <%--<span class="arrow"> </span>--%>
-                <%--</a>--%>
-                <%--<ul class="sub-menu" id="s_setting">--%>
-                    <%--<li id="add_classfi" class=""><a href="rest/addclass"><i class="fa fa-caret-right"></i>新增分类</a></li>--%>
-                    <%--<li id="add_device" class=""><a href="rest/adddev"><i class="fa fa-caret-right"></i>新增设备</a></li>--%>
-                    <%--</li>--%>
-                    <%--<li id="setPsWrd" data-target="#resetpwd" data-toggle="modal">--%>
-                        <%--<a href="javascript:void(0)"> <i class="fa fa-caret-right"></i>密码修改</a>--%>
-                    <%--</li>--%>
-                <%--</ul>--%>
-            <%--</li>--%>
+            <li id="setting" class="start">
+                <a href="javascript:;">
+                    <i class="fa fa-flag"></i>
+                    <span class="title">用户设置 </span>
+                    <span class="arrow"> </span>
+                </a>
+                <ul class="sub-menu" id="s_setting">
+                    <li id="add_classfi" class=""><a href="rest/addclass"><i class="fa fa-caret-right"></i>新增分类</a></li>
+                    <li id="add_device" class=""><a href="rest/adddev"><i class="fa fa-caret-right"></i>新增设备</a></li>
+                    </li>
+                    <li id="setPsWrd" data-target="#resetpwd" data-toggle="modal">
+                        <a href="javascript:void(0)"> <i class="fa fa-caret-right"></i>密码修改</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

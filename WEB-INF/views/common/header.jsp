@@ -2,7 +2,7 @@
 <!-- BEGIN TOP NAVIGATION BAR -->
 <div class="header-inner">
 
-	<a class="navbar-brand" href="#">Stand能耗系统</a>
+	<a class="navbar-brand" href="#"><img src="app/img/logo1-w.png"/>Stand能耗系统</a>
 
 	<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 	<a href="javascript:;" class="navbar-toggle" data-toggle="collapse"
@@ -11,6 +11,9 @@
 	</a>
 	<!-- --------------------------------- -->
 	<ul class="nav navbar-nav pull-right">
+        <li style="color: #fff;line-height: 45px;">
+            <span class="HeadDate">2017-11-02</span>
+        </li>
         <li class="dropdown message">
           <!--  <a href="#" data-toggle="dropdown"> -->
           <a href="rest/user/logout">

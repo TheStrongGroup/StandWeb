@@ -30,7 +30,7 @@
       <div class="col-lg-6 col-md-12">
         <div id="totalConsumption" class="main-box main-total-2">
           <h5>能耗总缆(用电量)</h5>
-          <div id="dayConsumption" class="col-md-6 col-xs-12">   
+          <div id="dayConsumption" class="col-md-6">   
             <div class="main-total-left">
               <span class="main-pic1"></span>
               <div class="main-total-rig main-left3">   
@@ -49,7 +49,7 @@
               </div>
             </div>
           </div>
-          <div id="weekConsumption" class="col-md-6 col-xs-12">   
+          <div id="weekConsumption" class="col-md-6">   
             <div class="main-total-left pink">
               <span class="main-pic1 pic-pink"></span>
               <div class="main-total-rig main-left3">   
@@ -68,7 +68,7 @@
               </div>
             </div>
           </div>
-          <div id="monthConsumption" class="col-md-6 col-xs-12">   
+          <div id="monthConsumption" class="col-md-6">   
             <div class="main-total-left d-blue">
               <span class="main-pic1 d-blue2"></span>
               <div class="main-total-rig main-left3">   
@@ -87,7 +87,7 @@
               </div>
             </div>
           </div>
-          <div id="yearConsumption" class="col-md-6 col-xs-12">   
+          <div id="yearConsumption" class="col-md-6">   
             <div class="main-total-left zs">
               <span class="main-pic1 zs2"></span>
               <div class="main-total-rig main-left3">   
@@ -113,30 +113,13 @@
       <div class="col-lg-6 col-md-12">
         <div class="main-box daily">
           <h5>月用量图（单位：kW.h）</h5>
-          <div class="col-md-1 col-xs-12 chart1">
-            <div class="col-lg-12 col-md-12 col-sm-2 col-xs-2">
-               <acronym title="电">
-                 <button class="btn btn-elc btn-elc-selected"></button>
-               </acronym>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-2 col-xs-2">
-               <acronym title="水">
-                 <button class="btn btn-water"></button>
-               </acronym>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-2 col-xs-2">
-               <acronym title="气">
-                 <button class="btn btn-solar"></button>
-               </acronym>
-            </div>
-          </div>
-          <div id="" class="col-md-11 col-xs-12 main-line"><!--dayLine--></div>
+          <div id="dayLine"></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="main-box daily">
           <h5>日负荷曲线（单位：kW.h）</h5>
-          <div id=""><!--hourLine--></div>
+          <div id="hourLine"></div>
         </div>
       </div>
   </div>
