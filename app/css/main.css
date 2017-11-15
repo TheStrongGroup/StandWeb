@@ -2,20 +2,36 @@
     font-family: "Microsoft YaHei";
 }
 
-.page-sidebar-menu>li>ul.sub-menu>li{
-    background-color: #CDE4B5!important;
-}
 .page-sidebar-menu>li>ul.sub-menu>li.active a{
     color:#514947!important;
 }
 /*历史曲线*/
+.servey-left .servey-left-t .btn-history{
+   margin:10px 5px 5px 0;
+}
 #ElecParam{
     margin-left:5px;
-    width:268px;
+    width:calc(100% - 110px);
+    height:35px;
 }
+.btn-history{margin-top:0!important;}
 .history-tree{height:475px!important;}
-.report2 .history-h{height: 395px;}
+.report2 .history-h{
+    height: 390px;
+    margin-bottom: 10px;
+}
 /*新增设备*/
+.adddev-margin{margin-top:10px;}
+.adddev-margin select{
+    width:165px;
+    height:32px;
+}
+.adddev-set{vertical-align: 19px;}
+.main-box .adddev-button{width:100px;}
+.btn-adddev{margin-top:7px;}
+.form-group textarea{
+    height:75px;
+}
 .main-container .adddev-h{
     height:auto;
     background:#F8FFF5;
@@ -39,7 +55,8 @@
 .report2 button{
   width:100px;
   height:35px;
-  background: #1D9F2B;
+  background-image:url(../img/search4.png) no-repeat;
+  background-color:#00ADEE;
   color:white;
   margin-bottom:10px;
   border:none;
@@ -70,7 +87,7 @@
 }
 .servey-left-t h5{
     margin:5px 5px 10px 5px;
-    background: #1D9F2B;
+    background: #00ADEE;
     color:white;
     padding:10px;
 }
@@ -92,6 +109,18 @@
   padding-right:0!important;
 }
 /*能耗概况*/}
+.chart1{
+    width:74px;
+    overflow: hidden;
+    float:left;
+    box-sizing:border-box;
+}
+.main-line{
+    height:347px;
+    width:calc(100% - 74px);
+    float:left;
+    overflow: hidden;
+}
 .class-rig{
     padding-left:0!important;
 }
@@ -116,13 +145,21 @@
 .class-search{
     display:block;
     margin:0 auto;
-    background: #1D9F2B;
+    background: #3DBDF5;
     color:white;
     width:200px;
     height:35px;
     border-radius:5px;
     border:0;
     margin-top:25px;
+}
+.EnergyBar select{
+    width:100%;
+    height: 30px;
+    border:1px solid #ddd;
+}
+.class-b-left div:first-child{
+    margin-bottom:5px;
 }
 .class-date div:last-child{
     border-right:0;
@@ -132,8 +169,14 @@
     height:85%;
     padding-top:20px!important;
 }
+.bar-diagram{
+    margin-top:10px;
+}
+.bar-diagram .class-bottom{
+    height:355px;
+}
 .class-bottom{
-    margin-bottom:40px;
+    margin-bottom:10px;
 }
 .col-md-8 .class-h{
     height:453px;
@@ -169,7 +212,7 @@
     width:90px;
     height:35px;
     background:url(../img/search2.png) no-repeat 15px 7px;
-    background-color:#1D9F2B;
+    background-color:#3DBDF5;
     padding:0 0 0 20px;
     border:none;
     color:white;
@@ -180,7 +223,6 @@
 .main-container .row{margin:0;}
 .main-container .col-lg-12{
     padding:0 5px 0 0;
-    margin-top:10px;
 }
 .main-container .col-md-8{
     padding-left:10px;
@@ -188,7 +230,7 @@
 }
 .main-container .col-md-4{padding:0;}
 /* 登录 */
-.login-form{padding:35px 25px 35px 25px;}
+.login-form{padding:35px 0 35px 25px;}
 .login-main{
     height:100%;
     padding:3% 0 0 0;
@@ -197,10 +239,10 @@
     padding-left:4%;
     font-size:30px;
     padding-bottom:18px;
-    color:#3dcd58;
+    color:#0161B8;
 }
 .login-tab{
-    border-top:8px solid #3dcd58;
+    border-top:8px solid #0161B8;
     background: url("../img/login.jpg");
     width:100%;
     background-size: 100% 100%;
@@ -226,7 +268,7 @@
    -webkit-border-radius: 5px; /* Safari 和 Chrome */
 }
 .login-right h4{
-    background:#3dcd58;
+    background:#0161B8;
     color:#FFF;
     padding:15px 10px 15px 15px;
     margin-bottom:15px;
@@ -235,7 +277,7 @@
 .login-right input{
     border:1px solid #ddd;
     font-size:14px;
-    width:240px;
+    width:245px;
     height:36px;
     margin-bottom:10px;
     padding:0 10px;
@@ -244,12 +286,11 @@
     margin-top:30px;
 }
 .login-right .pass-botton{
-    background-color:#3dcd58;
-    border:1px solid #36b148;
+    background-color:#0161B8;
     cursor:pointer;
     font-size:16px;
     color:#FFF;
-    width:100%;
+    width:92%;
     margin-top:60px;
     border-radius:20;
     border-radius:5px
@@ -257,7 +298,7 @@
    -webkit-border-radius: 5px; /* Safari 和 Chrome */
 }
 .login-right .pass-botton:hover{
-    background-color:#43d454;
+    background-color:#00ADEE;
 }
 .login-foot{
     width:100%;
@@ -326,7 +367,18 @@
     height: 376px;
     overflow: hidden;
 }
-
+@media (max-width: 990px) {
+    .main-line{
+        width:100%;
+        height: 276px;
+    }
+    .chart1{
+        width:100%!important;
+    }
+    .chart1 > .col-sm-2{
+        width:70px;
+    }
+}
 @media (max-width: 1000px) {
     .build-info-le, .build-info-le2 {
         height: 320px;
@@ -720,7 +772,6 @@
 
 .btn-count5:hover {
     background-color: #0076D0;
-    background-image: url(../img/search2.png);
 }
 
 .btn-count6:hover {
@@ -765,13 +816,6 @@
     border: 1px solid #74B000;
     color: #74B000;
 }
-
-.btn-count5 {
-    background-image: url(../img/search4.png) no-repeat;
-    border: 1px solid #0076D0;
-    color: #0076D0;
-}
-
 .btn-count6 {
     background-image: url(../img/excel4.png);
     border: 1px solid #0076D0;
@@ -1029,12 +1073,12 @@
     line-height:122px;
     float:left;
 }
-.load1 p{  background-color:#FF9900;}
-.load1 span{border:1px solid #FF9900;}
-.load2 p{  background-color:#67C238;}
-.load2 span{border:1px solid #67C238;}
-.load3 p{  background-color:#DB0B1E;}
-.load3 span{border:1px solid #DB0B1E;}
+.load1 p{  background-color:#3DBDF5;}
+.load1 span{border:1px solid #3DBDF5;}
+.load2 p{  background-color:#B1D52C;}
+.load2 span{border:1px solid #B1D52C;}
+.load3 p{  background-color:#F7AA40;}
+.load3 span{border:1px solid #F7AA40;}
 .history-time {
     width: 100px;
     text-align: center;
@@ -1179,7 +1223,7 @@
 }
 
 .message > a {
-    background: #1D9F2B !important;
+    background: #0161B8 !important;
     height: 38px;
 }
 
@@ -1217,7 +1261,7 @@
 .btn-default:active {
     background: rgb(87, 158, 200);
 }
-/*主界面*/
+/*主界面 常规*/
 .main-total-rig {
   overflow: hidden;
 }
@@ -1226,7 +1270,7 @@
   padding-top: 6px;
 }
 .main-left3 {
-  margin-top: 36px;
+  margin-top: 52px;
 }
 .main-clear-l {
   clear: left;
@@ -1237,48 +1281,40 @@
   display: inline-block;
   float: left;
   border-radius: 50%!important;
-  background: url(../img/main-s-icon.png) no-repeat 15px 13px;
-  background-color: #0088cc;
-  margin: 23px 10px 5px 10px;
+  background: url(../img/main-s-icon.png) no-repeat 22px 19px;
+  background-color: #38befb;
+  margin: 39px 10px 5px 10px;
 }
-.main-total {
-  border: 1px solid #c8c9c9;
-  overflow: hidden;
-  padding: 3px 10px 3px 10px;
-  line-height: 29px;
-  margin-bottom: 10px;
+.col-md-6 .pink{
+    background-color: #fef5ec;
+}
+.col-md-6 .d-blue{
+    background-color: #f7fbea;
+}
+.col-md-6 .zs{
+    background-color: #f4f4fe;
 }
 .main-total-left {
-  border: 1px solid #c8c9c9;
-  border-left: 4px solid #0088cc;
   overflow: hidden;
-  height:133px;
+  height:168px;
   padding-right: 10px;
-}
-.pink {
-  border-left: 4px solid #e36159;
+  background:#ebf8fe;
 }
 .pic-pink {
-  background-color: #e36159;
-  background-position: -84px 13px;
-}
-.d-blue {
-  border-left: 4px solid #2baab1;
+  background-color: #E60012;
+  background-position: -50px 19px;
 }
 .d-blue2 {
-  background-color: #2baab1;
-  background-position: 14px -109px;
-}
-.zs {
-  border-left: 4px solid #734ba9;
+  background-color: #b1d52d;
+  background-position: 22px -42px;
 }
 .zs2 {
-  background-color: #734ba9;
-  background-position: -84px -109px;
+  background-color: #9393eb;
+  background-position: -50px -42px;
 }
 .main-container .main-total-2 {
   padding-right: 0;
-  height:383px;
+  min-height:405px;
 }
 .main-container .main-total-2 > .col-md-12 {
   padding: 0 10px 0 0;
@@ -1294,17 +1330,20 @@
   font-size: 23px;
 }
 .main-container {
-  padding: 0 0 0 10px;
+  padding: 10px 5px 40px 10px;
   overflow: hidden;
 }
-.main-container .col-md-6 {
+.main-container .row > .col-lg-6 {
   padding: 0 10px 10px 0;
+}
+.row .col-lg-6 #dayConsumption,#weekConsumption,#monthConsumption,#yearConsumption{
+    padding:0 10px 10px 0;
+    width:50%;
 }
 .main-date-pl {
   padding: 0 10px 0 0;
   position: relative;
   overflow: hidden;
-  color: white;
 }
 .main-box {
   border: 1px solid #c8c9c9;
@@ -1312,7 +1351,8 @@
   padding: 0 10px 10px 10px;
 }
 .main-box h5 {
-  background: #e2e2e2;
+  background: #00ADEE;
+  color:white;
   padding: 10px 20px;
   margin-top: 0;
   margin: 0 -10px 10px -10px;
@@ -1320,35 +1360,44 @@
 .main-1 {
   text-align: center;
   position: relative;
+  min-height: 405px;
+  overflow: hidden;
+  border-radius: 10px!important;
+  border:1px solid #c8c9c9;
 }
 .main-dateicon {
   width: 115px;
   height: 115px;
-  background: url(../img/main-icon.png) no-repeat 31px 25px;
+  margin:40px 0 40px 0;
+  background: url(../img/main-icon.png) no-repeat 20px 14px;
   display: inline-block;
-  border: 2px solid #2baab1;
-  background-color: #FFF;
+  background-color: #00ADEE;
   border-radius: 50%!important;
   z-index: 1;
 }
+.main-1 h3{
+    color:#00ADEE;
+    font-family: "Arial";
+    font-weight: bold;
+}
+.main-1 p{color:#00ADEE;}
 .main-1 .main-temp {
   background-color: #734ba9;
 }
 .main-temp-icon {
-  border: 2px solid #734ba9;
-  background-position: -245px 25px;
+  background-position: -192px 18px;
 }
 .main-1 .main-service {
   background-color: #f29503;
 }
 .main-service-icon {
-  border: 2px solid #f29503;
-  background-position: -509px 25px;
+  background-position: -400px 18px;
 }
-.main-container .main-left-pr {
+.main-container .row .main-left-pr {
   padding-right: 0;
+  overflow: hidden;
 }
-.daily{height:383px;}
+.daily{min-height:405px;}
 .main-date {
   width: 100%;
   height: 335px;
@@ -1362,8 +1411,11 @@
 .main-date p {
   margin-bottom: 3px;
 }
-
-
+/*历史曲线*/
+.history-tree{
+    overflow-y:auto;
+}
+.stati-left
 /*分类用能情况*/
 .main-table {
     width: 95%;
@@ -1470,17 +1522,24 @@
 }
 
 @media (max-width: 768px) {
+    .login-main > h1 > img{width: 200px;}
+    .bar-diagram .class-bottom{
+        min-height:450px;
+    }
+    .bar-diagram .class-bottom .class-b-left{
+        height:150px;
+    }
     .chart {
         height: 460px;
     }
 }
-
 .chart1 {
     width: 74px;
     overflow: hidden;
     float: left;
+    padding:0;
 }
-
+.chart1 div{margin-top:0;}
 #main_line {
     height: 382px;
     float: left;
@@ -1697,11 +1756,10 @@
 }
 
 .btn-elc {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/elc2.png) no-repeat center center;
     background-color: #969696;
-    margin-bottom: 10px;
     margin-right: 5px;
 }
 
@@ -1710,16 +1768,19 @@
 }
 
 .btn-elc-selected {
-    background-color: #F08500;
+    background-color: #3DBDF5;
+    margin-bottom:10px;
+    border-radius: 10px!important;
 }
 
 .btn-water {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/water2.png) no-repeat center center;
-    background-color: #969696;
+    background-color: #B1D52C;
     margin-bottom: 10px;
     margin-right: 5px;
+    border-radius: 10px!important;
 }
 
 @media (max-width: 320px) {
@@ -1737,11 +1798,12 @@
 }
 
 .btn-solar {
-    width: 45px !important;
-    height: 45px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: url(../img/solar2.png) no-repeat center center;
-    background-color: #969696;
+    background-color: #F7AA40;
     margin-bottom: 10px;
+    border-radius: 10px!important;
 }
 
 .btn-solar:hover {
@@ -1830,8 +1892,6 @@
 @media (max-width: 1440px){
     .main-date{height:300px;}
     .main-container .main-total-2{height:348px;}
-    .main-total-left{height:115px;}
-    .main-left3{ margin-top:0;}
     /*历史曲线*/
     .statistical-left .report{height:720px!important;}
     .history-tree{height:475px!important;}
@@ -1844,18 +1904,18 @@
     .statical-h{height:350px!important;}
 }
 @media (max-width: 1366px){
+    /*用户设置-新增设备*/
+    .main-container .adddev-bottom{height:480px;}
     /*历史曲线*/
     .report2 .history-h{height: 300px;}
     /*报表*/
     .report-tree{height:370px!important;}
     .servey-left .report{height:600px!important;}
     .report2 .report-h{height:555px;}
-    .main-total-left > span{display:none;}
     .main-total-left{padding-top:10px;padding-left:10px;}
     .main-container .main-total-2{height:296px;}
     .main-date{height:248px;}
     .daily{height:296px;}
-    .main-total-left{height:90px;}
     /*统计分析*/
     .statical-h{height:300px!important;}
 }
@@ -1883,19 +1943,17 @@
     .load>div>span{  
     width:80px;
     }
-    /*用能概况*/
+    /*用能概况 1024*/
     .main-total-rig>span{padding-top:2px;}
     .main-date{
         margin-top:-46px;
         height:258px;
     }
     .main-dateicon{
-        width:80px;
-        height:80px;
-        background-position: 13px 10px;
+        background-position: 19px 14px;
     }
-    .main-temp-icon{background-position: -263px 10px;}
-    .main-service-icon{background-position: -527px 10px;}
+    .main-temp-icon{background-position: -191px 14px;}
+    .main-service-icon{background-position: -401px 14px;}
     .dis-tree {
         display: none;
     }
@@ -1926,8 +1984,7 @@
     }
     .class-b-left{height:60%;}
     .class-search{margin-top:10px;margin-bottom:10px;}
-    /*用能概况*/
-    .main-left3{margin-top:19px;}
+    /*用能概况 768*/
     .main-container{margin-bottom:30px;}
     .main-date{
         height:180px;
@@ -1935,6 +1992,8 @@
     }
 }
 @media (max-width: 600px) {
+    .login-main > h1 > img{width: 120px;}
+    .login-main > h1{font-size: 25px;}
     /*曲线报表*/
     .history-h{margin-top:10px;}
     /*登陆*/
@@ -1952,7 +2011,30 @@
     .statical-h{margin-bottom:10px;}
     .statical-phone{padding-left:0!important;}
     .main-container .stati-bottom{padding-bottom:0!important;}
-   .main-date-pl{margin-top:5px;padding:0;}
+   .main-date-pl{
+    margin-top:5px;
+    padding:0;
+    width:32.33%;
+    margin-right:1%;
+    float:left;
+}
+.main-1{
+    min-height: 250px;
+}
+.main-pic1{margin:9px 10px 5px 10px;}
+.main-dateicon{
+    width:85px;
+    height:85px;
+    margin:20px 0 10px 0;
+    background-size: 430px;
+    background-position: 9px 3px;
+}
+.main-1 .main-temp-icon{
+    background-size: 400px;
+    background-position: -162px 5px;}
+.main-1 .main-service-icon{
+    background-size: 400px;
+    background-position: -333px 5px;}
    .main-container .col-md-6{padding:0 0 10px 0;}
    .header-inner .navbar-brand{width:65%;}
    .main-container{padding:0 10px 0 10px;}
@@ -1960,9 +2042,11 @@
     height:auto;
     overflow: hidden;
    }
-   /*用能概况*/
-   .main-total-left{height:65px;}
-   .main-left3{margin-top:8px;}
+   /*用能概况 600*/
+   .header .navbar-brand img,.HeadDate{display: none;}
+   .main-total-left{height:97px;}
+   .main-container .row > .col-lg-6{padding:0 0 10px 0;}
+   .main-left3{margin-top:28px;}
    .load-calc{width:100%!important;}
    .load{
     width:100%;
@@ -1971,7 +2055,14 @@
    .load div{width:100%;}
    .load>div>p{width:35%;height:60px;line-height: 60px;}
    .load>div>span{width:65%;height:60px;line-height: 60px;}
+   .row .col-lg-6 #dayConsumption,#weekConsumption,#monthConsumption,#yearConsumption{
+    width:100%;
+}
 }
 @media (max-width: 375px) {
     .login-right{right:10%;}
 }
+.navbar-inner .navbar-brand{
+    padding:5 15px!important;
+}
+.header .navbar-brand img{float:left;}

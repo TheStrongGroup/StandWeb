@@ -12,7 +12,7 @@ Page header
 .header {
   filter: none !important;
   background-image: none !important;
-  background-color: #1D9F2B !important;
+  background-color: #0161B8 !important;
 }
 .header .btn-navbar {
   background-color: #212121 !important;
@@ -117,7 +117,7 @@ ul.page-sidebar-menu > li:last-child > a {
 ul.page-sidebar-menu > li.open > a,
 ul.page-sidebar-menu > li > a:hover,
 ul.page-sidebar-menu > li:hover > a{
-  background: #1D9F2B;              /*鼠标经过的字体颜色*/
+  background: #0161B8;              /*鼠标经过的字体颜色*/
   color: #fff !important;           /*鼠标经过的底色*/
 }
 
@@ -160,11 +160,10 @@ ul.page-sidebar-menu > li > ul.sub-menu li.open > a {
 }
 /* font color for all sub menu links*/
 ul.page-sidebar-menu li > ul.sub-menu > li > a {
-  color: #514947;
+  color: #585858;
 }
 ul.page-sidebar-menu li > ul.sub-menu > li > a:hover{
-    background-color: #1D9F2B;
-    color: #fff;       /*子导航文字颜色*/
+    color: #0161B8;       /*子导航文字颜色*/
 }
 /* menu arrows */
 ul.page-sidebar-menu > li > a .arrow.open {
@@ -210,7 +209,7 @@ Sidebar toggler
 ***/
 .sidebar-toggler {
   background-image: url(../../img/sidebar-toggler.jpg);
-  background-color: #1D9F2B;
+  background-color: #0161B8;
 }
 /* search box bg color on expanded */
 .page-sidebar-closed .page-sidebar .sidebar-search.open .form-container {

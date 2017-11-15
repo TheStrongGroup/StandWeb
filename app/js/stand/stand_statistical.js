@@ -15,7 +15,7 @@ var Static=(function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url, params, function(data) {
-				console.log(data);
+
 				if(type==0){
 					showTree(data[0].classlist);
 				}else if(type==1){
@@ -123,7 +123,7 @@ var Static=(function(){
 				    
 				    tooltip : {
 				        trigger: 'item',
-				        formatter: "{a} <br/>{b} : {c} ({d%})"
+				        formatter: "{a} <br/>{b} : {c}"
 				    },
 				    legend: {
 				        orient: 'vertical',
@@ -205,6 +205,9 @@ jQuery(document).ready(function($) {
 
 	$("#statistical").addClass('active');
 	$("#s_statistical").addClass('active');
+	$("#s_statistical").css('cssText','background-color:#1D9F2B!important;');
+	$("#s_statistical>a").css('cssText','color:white!important;');
+
 
 	var static = new Static();
 	static.init();
@@ -215,7 +218,32 @@ jQuery(document).ready(function($) {
 		var devIds = arr.join(',');
 		var startDate = $("#startBox").val();
 		var endDate = $("#endBox").val();
+		if(devIds==''){
+			alert("请选择设备！");
+			return;
+		}
 		static.getData("rest/statistical/analysis","startDate="+startDate+"&endDate="+endDate+"&devIds="+devIds+"&type=1",1);
-		console.log(arr);
+	
 	});
+
+	$("#startDate").datetimepicker().on('changeDate',function(e){
+		var date = e.date;
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+
+		month<10?(month ="0"+month):(month);
+		var currentDay = date.getDate();
+
+		currentDay<10?(currentDay = "0"+currentDay):currentDay;
+
+		var lastDayofCurrentMonth = new Date(year,month,0).getDate();
+		var startDate = new Date(year+"/"+month+"/"+currentDay);
+		var endDate = new Date(year+"/"+month+"/"+lastDayofCurrentMonth);
+
+		$("#endDate").datetimepicker('setStartDate',year+"-"+month+"-"+currentDay);
+		$("#endDate").datetimepicker('setEndDate',year+"-"+month+"-"+lastDayofCurrentMonth);
+
+	});
+
+	
 });

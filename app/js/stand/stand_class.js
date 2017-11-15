@@ -15,15 +15,16 @@ var StandClass = (function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url, params, function(data) {
-
+				console.log(data);
 				if(type==0){
 					generateSelect(data[0].classlist);
 					showCompare(data[1]);
 					showDay(data[2]);
 					showMultiBar(data[3]);
 				}else if(type==1){
-					showDay(data[0]);
-				}else if(type==2){
+                    showCompare(data[0]);
+                    showDay(data[1]);
+                }else if(type==2){
 					showMultiBar(data[0]);
 				}
 				
@@ -50,11 +51,13 @@ var StandClass = (function(){
 			if(data.yesterday != "")
 				$(".row>.col-xs-4>h4").eq(1).html(data.yesterday);
 
-			if(data.today != "" && data.yesterday != ""){
-				var today = parseFloat(data.today);
-				var yesterday = parseFloat(data.yesterday);
-				var diff = today-yesterday;
-				$(".row>.col-xs-4>h4").eq(2).html(diff.toFixed(2));
+			if(data.hasOwnProperty('today')&&data.hasOwnProperty('yesterday')){
+				if(data.today != "" && data.yesterday != ""){
+					var today = parseFloat(data.today);
+					var yesterday = parseFloat(data.yesterday);
+					var diff = today-yesterday;
+					$(".row>.col-xs-4>h4").eq(2).html(diff.toFixed(2));
+				}
 			}
 
 			if(data.thismonth != "")
@@ -63,12 +66,15 @@ var StandClass = (function(){
 			if(data.lastmonth != "")
 				$(".row>.col-xs-4>h4").eq(4).html(data.lastmonth);
 
-			if(data.thismonth != "" && data.lastmonth != ""){
-				var thismonth = parseFloat(data.thismonth);
-				var lastmonth = parseFloat(data.lastmonth);
-				var diff = thismonth-lastmonth;
-				$(".row>.col-xs-4>h4").eq(5).html(diff.toFixed(2));
+			if(data.hasOwnProperty('thismonth')&&data.hasOwnProperty('lastmonth')){
+				if(data.thismonth != "" && data.lastmonth != ""){
+					var thismonth = parseFloat(data.thismonth);
+					var lastmonth = parseFloat(data.lastmonth);
+					var diff = thismonth-lastmonth;
+					$(".row>.col-xs-4>h4").eq(5).html(diff.toFixed(2));
+				}
 			}
+			
 		}
 
 		function showDay(data){
@@ -77,8 +83,9 @@ var StandClass = (function(){
 			var values=[];
 
 			var maxValue=0;
-			var minValue=9999;
+			var minValue=999999;
 			var sum=0;
+			var avg=0;
 			var obj ={};
 			if(data.oneday.length>0){
 				$.each(data.oneday, function(key, val) {
@@ -93,11 +100,31 @@ var StandClass = (function(){
 
 					sum += parseFloat(val.data);
 				});
+			}else{
+				if(minValue > maxValue){
+					if(maxValue == 0){
+						maxValue ="--";
+					}
+
+					if(minValue == 999999)
+						minValue="--";
+				}
+
+				avg="--";
+
 			}
 
+
+			
 			obj.max = maxValue;
 			obj.min = minValue;
-			obj.avg = sum/data.oneday.length;
+			if(avg != "--"){
+				obj.avg = (sum/data.oneday.length).toFixed(2);
+			}else{
+				obj.avg = avg;
+			}
+			
+			
 
 			var width = $("#dayChart").parent('div').width();
 			var height = $(".class-h").height()-36;
@@ -172,7 +199,7 @@ var StandClass = (function(){
 
 			$(".class-h span").eq(0).html(value.max);
 			$(".class-h span").eq(1).html(value.min);
-			$(".class-h span").eq(2).html(value.avg.toFixed(2));
+			$(".class-h span").eq(2).html(value.avg);
 
 		}
 
@@ -186,6 +213,8 @@ jQuery(document).ready(function($) {
 
 	$("#energysubery").addClass('active');
 	$("#calssfi").addClass('active');
+	$("#calssfi").css('cssText','background-color:#1D9F2B!important;');
+	$("#calssfi>a").css('cssText','color:white!important;');
 	
 	var standClass = new StandClass();
 	standClass.init();

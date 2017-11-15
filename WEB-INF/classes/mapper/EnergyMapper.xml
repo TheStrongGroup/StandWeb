@@ -136,6 +136,6 @@
             </if>
         </set>
         WHERE Customer_Id=#{customerId}
-        AND Date=#{date}
+        AND date=#{date}
     </update>
 </mapper>

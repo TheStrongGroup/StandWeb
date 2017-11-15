@@ -20,7 +20,6 @@ var Report = (function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url,params, function(data) {
-				console.log(data);
 
 				if(type==0){
 					showTree(data[0].classlist);
@@ -74,7 +73,6 @@ var Report = (function(){
 						.replace(/devName/g,'text');
 
 			var treeData = JSON.parse(treeString);
-			console.log(treeData);
 			$("#treeview").width($(".statistical-left").width());
 			$("#treeview").height($(".statistical-left").height()-140);
 
@@ -113,6 +111,8 @@ jQuery(document).ready(function($) {
 
 	$("#statisticalreport").addClass('active');
 	$("#s_statisticalreport").addClass('active');
+	$("#s_statisticalreport").css('cssText','background-color:#1D9F2B!important;');
+	$("#s_statisticalreport>a").css('cssText','color:white!important;');
 
 	var report = new Report();
 	report.init();

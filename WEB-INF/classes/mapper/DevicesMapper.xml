@@ -17,6 +17,7 @@
         <result column="Dev_Unit" jdbcType="CHAR" property="devUnit"/>
         <result column="Dev_State" jdbcType="INTEGER" property="devState"/>
         <result column="Dev_IsAdd" jdbcType="INTEGER" property="devIsadd"/>
+        <result column="Dev_Date" jdbcType="TIMESTAMP" property="devDate"/>
 
     </resultMap>
 
@@ -63,7 +64,8 @@
           Dev_Price,
           Dev_Unit,
           Dev_State,
-          Dev_IsAdd
+          Dev_IsAdd,
+          Dev_Date
       )VALUES (
           #{devId,jdbcType=BIGINT},
           #{devName,jdbcType=VARCHAR},
@@ -79,7 +81,8 @@
           #{devPrice, jdbcType=DOUBLE  },
           #{devUnit, jdbcType=CHAR  },
           #{devState, jdbcType=INTEGER  },
-          #{devIsadd, jdbcType=INTEGER  }
+          #{devIsadd, jdbcType=INTEGER  },
+          NOW()
       )
   </insert>
 
@@ -108,14 +111,14 @@
     <update id="updateClassByDevId" parameterType="java.util.List">
 
         UPDATE
-          DEVICES
+        DEVICES
         SET
-          Dev_Class =  #{classId}
+        Dev_Class = #{classId}
         WHERE
-          Dev_Id IN
-           <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+        Dev_Id IN
+        <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
             #{item}
-            </foreach>
+        </foreach>
 
 
     </update>
