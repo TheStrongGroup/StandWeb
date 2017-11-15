@@ -11,12 +11,14 @@ var Home = (function () {
         this.getData = function (url, params) {
             initDOM();
             $.getJSON(url, params, function (data) {
-                // console.log(data);
+                //console.log(data);
 
                 showEnergyData(data);
                 showCompareData(data.energySurvey);
                 showHours(data);
                 showDays(data);
+
+                showTypeButton(data.energyTypeId);
             });
         }
 
@@ -33,14 +35,68 @@ var Home = (function () {
             $("#yearConsumption .red").html("--");
             $("#yearConsumption .grey").html("--");
 
-            $("#ElecValue>p").eq(0).html("--");
-            $("#ElecValue>p").eq(1).html("千瓦时(kW·h)");
+            $("#ElecValue>h3").html("--");
+            $("#ElecValue>p").html("千瓦时(kW·h)");
 
-            $("#WaterValue>p").eq(0).html("--");
-            $("#WaterValue>p").eq(1).html("吨(t)");
+            $("#WaterValue>h3").html("--");
+            $("#WaterValue>p").html("吨(t)");
 
-            $("#GasValue>p").eq(0).html("--");
-            $("#GasValue>p").eq(1).html("立方米(m³)");
+            $("#GasValue>h3").html("--");
+            $("#GasValue>p").html("立方米(m³)");
+
+            $('.btnType button').css('backgroundColor','#969696');
+            $("#Elec button").css('backgroundColor','#3DBDF5');
+        }
+
+        function showTypeButton(data){
+            if(!data.hasOwnProperty('elecId'))
+                $("#Elec").hide();
+            else{
+                $("#Elec button").click(function(){
+                    btnClickFunction(data.elecId,$(this),"elec");
+                });
+            }
+
+            if(!data.hasOwnProperty('waterId'))
+                $("#Water").hide();
+            else{
+                $("#Water button").click(function(){
+                    btnClickFunction(data.waterId,$(this),"water");
+                });
+            }
+
+            if(!data.hasOwnProperty('gasId'))
+                $("#Gas").hide();
+            else{
+                $("#Gas button").click(function(){
+                    btnClickFunction(data.gasId,$(this),"gas");
+                });
+            }
+        }
+
+        function btnClickFunction(type,$btn,typename){
+            $('.btnType button').css('backgroundColor','#969696');
+            $btn.css('backgroundColor','#3DBDF5');
+
+            switch(typename){
+                case "elec":
+                    $('.daily').eq(0).children('h5').html("月用电量图（单位：kW·h）");
+                    $('.daily').eq(1).children('h5').html("日负荷曲线（单位：kW.h）");
+                break;
+                case "water":
+                    $('.daily').eq(0).children('h5').html("月用水量图（单位：t）");
+                    $('.daily').eq(1).children('h5').html("月用电量图（单位：t）");
+                break;
+                case "gas":
+                    $('.daily').eq(0).children('h5').html("月用气量图（单位：m³）");
+                    $('.daily').eq(1).children('h5').html("月用电量图（单位：m³）");
+                break;
+            }
+
+            $.getJSON('rest/energysurvey/typeData', {tableId: type}, function(data) {
+                showHours(data);
+                showDays(data);
+            });
         }
 
         function showEnergyData(data){
@@ -49,14 +105,14 @@ var Home = (function () {
                 return;
 
             if(data.energySurvey.hasOwnProperty('sumelecenergy'))
-                $("#ElecValue>p").eq(0).html(data.energySurvey.sumelecenergy);
+                $("#ElecValue>h3").html(data.energySurvey.sumelecenergy);
 
 
             if(data.energySurvey.hasOwnProperty('sumwaterenergy'))
-                $("#WaterValue>p").eq(0).html(data.energySurvey.sumwaterenergy);
+                $("#WaterValue>h3").html(data.energySurvey.sumwaterenergy);
 
             if(data.energySurvey.hasOwnProperty('sumgasenergy'))
-                $("#GasValue>p").eq(0).html(data.energySurvey.sumgasenergy);
+                $("#GasValue>h3").html(data.energySurvey.sumgasenergy);
         }
 
         function showCompareData(data) {
