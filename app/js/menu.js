@@ -1,6 +1,5 @@
 /**
 * 实现菜单栏功能
-* @author Ben
 * @Date 2017.05.14
 */
 jQuery(document).ready(function($) {

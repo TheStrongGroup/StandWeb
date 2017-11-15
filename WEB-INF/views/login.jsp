@@ -7,19 +7,9 @@
 %>
 
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0.3
-Version: 1.5.5
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en" class="no-js">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
 <head>
     <base href="<%=basePath%>">
     <meta charset="utf-8"/>
@@ -37,12 +27,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           rel="stylesheet" type="text/css"/>
     <link href="assets/plugins/uniform/css/uniform.default.css"
           rel="stylesheet" type="text/css"/>
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL STYLES -->
     <link rel="stylesheet" type="text/css"
           href="assets/plugins/select2/select2_metro.css"/>
-    <!-- END PAGE LEVEL SCRIPTS -->
-    <!-- BEGIN THEME STYLES -->
     <link href="assets/css/style-metronic.css" rel="stylesheet"
           type="text/css"/>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -55,12 +41,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           type="text/css"/>
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <link href="app/css/main.css" rel="stylesheet" type="text/css"/>
-    <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="app/img/logo.ico"/>
 
 </head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
 <body>
 <div class="login-main">
     <h1><img src="app/img/logo1.png"/>Stand能耗系统</h1>
@@ -72,6 +55,11 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                                           size="25" value="java1234"/>
                 <label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" name="customerPwd1" placeholder="请输入密码"
                                                            id="customerPwd1" size="25" value="123456"/>
+                <label>验证码：</label><input type="text" name="checkCode" placeholder="请输入验证码"
+                                          id="checkCode" size="15" value="" style="width: 50%;"/>
+                <img id="img" src="<%=basePath%>rest/user/createCode" onclick="refresh()"
+                     style="width: 30%;height:100%;">
+
                 <input name="customerPwd" id="password" size="25" value="" class="form-control placeholder-no-fix"
                        type="customerPwd"
                        autocomplete="off" placeholder="密码"
@@ -87,12 +75,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 </div>
 
 
-<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-<!-- BEGIN CORE PLUGINS -->
-<!--[if lt IE 9]>
 <script src="assets/plugins/respond.min.js"></script>
 <script src="assets/plugins/excanvas.min.js"></script>
-<![endif]-->
 <script src="assets/plugins/jquery-1.10.2.min.js"
         type="text/javascript"></script>
 <script src="assets/plugins/jquery-migrate-1.2.1.min.js"
@@ -109,8 +93,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="assets/plugins/uniform/jquery.uniform.min.js"
         type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
 <script
         src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"
         type="text/javascript"></script>
@@ -118,29 +100,21 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
         type="text/javascript"></script>
 <script type="text/javascript"
         src="assets/plugins/select2/select2.min.js"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/scripts/app.js" type="text/javascript"></script>
 <script src="assets/scripts/login-soft.js" type="text/javascript"></script>
 
 <script src="app/lib/security/sha256.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
 <script>
-    /* 	jQuery(document).ready(function() {
-     App.init();
-     Login.init();
-     });
-     */
     $(document).ready(function () {
         $("#loginBut").bind("click", function () {
             App.init();
             Login.init();
         });
-
-
     })
+    function refresh() {
+        var url = "/rest/user/createCode?number=" + Math.random();//这里没有随机参数的话就只进两次后台就再也不进了，这个现在还不太明白为什么
+        $("#img").attr("src", url);
+    }
 </script>
-<!-- END JAVASCRIPTS -->
 </body>
-<!-- END BODY -->
 </html>

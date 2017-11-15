@@ -15,7 +15,7 @@ var StandClass = (function(){
 		function getByAjax(url,params,type){
 
 			$.getJSON(url, params, function(data) {
-				console.log(data);
+				//console.log(data);
 				if(type==0){
 					generateSelect(data[0].classlist);
 					showCompare(data[1]);
@@ -128,8 +128,8 @@ var StandClass = (function(){
 
 			var width = $("#dayChart").parent('div').width();
 			var height = $(".class-h").height()-36;
-
-			initLine($("#dayChart"),'line',time,values,width,height);
+			var color=['#FFC244','#6EB5FF'];
+			initLine($("#dayChart"),'line',time,values,width,height,color);
 			showMaxMinInfo(obj);
 
 		}
@@ -144,14 +144,14 @@ var StandClass = (function(){
 					values.push(val.data);
 				});
 			}
-
+			var color=['#61B2F0','#B0A5C9'];
 			var width = $("#chartBar").parent('div').width();
 			var height = $(".class-bottom").height()-36;
-			initLine($("#chartBar"),'bar',time,values,width,height);
+			initLine($("#chartBar"),'bar',time,values,width,height,color);
 
 		}
 
-		function initLine($container,serieType,time,data,width,height){
+		function initLine($container,serieType,time,data,width,height,color){
 
 			$container.html("");
 			$container.width(width);
@@ -186,7 +186,8 @@ var StandClass = (function(){
 				series:{
 					type:serieType,
 					data:data
-				}
+				},
+				color:color
 			};
 
 			line.setOption(options);
@@ -213,18 +214,18 @@ jQuery(document).ready(function($) {
 
 	$("#energysubery").addClass('active');
 	$("#calssfi").addClass('active');
-	$("#calssfi").css('cssText','background-color:#1D9F2B!important;');
+	//$("#calssfi").css('cssText','background-color:#1D9F2B!important;');
 	$("#calssfi>a").css('cssText','color:white!important;');
 	
 	var standClass = new StandClass();
 	standClass.init();
-	standClass.getData("rest/energy/class","startDate=&endDate=&classId=1&type=0",0);
+	standClass.getData("rest/energy/class","startDate=&endDate=&classId=1&type=0&typeCode=1",0);
 
 	$("#yearSearch").click(function(event) {
 		var day=$("#yearcalendar").val();
-		var classId=$("#buildinglist").val();
-		
-		standClass.getData("rest/energy/class","startDate="+day+"&endDate=&classId="+classId+"&type=1",1);
+        var classId=$("#buildinglist").val();
+
+        standClass.getData("rest/energy/class","startDate="+day+"&endDate=&classId="+classId+"&type=1",1);
 
 	});
 
@@ -232,8 +233,9 @@ jQuery(document).ready(function($) {
 		var startDate=$("#StartBox").val();
 		var endDate=$("#EndBox").val();
 		var classId=$("#buildinglist").val();
+		var typeCode=$("#TypeCode").val();
 
-		standClass.getData("rest/energy/class","startDate="+startDate+"&endDate="+endDate+"&classId="+classId+"&type=2",2);
+		standClass.getData("rest/energy/class","startDate="+startDate+"&endDate="+endDate+"&classId="+classId+"&type=2"+"&typeCode="+typeCode,2);
 	});
 
 

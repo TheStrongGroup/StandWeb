@@ -16,6 +16,9 @@
         <result column="Customer_Seg" jdbcType="VARCHAR" property="customerSeg"/>
         <result column="Customer_Reg" jdbcType="VARCHAR" property="customerReg"/>
         <result column="Customer_State" jdbcType="BIT" property="customerState"/>
+        <result column="Customer_Elec_Id" jdbcType="VARCHAR" property="customerElecId"/>
+        <result column="Customer_Gas_Id" jdbcType="VARCHAR" property="customerGasId"/>
+        <result column="Customer_Water_Id" jdbcType="VARCHAR" property="customerWaterId"/>
     </resultMap>
 
     <select id="queryCustomerById" parameterType="com.stand.spring.model.CustomerDO" resultMap="BaseResultMap">

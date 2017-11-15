@@ -12,6 +12,9 @@ var Login = function() {
                 customerPwd : {
                     required : true
                 },
+                checkCode : {
+                    required : true
+                },
                 remember : {
                     required : false
                 }
@@ -23,6 +26,9 @@ var Login = function() {
                 },
                 customerPwd : {
                     required : "密码不能为空."
+                },
+                checkCode : {
+                    required : "验证码不能为空."
                 }
             },
 
