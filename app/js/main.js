@@ -11,8 +11,8 @@ var Home = (function () {
         this.getData = function (url, params) {
             initDOM();
             $.getJSON(url, params, function (data) {
-               // console.log(data);
-                
+                // console.log(data);
+
                 showEnergyData(data);
                 showCompareData(data.energySurvey);
                 showHours(data);
@@ -50,7 +50,7 @@ var Home = (function () {
 
             if(data.energySurvey.hasOwnProperty('sumelecenergy'))
                 $("#ElecValue>p").eq(0).html(data.energySurvey.sumelecenergy);
-                
+
 
             if(data.energySurvey.hasOwnProperty('sumwaterenergy'))
                 $("#WaterValue>p").eq(0).html(data.energySurvey.sumwaterenergy);
@@ -123,7 +123,7 @@ var Home = (function () {
                     datas2 = val;
                 }
             });
-            
+
             var color=['#6EB5FF','#FFC244'];
             initLine($("#dayLine"), times, datas1, datas2, '当月', '上月', 'bar',color);
         }
