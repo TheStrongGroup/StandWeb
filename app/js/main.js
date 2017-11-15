@@ -82,15 +82,15 @@ var Home = (function () {
                 case "elec":
                     $('.daily').eq(0).children('h5').html("月用电量图（单位：kW·h）");
                     $('.daily').eq(1).children('h5').html("日负荷曲线（单位：kW.h）");
-                break;
+                    break;
                 case "water":
                     $('.daily').eq(0).children('h5').html("月用水量图（单位：t）");
                     $('.daily').eq(1).children('h5').html("月用电量图（单位：t）");
-                break;
+                    break;
                 case "gas":
                     $('.daily').eq(0).children('h5').html("月用气量图（单位：m³）");
                     $('.daily').eq(1).children('h5').html("月用电量图（单位：m³）");
-                break;
+                    break;
             }
 
             $.getJSON('rest/energysurvey/typeData', {tableId: type}, function(data) {
